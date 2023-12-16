@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Free algebras by means of a universal property | Elias Judin</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <meta name="google-site-verification" content="woicpQb3QYBpCMz2BHOxKJ5K0KwbH2FN-PYSu8jYaaI" />
+    <meta rel="me" href="https://mathstodon.xyz/@e_l" />
+</head>
+  <body>
+    
+<a href="/">
+  
+  <img src="/assets/images/banner.svg" />
+  
+</a>
+<hr \>
+<footer>
+  <ul>
+      
+      <li>
+        <a href=/>about</a>
+      </li>
+      
+      <li>
+        <a href=/gallery>gallery</a>
+      </li>
+      
+      <li>
+        <a href=/blog>blog</a>
+      </li>
+      
+      <li>
+        <a href=/archives>(list)</a>
+      </li>
+      
+      <li>
+        <a href=/conversation>conversation</a>
+      </li>
+      
+      <li>
+        <a href=/cv>cv</a>
+      </li>
+      
+     
+    </ul>
+</footer>
+    <main>
+      
+
+
+
+
+
+
+<h2>Free algebras by means of a universal property</h2>
+
+
+
+
+<em>June 27, 2022</em>
+
+
+<p>Consider a vector space $V$, when $X$ is a basis of $V$, we say that $V$ is a <em>free vector space on</em> $X$ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. For any vector space $V$ and $W$ and a basis $X$ of $V$, if there is a map $f:X\to W$ then there exists a unique linear map from $V$ to $W$ that extends $f$. That is, there is a unique linear map making the following diagram commute,</p>
+<p><img src="/assets/images/blog/free_algebras/commdiagram1.svg" alt="commutative diagram 1"></p>
+<p>where $i$ is the inclusion map $i:X\to V$ (in fact, any map $X\to V$ satisfying this property turns out to be injective) <sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In other words there exists a unique map $g:V\to W$ such that $gi=f$.</p>
+<p>We can use this to define <em>free</em> in terms of a universal property. In order to do this we define the following category. Let $\mathbf{C}$ be a full subcategory of $\mathbf{Alg}(\Omega)$ with objects in $\mathbf{C}$ called $\mathbf{C}$-algebras, and let $X$ be a set. Define $\mathbf{C}[X]$ to be the category of pairs $(A,\alpha)$, in which $A$ is a $\mathbf{C}$-algebra and $\alpha$ a map from $X$ to $A$. A morphism $f:(A,\alpha)\to (B,\beta)$ in $\mathbf{C}[X]$ is a homomorphism $f:A\to B$ such that $f\alpha = \beta$ <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. That is, a morphism in $\mathbf{C}[X]$ is a map $f:A\to B$ making the following diagram commute.</p>
+<p><img src="/assets/images/blog/free_algebras/commdiagram2.svg" alt="commutative diagram 2"></p>
+<p>A <em>free algebra</em> on $X$ is then an initial object in $\mathbf{C}[X]$ <sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>The example of a free $K$-vector space above can be constructed in terms of this definition. Let $K$ be a field and $\mathbf{C}$ the category of $K$-vector spaces. The free $\mathbf{C}$-algebra $(V,\alpha)$ on a set $X$ is the free $K$-vector space on $X$ where $V$ is the set $K^{(X)}$ of all maps $u: X\to K$ such that $\{x\in X:u(x)\neq 0\}$ is finite. The $K$-vector space structure on $V$ is defined by $$(u+v)(x)=u(x)+v(x)\text{ and }(ku)(x)=k(u(x))$$ for $u,v\in V$, $x\in X$, and $k\in K$. The map $\alpha: X\to V$ is defined by
+$$\alpha(x)(y)=\begin{cases}
+1, \text { if } x=y \\
+0, \text { if } x \neq y
+\end{cases}
+$$ for all $x,y\in X$.</p>
+<p>Now, for every map $\beta:X\to W$ there exists a unique morphism of $K$-vector spaces $f:V\to W$ with $f\alpha = \beta$, that is, making the diagram</p>
+<p><img src="/assets/images/blog/free_algebras/commdiagram3.svg" alt="commutative diagram 3"></p>
+<p>commute and this map is explicitly given by $$f(u) = \sum_{x\in X}u(x)\beta(x)$$ <sup id="fnref2:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Hence, $V$ is initial since this morphism always exists for any object $(W,\beta)$ of $\mathbf{C}[X]$. In fact, every $K$-vector space is the free-semimodule over a field and so every $K$-vector space is free.</p>
+<p>We can apply this definition to other algebraic structures. Consider $\mathbf{C}$ as the category of magmas. Then a free magma on $X$ is an initial object $(M,\alpha)$ in $\mathbf{C}[X]$. Similarily, for groups, if we consider $\mathbf{C}$ the category of groups, the free group on $X$ is the initial object in $\mathbf{C}[X]$.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>George Janelidze. Conversation on free algebras. Personal communica- tion 15/03/22, 2022.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>George Janelidze. Introduction to abstract algebra. Lecture Notes, 2015.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+<p>
+
+</p>
+
+<p>
+
+
+<em>Tags: 
+
+
+
+  
+  
+  
+
+  <a href=https://eliasjudin.github.io/tags/category-theory/>category-theory</a>
+
+
+
+  
+  
+  
+
+  <a href=https://eliasjudin.github.io/tags/universal-algebra/>universal-algebra</a>
+
+
+
+</em>
+
+
+
+</p>
+
+
+    </main>
+    <footer>
+    <hr />
+    <ul>
+      <li>
+        <em id="updated">Updated: December 16, 2023</em>
+      </li>
+    </ul>
+</footer>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+  </body>
+</html>

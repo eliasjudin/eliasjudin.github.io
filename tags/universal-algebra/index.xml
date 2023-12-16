@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>universal-algebra on Elias Judin</title>
+    <link>https://eliasjudin.github.io/tags/universal-algebra/</link>
+    <description>Recent content in universal-algebra on Elias Judin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jun 2022 12:22:12 +0200</lastBuildDate>
+    <atom:link href="https://eliasjudin.github.io/tags/universal-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Free algebras by means of a universal property</title>
+      <link>https://eliasjudin.github.io/blog/free_algebras_by_means_of_a_universal_property/</link>
+      <pubDate>Mon, 27 Jun 2022 12:22:12 +0200</pubDate>
+      <guid>https://eliasjudin.github.io/blog/free_algebras_by_means_of_a_universal_property/</guid>
+      <description>Consider a vector space $V$, when $X$ is a basis of $V$, we say that $V$ is a free vector space on $X$ 1. For any vector space $V$ and $W$ and a basis $X$ of $V$, if there is a map $f:X\to W$ then there exists a unique linear map from $V$ to $W$ that extends $f$. That is, there is a unique linear map making the following diagram commute,</description>
+    </item>
+    <item>
+      <title>Category of modules and category of vector spaces as algebraic categories</title>
+      <link>https://eliasjudin.github.io/blog/category_of_modules_and_vector_spaces_as_algebraic_categories/</link>
+      <pubDate>Sun, 26 Jun 2022 18:56:48 +0200</pubDate>
+      <guid>https://eliasjudin.github.io/blog/category_of_modules_and_vector_spaces_as_algebraic_categories/</guid>
+      <description>An algebraic category is defined to be any full subcategory of $\textbf{Alg}(\Omega)$, the catgeory of all $\Omega$-algebras. We can define various algebraic structures as algebraic categories. For example, in order to define $\textbf{Groups}$, the category of Groups, we can specify $\Omega = \{e,m,i\}$ as the set consisting of three operators: one nullary, one unary, and one binary, such that, $(G,e,m)$ is a monoid and $$m(i(x),x)=x=m(x,(i(x))$$ $\forall x \in G$, making $\textbf{Alg}(\Omega) = \textbf{Groups}$ for $\Omega$ as specified1.</description>
+    </item>
+  </channel>
+</rss>

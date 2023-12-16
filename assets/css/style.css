@@ -1,0 +1,132 @@
+html,
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 1em;
+  overflow-x: scroll;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin: 0;
+  display: inline;
+  padding: 2px 3px;
+}
+
+footer li em {
+  margin: 0;
+  display: block;
+  padding: 2px 3px;
+}
+
+
+blockquote {
+  margin-left: 0.75em;
+  color: #3b3b3b;
+  font-size: 95%;
+}
+
+pre {
+  overflow-x: auto;
+  padding-bottom: 25px;
+  color: #3b3b3b;
+  font-size: 95%;
+  resize: horizontal;
+}
+
+code {
+    overflow-x: auto;
+    padding-bottom: 25px;
+    color: #3b3b3b;
+    font-size: 95%;
+}
+
+table {
+    min-width: 90vw;
+    border-collapse: collapse;
+    border: 1px solid #bdbdbd;
+}
+
+th {
+  text-align: left;
+  white-space: nowrap;
+  padding: 3px 6px;
+  background: #eaeaea;
+  border: 1px solid #bdbdbd;
+}
+
+td {
+  white-space: nowrap;
+  border: 1px solid #bdbdbd;
+  padding: 5px 10px;
+}
+
+.post-header h2 {
+    margin-bottom: 3px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #282828;
+    color: #EEEEEE;
+  }
+  a {
+    color: #EEEEEE;
+  }
+  pre {
+      color: #d1d1d1
+  }
+} */
+
+
+/* The styles below deal with the default Hugo theme content. */
+
+.list-content h1, .list-content h2 {
+    font-size: 1.2em;
+}
+
+.list-content h2 {
+    font-size: 1.1em;
+}
+
+.archive {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 699px) {
+  main {
+    width: 500px;
+    overflow-x: visible;
+  }
+
+  img {
+    max-width: 500px;
+  }
+
+  footer li {
+    display: inline;
+  }
+
+  footer li em {
+      display: inline;
+  }
+}
