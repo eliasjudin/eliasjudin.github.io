@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>knot theory on Elias Judin</title>
+    <title>Knot Theory on Elias Judin</title>
     <link>https://eliasjudin.github.io/tags/knot-theory/</link>
-    <description>Recent content in knot theory on Elias Judin</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Knot Theory on Elias Judin</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://eliasjudin.github.io/tags/knot-theory/index.xml" rel="self" type="application/rss+xml" />

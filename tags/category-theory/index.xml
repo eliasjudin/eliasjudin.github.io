@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>category-theory on Elias Judin</title>
+    <title>Category-Theory on Elias Judin</title>
     <link>https://eliasjudin.github.io/tags/category-theory/</link>
-    <description>Recent content in category-theory on Elias Judin</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Category-Theory on Elias Judin</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Dec 2022 12:45:05 +0200</lastBuildDate>
     <atom:link href="https://eliasjudin.github.io/tags/category-theory/index.xml" rel="self" type="application/rss+xml" />

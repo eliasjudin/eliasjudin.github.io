@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>topology on Elias Judin</title>
+    <title>Topology on Elias Judin</title>
     <link>https://eliasjudin.github.io/tags/topology/</link>
-    <description>Recent content in topology on Elias Judin</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Topology on Elias Judin</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://eliasjudin.github.io/tags/topology/index.xml" rel="self" type="application/rss+xml" />
