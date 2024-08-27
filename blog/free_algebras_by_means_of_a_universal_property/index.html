@@ -130,39 +130,91 @@ $$ for all $x,y\in X$.</p>
     </main>
     <footer>
     <hr />
-    <ul>
-      <li>
-        <em id="updated">Updated: August 27, 2024</em>
-      </li>
-    </ul>
+    <p>
+        <span class="updated"
+            >Updated: June 27, 2022</span
+        >
+        © 2024 Elias Judin. Content licensed under
+        <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="license noopener noreferrer"
+        >
+            <img
+                src="https://i.creativecommons.org/l/by/4.0/80x15.png"
+                alt="Creative Commons Attribution 4.0 International License"
+                width="80"
+                height="15"
+            />
+        </a>
+        Website code licensed under
+        <a
+            href="https://opensource.org/licenses/MIT"
+            target="_blank"
+            rel="license noopener noreferrer"
+            >MIT License</a
+        >.
+    </p>
 </footer>
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
+<style>
+    footer {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #555;
+    }
+    footer hr {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 1rem 0;
+    }
+    footer .updated {
+        font-style: italic;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    footer a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    footer img {
+        vertical-align: middle;
+    }
+</style>
+
+<script
+    type="text/javascript"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+
+    MathJax.Hub.Config({
+    
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
 </script>
 
   </body>
