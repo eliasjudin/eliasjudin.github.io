@@ -95,9 +95,9 @@
     </item>
     <item>
       <title>gallery</title>
-      <link>https://eliasjudin.github.io/gallery/</link>
+      <link>https://eliasjudin.github.io/feed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://eliasjudin.github.io/gallery/</guid>
+      <guid>https://eliasjudin.github.io/feed/</guid>
       <description>&lt;p&gt;&lt;em&gt;August 2024&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Concept design with &lt;a href=&#34;https://www.coal.digital&#34;&gt;coalonsolana&lt;/a&gt; PoW within the ORE (&lt;a href=&#34;https://www.ore.supply&#34;&gt;ore.supply&lt;/a&gt;) on &lt;a href=&#34;https://solana.com&#34;&gt;Solana&lt;/a&gt; ecosystem:&lt;/p&gt;&#xA;&lt;blockquote class=&#34;twitter-tweet&#34; data-dnt=&#34;true&#34;&gt;&#xA;    &lt;a href=&#34;https://twitter.com/coalonsolana/status/1828403054367895722&#34;&gt;&lt;/a&gt;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;p&gt;Contributed &lt;a href=&#34;https://github.com/Kriptikz/ore-hq-client/blob/main/src/protomine.rs&#34;&gt;protype proof of work mining client&lt;/a&gt; for the &lt;a href=&#34;https://github.com/Kriptikz/ore-hq-client&#34;&gt;&lt;code&gt;ore-hq-client&lt;/code&gt;&lt;/a&gt;: the first ORE mining pool with delegated staking.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;December 2023&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Romans would have denied robots legal personhood&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Luciano Floridi, Mariarosaria Taddeo&lt;/strong&gt; &lt;em&gt;Oxford Internet Institute, University of Oxford, UK.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
