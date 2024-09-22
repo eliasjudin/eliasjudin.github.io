@@ -293,6 +293,27 @@ a:hover {
     margin-bottom: 15px;
 }
 
+.scrolling-footer {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll-left 10s linear infinite;
+    font-size: 0.8em;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-footer p:hover {
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5);
+    transition: 2s ease-in-out;
+}
+
 /* @media (min-width: 699px) {
     main {
         width: 500px;
