@@ -283,7 +283,7 @@ a:hover {
 .scrolling-footer {
     overflow: hidden;
     white-space: nowrap;
-    animation: scroll-left 10s linear infinite;
+    animation: scroll-left 18s linear infinite;
     font-size: 0.8em;
 }
 
