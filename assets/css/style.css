@@ -1,18 +1,13 @@
 html,
-/* body {
-    font-family: sans-serif;
-} */
-
-/* Centering the body content with flexbox */
 body {
     display: flex;
     justify-content: center; /* Centers content horizontally */
     align-items: flex-start; /* Aligns content at the top */
     min-height: 100vh;
     font-family: "Roboto Mono", monospace;
-    line-height: 1.8;
+    /* line-height: 1.8; */
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
 }
 
 /* Wrapper class to control the layout and centering of the main content */
@@ -297,7 +292,7 @@ a:hover {
     margin-bottom: 15px;
 }
 
-@media (min-width: 699px) {
+/* @media (min-width: 699px) {
     main {
         width: 500px;
         overflow-x: visible;
@@ -313,5 +308,41 @@ a:hover {
 
     footer li em {
         display: inline;
+    }
+} */
+
+/* Adjust font sizes for better readability on mobile */
+@media (max-width: 768px) {
+    main {
+        width: 500px;
+        overflow-x: visible;
+    }
+
+    img {
+        max-width: 500px;
+    }
+
+    footer li {
+        display: inline;
+    }
+
+    footer li em {
+        display: inline;
+    }
+    h1,
+    h2,
+    h3 {
+        font-size: 1.5em; /* Scale down the font size on smaller screens */
+    }
+
+    p,
+    li {
+        font-size: 1em; /* Adjust paragraph and list item font sizes */
+        line-height: 1.5; /* Improve readability with adequate line spacing */
+    }
+
+    a {
+        font-size: 1em; /* Ensure link font size matches the body text */
+        word-break: break-word; /* Prevent links from overflowing or causing awkward breaks */
     }
 }
