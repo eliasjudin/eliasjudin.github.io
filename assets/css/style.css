@@ -59,6 +59,7 @@ header,
 footer {
     text-align: center; /* Center align the header and footer content */
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 img {
@@ -312,7 +313,7 @@ a:hover {
 } */
 
 /* Adjust font sizes for better readability on mobile */
-@media (max-width: 768px) {
+@media (max-width: 699px) {
     main {
         width: 500px;
         overflow-x: visible;
