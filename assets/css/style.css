@@ -1,16 +1,69 @@
 html,
-body {
+/* body {
     font-family: sans-serif;
-}
+} */
 
-h2 {
-    margin-top: 0px;
-}
-
-main {
+/* Centering the body content with flexbox */
+body {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: flex-start; /* Aligns content at the top */
     min-height: 100vh;
-    padding: 1em;
-    overflow-x: scroll;
+    font-family: "Roboto Mono", monospace;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper class to control the layout and centering of the main content */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Set the maximum width of the content area */
+    margin: 0 auto; /* Centers the wrapper itself */
+    padding: 20px;
+}
+
+/* Styling the main content area */
+main {
+    width: 100%; /* Adjusts the main width to be responsive */
+    padding: 0;
+    text-align: left; /* Ensures text is left-aligned for readability */
+}
+
+/* h2 {
+    margin-top: 0px;
+} */
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ff79c6; /* Bright pink headers */
+    text-shadow: 2px 2px 0px #444;
+}
+
+p {
+    text-align: justify;
+    word-break: break-word;
+    margin: 1em 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ff79c6, #50fa7b);
+    margin: 20px 0;
+}
+
+header,
+footer {
+    text-align: center; /* Center align the header and footer content */
+    margin-bottom: 20px;
 }
 
 img {
@@ -95,6 +148,139 @@ td {
       color: #d1d1d1
   }
 } */
+
+/* Glitch animations and style distortions. */
+.header-link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.glitch-text {
+    position: relative;
+    color: #d0ff4f;
+    font-family: "Courier New", monospace;
+    text-transform: uppercase;
+    font-size: 3em;
+    animation: glitch 1.5s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    color: #ff79c6;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+    animation: glitch-skew 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    animation: glitch-skew 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow:
+            2px 0 red,
+            -2px 0 blue;
+    }
+    20% {
+        text-shadow:
+            -2px 0 red,
+            2px 0 blue;
+    }
+    40% {
+        text-shadow:
+            2px 0 red,
+            -2px 0 blue;
+    }
+    60% {
+        text-shadow:
+            -2px 0 red,
+            2px 0 blue;
+    }
+    80% {
+        text-shadow:
+            2px 0 red,
+            -2px 0 blue;
+    }
+    100% {
+        text-shadow:
+            -2px 0 red,
+            2px 0 blue;
+    }
+}
+
+.glitch-img {
+    filter: contrast(1.2) brightness(1.1);
+    animation: glitch-img 5s infinite;
+}
+
+@keyframes glitch-img {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        transform: translate(5px, -5px);
+    }
+    60% {
+        transform: translate(-5px, -5px);
+    }
+    80% {
+        transform: translate(5px, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.main-footer {
+    /* background-color: #1e1e1e; */
+    padding: 10px 0;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.footer-link {
+    /* color: #d0ff4f; */
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ff79c6;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Global link styles */
+a {
+    text-decoration: none; /* Remove underline */
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease; /* Smooth transition for color and text-shadow */
+}
+
+/* Hover effect for all links */
+a:hover {
+    color: #ff79c6; /* Hover color (bright pink) */
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5); /* Adds a soft shadow effect */
+    text-decoration: underline; /* Optionally underline on hover */
+}
 
 /* The styles below deal with the default Hugo theme content. */
 

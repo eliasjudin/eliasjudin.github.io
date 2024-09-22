@@ -11,40 +11,46 @@
     <meta rel="me" href="https://mathstodon.xyz/@e_l" />
     </head>
     <body>
-        
-<a href="/">
+        <div class="wrapper">
+            
+<a href="/" class="header-link">
     
-    <img src="/assets/images/banner.svg" />
+    <img
+        src="/assets/images/banner.svg"
+        alt="Header Image"
+        class="glitch-img"
+    />
     
-  </a>
-  <hr \>
-  <footer>
-    <ul>
+</a>
+<hr />
+
+<footer class="main-footer">
+    <ul class="footer-menu">
         
         <li>
-          <a href=/>home</a>
+            <a href="/" class="footer-link">home</a>
         </li>
         
         <li>
-          <a href=/feed>feed</a>
+            <a href="/feed" class="footer-link">feed</a>
         </li>
         
         <li>
-          <a href=/blog>blog</a>
+            <a href="/blog" class="footer-link">blog</a>
         </li>
         
         <li>
-          <a href=/archives>(list)</a>
+            <a href="/archives" class="footer-link">(list)</a>
         </li>
         
         <li>
-          <a href=/cv>cv</a>
+            <a href="/cv" class="footer-link">cv</a>
         </li>
         
-       
-      </ul>
-  </footer>
-        <main>
+    </ul>
+</footer>
+
+            <main>
 
 
 
@@ -58,22 +64,12 @@
 
 
 <p><em>August 2024</em></p>
-<p>Concept design with <a href="https://www.coal.digital">coalonsolana</a> PoW within the ORE (<a href="https://www.ore.supply">ore.supply</a>) on <a href="https://solana.com">Solana</a> ecosystem:</p>
+<p>Concept design <a href="https://www.minechain.gg"><strong>minechain</strong></a> (previously <em>coalonsolana</em>) &ndash; <a href="https://ncatlab.org/nlab/show/blockchain#section_Proof_of_work">PoW</a> mining cryptocurrencies linked in a chain ecosystem with crafting mechanics. Situated within the $ORE (<a href="https://www.ore.supply">ore.supply</a>) on <a href="https://solana.com">Solana</a> ecosystem. [<em>under continuous development</em>].</p>
 <blockquote class="twitter-tweet" data-dnt="true">
     <a href="https://twitter.com/coalonsolana/status/1828403054367895722"></a>
 </blockquote>
 
-<p>Contributed <a href="https://github.com/Kriptikz/ore-hq-client/blob/main/src/protomine.rs">protype proof of work mining client</a> for the <a href="https://github.com/Kriptikz/ore-hq-client"><code>ore-hq-client</code></a>: the first ORE mining pool with delegated staking.</p>
-<p><em>December 2023</em></p>
-<p><strong>Romans would have denied robots legal personhood</strong></p>
-<p><strong>Luciano Floridi, Mariarosaria Taddeo</strong> <em>Oxford Internet Institute, University of Oxford, UK.</em></p>
-<blockquote>
-<p>In an open letter, 156 artificial-intelligence experts from 14 European countries (<a href="go.nature.com/2t5mgov">go.nature.com/2t5mgov</a>) have rejected the European Parliament’s recommendation that robots should have legal status as electronic persons. This would make robots responsible for repairing any damage they might cause (<a href="go.nature.com/2wxlwg6">go.nature.com/2wxlwg6</a>). We are not signatories to the open letter, but endorse it nonetheless.</p>
-<p>In our view, the parliament’s recommendation is flawed. Its rationale seems to be that robots can be electronic juridical persons in the same way as companies are. But companies are constituted and run by real people. That is why they can be meaningfully attributed with intentions, plans, goals, legal rights and duties, and why they can be taught, praised or punished. Hence, they are considered to be responsible, accountable or liable for their actions.</p>
-<p>Attributing electronic personhood to robots risks misplacing moral responsibility, causal accountability and legal liability regarding their mistakes and misuses. Robots could be blamed and punished instead of humans. And irresponsible people would dismiss the need for care in the engineering, marketing and use of robots. Even the Romans knew better: the owner of an enslaved person was fully responsible for any damage caused by that person (known as vicarious liability).</p>
-</blockquote>
-<p>Nature <strong>557</strong>, 309 (2018)</p>
-<p>doi: <a href="https://doi-org.ezproxy.uct.ac.za/10.1038/d41586-018-05154-5">https://doi-org.ezproxy.uct.ac.za/10.1038/d41586-018-05154-5</a></p>
+<p>Open source contribution. <a href="https://github.com/Kriptikz/ore-hq-client/blob/main/src/protomine.rs">Prototype proof of work mining client</a> for <a href="https://github.com/Kriptikz/ore-hq-client"><code>ore-hq-client</code></a>. First <a href="https://www.ore.supply">$ORE</a> mining pool with delegated staking.</p>
 <p><em>June, 2022</em></p>
 <p>In the algebraic topology course at UCT we used the textbook <a href="https://amzn.to/3R00l4H"><em>A first course in algebraic topology</em></a> by  Czes Kosniowski and in the differential geometry course we used <a href="https://amzn.to/3NftN3m"><em>Geometry, Topology, and Physics</em></a> by M. Nakahara.</p>
 <p><em>January, 2022</em></p>
@@ -141,7 +137,7 @@
 </p>
 
 </main>
-        <footer>
+            <footer>
     <hr />
     <p style="font-size: 0.8em">
         <small>
@@ -199,7 +195,9 @@
     TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 </script>
- <script>
+
+        </div>
+        <script>
     function loadTwitterScript() {
         var script = document.createElement("script");
         script.src = "https://platform.twitter.com/widgets.js";

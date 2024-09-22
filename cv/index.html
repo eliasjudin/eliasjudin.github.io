@@ -11,40 +11,46 @@
     <meta rel="me" href="https://mathstodon.xyz/@e_l" />
     </head>
     <body>
-        
-<a href="/">
+        <div class="wrapper">
+            
+<a href="/" class="header-link">
     
-    <img src="/assets/images/banner.svg" />
+    <img
+        src="/assets/images/banner.svg"
+        alt="Header Image"
+        class="glitch-img"
+    />
     
-  </a>
-  <hr \>
-  <footer>
-    <ul>
+</a>
+<hr />
+
+<footer class="main-footer">
+    <ul class="footer-menu">
         
         <li>
-          <a href=/>home</a>
+            <a href="/" class="footer-link">home</a>
         </li>
         
         <li>
-          <a href=/feed>feed</a>
+            <a href="/feed" class="footer-link">feed</a>
         </li>
         
         <li>
-          <a href=/blog>blog</a>
+            <a href="/blog" class="footer-link">blog</a>
         </li>
         
         <li>
-          <a href=/archives>(list)</a>
+            <a href="/archives" class="footer-link">(list)</a>
         </li>
         
         <li>
-          <a href=/cv>cv</a>
+            <a href="/cv" class="footer-link">cv</a>
         </li>
         
-       
-      </ul>
-  </footer>
-        <main>
+    </ul>
+</footer>
+
+            <main>
 
 
 
@@ -89,8 +95,12 @@ Project: <a href="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-th
 </ul>
 <hr>
 <h3 id="summer-schools-participant">Summer schools. Participant.</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!-- Organisers: Boaz Barak (Harvard), Shuchi Chawla (UT Austin), Madhur Tulsiani (TTI-Chicago).
+    Lectures:
+    Markov Chain Monte Carlo Method - Antonio Blanca (Penn State University);
+    Gradient descent, stochastic gradient descent, mirror descent and convex geometry - Ashia Wilson (MIT);
+    Streaming and sketching algorithms - Jelani Nelson (UC Berkeley) – Market design, one-sided and two-sided matching algorithms - Nicole Immorlica (Microsoft Research);
+    Cryptography: generating pseudorandomness and Interactive Proof Systems - Yael Kalai (Microsoft Research). -->
 <ul>
 <li><a href="https://boazbk.github.io/tcs-summerschool/">Harvard&rsquo;s New horizons in theoretical computer science</a>. June 2021.</li>
 <li>IBM Qiskit global summer school. July 2020.</li>
@@ -117,7 +127,7 @@ Project: <a href="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-th
 </p>
 
 </main>
-        <footer>
+            <footer>
     <hr />
     <p style="font-size: 0.8em">
         <small>
@@ -175,7 +185,9 @@ Project: <a href="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-th
     TeX: { equationNumbers: { autoNumber: "AMS" } }
     });
 </script>
- <script>
+
+        </div>
+        <script>
     function loadTwitterScript() {
         var script = document.createElement("script");
         script.src = "https://platform.twitter.com/widgets.js";
