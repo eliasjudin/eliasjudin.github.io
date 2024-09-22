@@ -339,9 +339,22 @@ a:hover {
         gap: 5px; /* Reduced from 10px to 5px */
     }
 
-    /* Adjust scrolling footer font size */
+    /* Adjust scrolling footer font size and ensure visibility */
     .scrolling-footer {
         font-size: 0.7em;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 5px 0;
+    }
+
+    /* Adjust scrolling footer animation */
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 
     /* Adjust glitch-text font size */
