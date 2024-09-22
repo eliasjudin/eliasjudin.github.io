@@ -1,49 +1,52 @@
-/* Apply box-sizing to all elements for easier sizing and layout */
+/* 1. Apply box-sizing to all elements for easier sizing and layout */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* 2. Reset default margins and paddings */
 html,
 body {
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: flex-start; /* Aligns content at the top */
-    min-height: 100vh;
-    font-family: "Roboto Mono", monospace;
     margin: 0;
-    padding: 0 10px;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    /* Remove flex display to simplify layout */
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-start; */
     background-color: #fff; /* Optional: Set a background color */
+    color: #000; /* Ensure text is readable */
 }
 
-/* Wrapper class to control the layout and centering of the main content */
+/* 3. Wrapper class to control the layout and centering of the main content */
 .wrapper {
+    width: 100%;
+    max-width: 800px; /* Set the maximum width of the content area */
+    margin: 0 auto; /* Centers the wrapper itself */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 800px; /* Maximum width for larger screens */
-    margin: 0 auto; /* Centers the wrapper itself */
-    padding: 20px;
 }
 
-/* Styling the main content area */
+/* 4. Styling the main content area */
 main {
     width: 100%; /* Full width for responsiveness */
     padding: 0;
     text-align: left; /* Left-align text for readability */
 }
 
-/* Header and Footer Styles */
+/* 5. Header and Footer Styles */
 header,
 footer {
     text-align: center; /* Center align content */
     margin-bottom: 20px;
     padding: 0 10px;
+    width: 100%; /* Ensure full width */
 }
 
-/* Typography Styles */
+/* 6. Typography Styles */
 h1,
 h2,
 h3 {
@@ -63,7 +66,7 @@ p {
     line-height: 1.6; /* Improved readability */
 }
 
-/* Horizontal Rule Styling */
+/* 7. Horizontal Rule Styling */
 hr {
     border: none;
     height: 2px;
@@ -71,14 +74,16 @@ hr {
     margin: 20px 0;
 }
 
-/* Image and SVG Styling */
+/* 8. Image and SVG Styling */
 img,
 svg {
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    margin: 0 auto; /* Center images if necessary */
 }
 
-/* Footer Menu Styles */
+/* 9. Footer Menu Styles */
 .footer-menu {
     list-style: none;
     display: flex;
@@ -100,16 +105,17 @@ svg {
     margin: 0;
 }
 
-/* Blockquote Styling */
+/* 10. Blockquote Styling */
 blockquote {
     margin-left: 0.75em;
     color: #3b3b3b;
     font-size: 95%;
     border-left: 4px solid #ff79c6; /* Add a visual indicator */
     padding-left: 10px;
+    background-color: #f9f9f9; /* Optional: Light background */
 }
 
-/* Code and Preformatted Text Styling */
+/* 11. Code and Preformatted Text Styling */
 pre,
 code {
     display: block;
@@ -122,7 +128,7 @@ code {
     margin: 1em 0;
 }
 
-/* Table Styling */
+/* 12. Table Styling */
 table {
     width: 100%; /* Full width for responsiveness */
     border-collapse: collapse;
@@ -144,7 +150,7 @@ th {
     background: #eaeaea;
 }
 
-/* Glitch Animation Styles */
+/* 13. Glitch Animation Styles */
 .header-link {
     display: block;
     text-align: center;
@@ -237,7 +243,7 @@ th {
     }
 }
 
-/* Footer Link Styles */
+/* 14. Footer Link Styles */
 .footer-link {
     text-decoration: none;
     font-size: 0.9em;
@@ -249,7 +255,7 @@ th {
     text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5);
 }
 
-/* Global Link Styles */
+/* 15. Global Link Styles */
 a {
     text-decoration: none; /* Remove underline */
     transition:
@@ -263,7 +269,7 @@ a:hover {
     text-decoration: underline; /* Optionally underline on hover */
 }
 
-/* Scrolling Footer Styles */
+/* 16. Scrolling Footer Styles */
 .scrolling-footer {
     overflow: hidden;
     white-space: nowrap;
@@ -285,7 +291,7 @@ a:hover {
     transition: 2s ease-in-out;
 }
 
-/* Responsive Styles for Mobile Devices */
+/* 17. Responsive Styles for Mobile Devices */
 @media (max-width: 699px) {
     .wrapper {
         padding: 10px; /* Reduce padding on smaller screens */
