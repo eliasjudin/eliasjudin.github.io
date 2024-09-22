@@ -335,7 +335,7 @@ a:hover {
 
 /* Adjust font sizes for better readability on mobile */
 @media (max-width: 699px) {
-    main {
+    /* main {
         width: 500px;
         overflow-x: visible;
     }
@@ -350,7 +350,7 @@ a:hover {
 
     footer li em {
         display: inline;
-    }
+    } */
     h1,
     h2,
     h3 {
