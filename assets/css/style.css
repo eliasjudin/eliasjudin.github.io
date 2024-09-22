@@ -283,8 +283,25 @@ a:hover {
 .scrolling-footer {
     overflow: hidden;
     white-space: nowrap;
-    animation: scroll-left 18s linear infinite;
+    animation: scroll-left 16s linear infinite;
     font-size: 0.8em;
+    width: 100%;
+}
+
+.scrolling-footer p {
+    display: inline-block; /* Allows the text to flow horizontally */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    line-height: 1.5; /* Ensures sufficient line spacing */
+    color: #000; /* Ensure text color contrasts with background */
+}
+
+.scrolling-footer a {
+    white-space: nowrap; /* Prevent links from breaking into multiple lines */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for truncated text */
+    display: inline-block; /* Allow width and other box model properties */
+    max-width: 100%; /* Prevent links from exceeding container width */
 }
 
 @keyframes scroll-left {
