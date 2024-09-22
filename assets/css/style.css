@@ -160,6 +160,7 @@ th {
 
 .glitch-text {
     position: relative;
+    overflow: hidden; /* Prevent pseudo-elements from causing overflow */
     color: #d0ff4f;
     font-family: "Courier New", monospace;
     text-transform: uppercase;
@@ -174,7 +175,8 @@ th {
     left: 0;
     color: #ff79c6;
     overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
+    /* Adjusted clip to prevent overflow on smaller screens */
+    clip: rect(0, 300px, 0, 0); /* Reduced from 900px to 300px */
 }
 
 .glitch-text::before {
@@ -326,7 +328,7 @@ a:hover {
     .footer-menu {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 5px; /* Reduced from 10px to 5px */
     }
 
     /* Adjust scrolling footer font size */
@@ -336,7 +338,7 @@ a:hover {
 
     /* Adjust glitch-text font size */
     .glitch-text {
-        font-size: 2em;
+        font-size: 1.5em; /* Optional: Further reduce font size if needed */
     }
 
     /* Reduce padding in header and footer */
@@ -348,15 +350,30 @@ a:hover {
     /* Optional: Adjust the glitch animation for smaller screens */
     @keyframes glitch-skew {
         0% {
-            clip: rect(10px, 9999px, 15px, 0);
+            clip: rect(
+                10px,
+                300px,
+                15px,
+                0
+            ); /* Adjusted from 9999px to 300px */
             transform: skew(0.5deg);
         }
         50% {
-            clip: rect(85px, 9999px, 140px, 0);
+            clip: rect(
+                85px,
+                300px,
+                140px,
+                0
+            ); /* Adjusted from 9999px to 300px */
             transform: skew(-0.5deg);
         }
         100% {
-            clip: rect(10px, 9999px, 15px, 0);
+            clip: rect(
+                10px,
+                300px,
+                15px,
+                0
+            ); /* Adjusted from 9999px to 300px */
             transform: skew(0.5deg);
         }
     }
