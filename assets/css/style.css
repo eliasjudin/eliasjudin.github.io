@@ -343,8 +343,7 @@ a:hover {
     .scrolling-footer {
         font-size: 0.7em;
         white-space: nowrap;
-        overflow: hidden;
-        padding: 5px 0;
+        padding: 0 0;
     }
 
     /* Adjust scrolling footer animation */
