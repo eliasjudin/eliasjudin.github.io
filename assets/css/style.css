@@ -49,7 +49,8 @@ footer {
 /* 6. Typography Styles */
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: "Playfair Display", serif;
     text-transform: uppercase;
     letter-spacing: 0.05em;
