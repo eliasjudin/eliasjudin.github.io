@@ -8,7 +8,7 @@
     </title>
     <meta
         name="description"
-        content=""
+        content="Exercises in category theory: monomorphisms and epimorphisms"
     />
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
     <link
@@ -78,7 +78,7 @@
 <em>December 17, 2022</em>
 
 
-<p>The classes of monomorphisms, epimorphisms, bimorphisms, split monomorphisms, and split epimorphisms are closed under composition and and contain all isomorsphisms.
+<p>The classes of monomorphisms, epimorphisms, bimorphisms, split monomorphisms, and split epimorphisms are closed under composition and contain all isomorsphisms.
 To show these classes are closed under composition, consider two morphisms $f:A\to B$ and $g:B\to C$. If $f$ and $g$ are monomorphisms then for $a,a&rsquo;\in\operatorname{hom}(X,A)$, $$(gf)a=(gf)a&rsquo;\implies fa=fa&rsquo;\implies a = a&rsquo;$$ and so $gf$ is a monomorphism. If $f$ and $g$ are epimorphisms then for $c,c&rsquo;\in\operatorname{hom}(C,X)$, $$c(gf)=c&rsquo;(gf)\implies cg=cg&rsquo;\implies c=c&rsquo;$$ and so $gf$ is an epimorphism. If $f$ and $g$ are split monomorphisms then there exists $F:B\to A$ and $G:C\to B$ such that $Ff=1_A$ and $Gg=1_B$. So $gf$ is a split monomorphism since $(FG)(gf)=1_A$. Similarily, if $g$ and $f$ are split epimorphisms then $(gf)(FG)=1_C$ and so $gf$ is a split epimorphism.</p>
 <p>Let $f:A\to B$ be an isomorphism then, $f$ has inverse $g:B\to A$ and so for every pair of morphisms $a,a&rsquo;\in\operatorname{hom}(X,A)$ and $b,b&rsquo;\in\operatorname{hom}(B,X)$ we have that $$fa=fa&rsquo;\implies gfa=gfa&rsquo;\implies a=a&rsquo;$$ and $$bf=b&rsquo;f\implies bfg=b&rsquo;fg\implies b=b&rsquo;.$$ Hence, every isomorphism is a monomorphism and an epimorphism and so it is a bimorphism. Also, every isomorphism is a split monomorphism and a split epimorphism since it has a unique inverse.</p>
 <p>Let $f:A\to B$ and $g:B\to C$ be two morphisms:</p>
