@@ -1,69 +1,70 @@
 /* PDF Container Styles */
 .pdf-container {
     /* Use system font stack for better performance */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+
     /* Responsive width */
     width: 100%;
-    max-width: 800px;  /* Adjust based on your layout */
-    
+    max-width: 800px; /* Adjust based on your layout */
+
     /* Center the container */
     margin: 2rem auto;
-    
+
     /* Subtle border and shadow for depth */
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     /* Smooth transitions for hover effects */
     transition: box-shadow 0.3s ease;
 
-    overflow: hidden; /* Hide overflow content */
-  }
-  
-  .pdf-container:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  }
-  
-  /* Style for the object tag */
-  .pdf-container object {
+    /* Allow scrolling if content overflows */
+    overflow: auto;
+}
+
+.pdf-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for the iframe */
+.pdf-container iframe {
     width: 100%;
-    height: 600px;  /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
     border: none;
-  }
-  
-  /* Fallback message styling */
-  .pdf-container p {
+
+    /* Enable touch scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Fallback message styling */
+.pdf-fallback {
     padding: 1rem;
     text-align: center;
     color: #555;
-  }
-  
-  /* Style for the fallback link */
-  .pdf-container a {
+    background-color: #f8f8f8;
+}
+
+/* Style for the fallback link */
+.pdf-container a {
     color: #0077cc;
     text-decoration: none;
     border-bottom: 1px solid currentColor;
-  }
-  
-  .pdf-container a:hover,
-  .pdf-container a:focus {
-    color: #004499;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    .pdf-container {
-      margin: 1rem auto;
-    }
-    
-    .pdf-container object {
-      height: 400px;  /* Shorter on mobile */
-    }
-  }
+}
 
-  .pdf-fallback {
-    padding: 20px;
-    text-align: center;
-    background-color: #f8f8f8;
-  }
+.pdf-container a:hover,
+.pdf-container a:focus {
+    color: #004499;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .pdf-container {
+        margin: 1rem auto;
+    }
+
+    .pdf-container iframe {
+        height: 400px; /* Shorter on mobile */
+    }
+}
