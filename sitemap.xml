@@ -2,65 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eliasjudin.github.io/blog/</loc>
-    <lastmod>2024-08-22T14:19:43+02:00</lastmod>
-  </url><url>
     <loc>https://eliasjudin.github.io/tags/category-theory/</loc>
-    <lastmod>2024-08-22T14:19:43+02:00</lastmod>
+    <lastmod>2024-09-23T08:12:32+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/free-semimodules-and-their-examples/</loc>
-    <lastmod>2024-08-22T14:19:43+02:00</lastmod>
-  </url><url>
-    <loc>https://eliasjudin.github.io/</loc>
-    <lastmod>2024-08-22T14:19:43+02:00</lastmod>
+    <lastmod>2024-09-23T08:12:32+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/tags/</loc>
-    <lastmod>2024-08-22T14:19:43+02:00</lastmod>
+    <lastmod>2024-09-23T08:12:32+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/tags/universal-algebra/</loc>
-    <lastmod>2024-08-22T14:19:43+02:00</lastmod>
+    <lastmod>2024-09-23T08:12:32+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/monos-and-epis/</loc>
-    <lastmod>2022-12-17T12:45:05+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/hom-sets/</loc>
-    <lastmod>2022-12-15T10:00:00+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/tags/art/</loc>
-    <lastmod>2022-12-14T15:00:00+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/describing-difficult-spaces/</loc>
-    <lastmod>2022-12-14T15:00:00+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/tags/differential-geometry/</loc>
-    <lastmod>2022-12-14T15:00:00+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/yoneda/</loc>
-    <lastmod>2022-07-15T10:51:26+04:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/free_algebras_by_means_of_a_universal_property/</loc>
-    <lastmod>2022-06-27T12:22:12+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/category_of_modules_and_vector_spaces_as_algebraic_categories/</loc>
-    <lastmod>2022-06-26T18:56:48+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/groupoids_and_skeletons_of_monoids_and_preorders/</loc>
-    <lastmod>2022-06-14T19:18:00+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/exercises_in_category_theory/</loc>
-    <lastmod>2022-06-14T19:08:52+02:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/blog/is-double-mobius-strip-isotopic-to-strip/</loc>
-    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/tags/knot-theory/</loc>
-    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/tags/topology/</loc>
-    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
+  </url><url>
+    <loc>https://eliasjudin.github.io/blog/</loc>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/cv/</loc>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url><url>
     <loc>https://eliasjudin.github.io/feed/</loc>
+    <lastmod>2024-09-23T08:41:01+02:00</lastmod>
+  </url><url>
+    <loc>https://eliasjudin.github.io/</loc>
+    <lastmod>2024-09-23T08:02:44+02:00</lastmod>
   </url>
 </urlset>
