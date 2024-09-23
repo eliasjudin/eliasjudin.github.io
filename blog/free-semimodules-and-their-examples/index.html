@@ -21,6 +21,7 @@
         content="woicpQb3QYBpCMz2BHOxKJ5K0KwbH2FN-PYSu8jYaaI"
     />
     <meta rel="me" href="https://mathstodon.xyz/@e_l" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
 </head>
 
     <body>
@@ -78,18 +79,52 @@
 <em>August 22, 2024</em>
 
 
-
-
+ 
 <div class="pdf-container">
-  <iframe
-    src="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-their-examples/free_semimodules_and_their_examples.pdf"
-    width="100%"
-    height="600px"
-    style="border: none;"
-  >
-    <p class="pdf-fallback">Embedded PDF. <a href="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-their-examples/free_semimodules_and_their_examples.pdf">Download free_semimodules_and_their_examples.pdf</a></p>
-  </iframe>
+    <canvas id="pdf-canvas"></canvas>
 </div>
+
+<script>
+    
+    const url = "https:\/\/cdn.jsdelivr.net\/gh\/eliasjudin\/free-semimodules-and-their-examples\/free_semimodules_and_their_examples.pdf";
+
+    
+    const loadingTask = pdfjsLib.getDocument(url);
+    loadingTask.promise.then(
+        (pdf) => {
+            
+            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                pdf.getPage(pageNumber).then((page) => {
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale: scale });
+
+                    
+                    const canvas = document.createElement("canvas");
+                    canvas.className = "pdf-page-canvas";
+                    const context = canvas.getContext("2d");
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    
+                    document
+                        .querySelector(".pdf-container")
+                        .appendChild(canvas);
+
+                    
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport,
+                    };
+                    page.render(renderContext);
+                });
+            }
+        },
+        (reason) => {
+            
+            console.error(reason);
+        },
+    );
+</script>
 
 
 
