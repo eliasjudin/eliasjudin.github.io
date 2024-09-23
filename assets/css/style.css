@@ -282,18 +282,23 @@ a:hover {
 /* 16. Scrolling Footer Styles */
 .scrolling-footer {
     white-space: nowrap;
-    animation: scroll-left 16s linear infinite;
+    animation: scroll-left 12s linear infinite;
     font-size: 0.8em;
     width: 100%;
 }
 
 @keyframes scroll-left {
-    0% {
+    0%,
+    100% {
         transform: translateX(100%);
     }
-    100% {
+    50% {
         transform: translateX(-100%);
     }
+    30%,
+    70% {
+        opacity: 0.5;
+    } /* Glitch pause effect */
 }
 
 .scrolling-footer p:hover {
@@ -344,16 +349,6 @@ a:hover {
         font-size: 0.7em;
         white-space: nowrap;
         padding: 0 0;
-    }
-
-    /* Adjust scrolling footer animation */
-    @keyframes scroll-left {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
     }
 
     /* Adjust glitch-text font size */
