@@ -1,20 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Logic on Elias Judin</title>
-    <link>http://localhost:1313/tags/logic/</link>
-    <description>Recent content in Logic on Elias Judin</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>© 2024 by Elias Judin</copyright>
-    <lastBuildDate>Sat, 28 Sep 2024 10:54:14 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/logic/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Definitions and Characterisations</title>
-      <link>http://localhost:1313/blog/definitions-and-characterisations/</link>
-      <pubDate>Thu, 26 Sep 2024 16:15:40 +0200</pubDate>
-      <guid>http://localhost:1313/blog/definitions-and-characterisations/</guid>
-      <description>&lt;h3 id=&#34;definitions-axioms&#34;&gt;Definitions. &lt;em&gt;axioms&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Serve as the foundational building blocks of a mathematical structure.&lt;/p&gt;&#xA;&lt;p&gt;Prescriptive and minimal; they specify the essential properties that define the object without redundancy.&lt;/p&gt;&#xA;&lt;p&gt;Establish the scope and boundaries of the structure, allowing for the derivation of further properties and theorems.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;characterizations-derived-properties&#34;&gt;Characterizations. &lt;em&gt;derived properties&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Provide additional properties or conditions that uniquely identify or describe specific instances within the broader class defined by the axioms.&lt;/p&gt;&#xA;&lt;p&gt;Descriptive and often contingent upon the axioms; they help in classifying and distinguishing structures.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Logic on Elias Judin</title><link>https://eliasjudin.github.io/tags/logic/</link><description>Recent content in Logic on Elias Judin</description><generator>Hugo</generator><language>en</language><copyright>© 2024 by Elias Judin</copyright><lastBuildDate>Thu, 14 Nov 2024 10:05:41 +0200</lastBuildDate><atom:link href="https://eliasjudin.github.io/tags/logic/index.xml" rel="self" type="application/rss+xml"/><item><title>Tarski's automorphsisms</title><link>https://eliasjudin.github.io/blog/tarskis-automorphsisms/</link><pubDate>Thu, 14 Nov 2024 09:34:48 +0200</pubDate><guid>https://eliasjudin.github.io/blog/tarskis-automorphsisms/</guid><description>&lt;p>I first came across &lt;a href="https://ncatlab.org/nlab/show/Albert+Lautman">Albert Lautman (nLab)&lt;/a> after reading &lt;a href="https://ncatlab.org/nlab/show/Fernando+Zalamea">Fernando Zalamea&amp;rsquo;s&lt;/a> remarks on his importance to structural mathematics in &lt;a href="https://mitpress.mit.edu/9780956775016/synthetic-philosophy-of-contemporary-mathematics/">&lt;em>Synthetic philosophy of contemporary mathematics&lt;/em>&lt;/a>.&lt;/p>
+&lt;p>While reading the &lt;a href="https://golem.ph.utexas.edu/category/">n-category cafe&lt;/a> article on &lt;a href="https://golem.ph.utexas.edu/category/2008/02/albert_lautman.html">Albert Lautman&lt;/a>, I encountered some ideas which have been coming up in my work on my masters thesis and seem to originate with &lt;a href="https://en.wikipedia.org/wiki/Alfred_Tarski">Alfred Tarski&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>From Tarski&amp;rsquo;s 1966 lecture &lt;a href="https://philarchive.org/rec/TARWAL">&lt;em>&amp;ldquo;What are logical notions?&amp;rdquo;&lt;/em>&lt;/a> (published posthumously in 1986).&lt;/p>
+&lt;p>What would an answer to the question of the title look like?&lt;/p></description></item></channel></rss>
