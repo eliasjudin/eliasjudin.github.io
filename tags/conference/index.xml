@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conference on Elias Judin | Academic Website | Category Theory</title>
+    <link>http://localhost:1313/tags/conference/</link>
+    <description>Recent content in Conference on Elias Judin | Academic Website | Category Theory</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© 2024 by Elias Judin</copyright>
+    <lastBuildDate>Fri, 13 Dec 2024 11:25:57 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guillaume Brümmer 90th Conference</title>
+      <link>http://localhost:1313/blog/gcl-brummer-90th-conference/</link>
+      <pubDate>Fri, 13 Dec 2024 11:25:57 +0200</pubDate>
+      <guid>http://localhost:1313/blog/gcl-brummer-90th-conference/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
