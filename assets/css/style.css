@@ -15,16 +15,21 @@ body {
     /* display: flex;
     justify-content: center;
     align-items: flex-start; */
-    background-color: #fff; /* Optional: Set a background color */
-    color: #000; /* Ensure text is readable */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #fff;
+    /* Optional: Set a background color */
+    color: #000;
+    /* Ensure text is readable */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 /* 3. Wrapper class to control the layout and centering of the main content */
 .wrapper {
     width: 100%;
-    max-width: 800px; /* Set the maximum width of the content area */
-    margin: 0 auto; /* Centers the wrapper itself */
+    max-width: 800px;
+    /* Set the maximum width of the content area */
+    margin: 0 auto;
+    /* Centers the wrapper itself */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -33,18 +38,22 @@ body {
 
 /* 4. Styling the main content area */
 main {
-    width: 100%; /* Full width for responsiveness */
+    width: 100%;
+    /* Full width for responsiveness */
     padding: 0;
-    text-align: left; /* Left-align text for readability */
+    text-align: left;
+    /* Left-align text for readability */
 }
 
 /* 5. Header and Footer Styles */
 header,
 footer {
-    text-align: center; /* Center align content */
+    text-align: center;
+    /* Center align content */
     margin-bottom: 20px;
     padding: 0 10px;
-    width: 100%; /* Ensure full width */
+    width: 100%;
+    /* Ensure full width */
 }
 
 /* 6. Typography Styles */
@@ -55,17 +64,21 @@ h4 {
     font-family: "Playfair Display", serif;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #ff79c6; /* Bright pink headers */
+    color: #ff79c6;
+    /* Bright pink headers */
     text-shadow: 2px 2px 0px #444;
-    margin: 0.5em 0; /* Consistent vertical spacing */
-    word-break: break-word; /* Prevent long words from overflowing */
+    margin: 0.5em 0;
+    /* Consistent vertical spacing */
+    word-break: break-word;
+    /* Prevent long words from overflowing */
 }
 
 p {
     text-align: justify;
     word-break: break-word;
     margin: 1em 0;
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
+    /* Improved readability */
 }
 
 /* 7. Horizontal Rule Styling */
@@ -80,20 +93,25 @@ hr {
 img,
 svg {
     max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Prevent inline spacing issues */
-    margin: 0 auto; /* Center images if necessary */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Prevent inline spacing issues */
+    margin: 0 auto;
+    /* Center images if necessary */
 }
 
 /* 9. Footer Menu Styles */
 .footer-menu {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
     justify-content: center;
     gap: 15px;
     padding: 0;
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
 }
 
 .footer-menu li {
@@ -112,9 +130,11 @@ blockquote {
     margin-left: 0.75em;
     color: #3b3b3b;
     font-size: 95%;
-    border-left: 4px solid #ff79c6; /* Add a visual indicator */
+    border-left: 4px solid #ff79c6;
+    /* Add a visual indicator */
     padding-left: 10px;
-    background-color: #f9f9f9; /* Optional: Light background */
+    background-color: #f9f9f9;
+    /* Optional: Light background */
 }
 
 /* 11. Code and Preformatted Text Styling */
@@ -125,29 +145,36 @@ code {
     padding: 15px;
     color: #3b3b3b;
     font-size: 95%;
-    background-color: #f5f5f5; /* Light background for readability */
+    background-color: #f5f5f5;
+    /* Light background for readability */
     border-radius: 5px;
     margin: 1em 0;
-    max-width: 100%; /* Prevent overflow */
+    max-width: 100%;
+    /* Prevent overflow */
 }
 
 /* 12. Table Styling */
 table {
-    width: 100%; /* Full width for responsiveness */
+    width: 100%;
+    /* Full width for responsiveness */
     border-collapse: collapse;
     border: 1px solid #bdbdbd;
     margin: 1em 0;
     overflow-x: auto;
-    display: block; /* Allow horizontal scrolling */
-    max-width: 100%; /* Prevent overflow */
+    display: block;
+    /* Allow horizontal scrolling */
+    max-width: 100%;
+    /* Prevent overflow */
 }
 
 th,
 td {
-    padding: 8px 12px; /* Increased padding for better touch targets */
+    padding: 8px 12px;
+    /* Increased padding for better touch targets */
     border: 1px solid #bdbdbd;
     text-align: left;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
 th {
@@ -163,13 +190,16 @@ th {
 
 .glitch-text {
     position: relative;
-    overflow: hidden; /* Prevent pseudo-elements from causing overflow */
+    overflow: hidden;
+    /* Prevent pseudo-elements from causing overflow */
     color: #d0ff4f;
     font-family: "Courier New", monospace;
     text-transform: uppercase;
-    font-size: 2em; /* Adjusted for better readability on mobile */
+    font-size: 2em;
+    /* Adjusted for better readability on mobile */
     animation: glitch 1.5s infinite;
-    max-width: 100%; /* Ensure it doesn't exceed the container */
+    max-width: 100%;
+    /* Ensure it doesn't exceed the container */
 }
 
 .glitch-text::before,
@@ -177,7 +207,8 @@ th {
     content: attr(data-text);
     position: absolute;
     left: 0;
-    top: 0; /* Ensure pseudo-elements align correctly */
+    top: 0;
+    /* Ensure pseudo-elements align correctly */
     color: #ff79c6;
     overflow: hidden;
     /* Use clip-path instead of clip for modern browsers */
@@ -200,26 +231,31 @@ th {
             2px 0 red,
             -2px 0 blue;
     }
+
     20% {
         text-shadow:
             -2px 0 red,
             2px 0 blue;
     }
+
     40% {
         text-shadow:
             2px 0 red,
             -2px 0 blue;
     }
+
     60% {
         text-shadow:
             -2px 0 red,
             2px 0 blue;
     }
+
     80% {
         text-shadow:
             2px 0 red,
             -2px 0 blue;
     }
+
     100% {
         text-shadow:
             -2px 0 red,
@@ -236,18 +272,23 @@ th {
     0% {
         transform: translate(0, 0);
     }
+
     20% {
         transform: translate(-5px, 5px);
     }
+
     40% {
         transform: translate(5px, -5px);
     }
+
     60% {
         transform: translate(-5px, -5px);
     }
+
     80% {
         transform: translate(5px, 5px);
     }
+
     100% {
         transform: translate(0, 0);
     }
@@ -267,16 +308,21 @@ th {
 
 /* 15. Global Link Styles */
 a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    /* Remove underline */
     transition:
         color 0.3s ease,
-        text-shadow 0.3s ease; /* Smooth transition for color and text-shadow */
+        text-shadow 0.3s ease;
+    /* Smooth transition for color and text-shadow */
 }
 
 a:hover {
-    color: #ff79c6; /* Hover color (bright pink) */
-    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5); /* Adds a soft shadow effect */
-    text-decoration: underline; /* Optionally underline on hover */
+    color: #ff79c6;
+    /* Hover color (bright pink) */
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.5);
+    /* Adds a soft shadow effect */
+    text-decoration: underline;
+    /* Optionally underline on hover */
 }
 
 /* 16. Scrolling Footer Styles */
@@ -288,17 +334,22 @@ a:hover {
 }
 
 @keyframes scroll-left {
+
     0%,
     100% {
         transform: translateX(100%);
     }
+
     50% {
         transform: translateX(-100%);
     }
+
     30%,
     70% {
         opacity: 0.5;
-    } /* Glitch pause effect */
+    }
+
+    /* Glitch pause effect */
 }
 
 .scrolling-footer p:hover {
@@ -309,24 +360,30 @@ a:hover {
 /* 17. Responsive Styles for Mobile Devices */
 @media (max-width: 699px) {
     .wrapper {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 10px;
+        /* Reduce padding on smaller screens */
     }
 
     h1,
     h2,
     h3 {
-        font-size: 1.5em; /* Scale down the font size on smaller screens */
+        font-size: 1.5em;
+        /* Scale down the font size on smaller screens */
     }
 
     p,
     li {
-        font-size: 1em; /* Adjust paragraph and list item font sizes */
-        line-height: 1.5; /* Improve readability with adequate line spacing */
+        font-size: 1em;
+        /* Adjust paragraph and list item font sizes */
+        line-height: 1.5;
+        /* Improve readability with adequate line spacing */
     }
 
     a {
-        font-size: 1em; /* Ensure link font size matches the body text */
-        word-break: break-word; /* Prevent links from overflowing or causing awkward breaks */
+        font-size: 1em;
+        /* Ensure link font size matches the body text */
+        word-break: break-word;
+        /* Prevent links from overflowing or causing awkward breaks */
     }
 
     /* Make tables scrollable */
@@ -334,14 +391,16 @@ a:hover {
         display: block;
         overflow-x: auto;
         width: 100%;
-        max-width: 100%; /* Prevent overflow */
+        max-width: 100%;
+        /* Prevent overflow */
     }
 
     /* Adjust footer menu for better stacking on mobile */
     .footer-menu {
         flex-direction: column;
         align-items: center;
-        gap: 5px; /* Reduced from 10px to 5px */
+        gap: 5px;
+        /* Reduced from 10px to 5px */
     }
 
     /* Adjust scrolling footer font size and ensure visibility */
@@ -353,8 +412,10 @@ a:hover {
 
     /* Adjust glitch-text font size */
     .glitch-text {
-        font-size: 1.5em; /* Optional: Further reduce font size if needed */
-        max-width: 100%; /* Ensure it doesn't exceed the container */
+        font-size: 1.5em;
+        /* Optional: Further reduce font size if needed */
+        max-width: 100%;
+        /* Ensure it doesn't exceed the container */
     }
 
     /* Reduce padding in header and footer */
@@ -366,16 +427,44 @@ a:hover {
     /* Adjust the glitch animation for smaller screens using clip-path */
     @keyframes glitch-skew {
         0% {
-            clip-path: inset(0 0 0 0); /* No clipping */
+            clip-path: inset(0 0 0 0);
+            /* No clipping */
             transform: skew(0.5deg);
         }
+
         50% {
-            clip-path: inset(0 0 0 0); /* No clipping */
+            clip-path: inset(0 0 0 0);
+            /* No clipping */
             transform: skew(-0.5deg);
         }
+
         100% {
-            clip-path: inset(0 0 0 0); /* No clipping */
+            clip-path: inset(0 0 0 0);
+            /* No clipping */
             transform: skew(0.5deg);
         }
+    }
+
+    /* Timeline styling */
+    .timeline-entries {
+        margin: 1rem 0;
+    }
+
+    .timeline-entries p {
+        display: flex;
+        margin: 0.5rem 0;
+        line-height: 1.5;
+    }
+
+    .timeline-date {
+        display: inline-block;
+        font-family: var(--font-mono);
+        background: rgba(255, 121, 198, 0.1);
+        padding: 0.1rem 0.4rem;
+        margin-right: 0.5rem;
+        border-radius: 3px;
+        font-weight: bold;
+        color: var(--color-primary, #ff79c6);
+        min-width: 110px;
     }
 }
