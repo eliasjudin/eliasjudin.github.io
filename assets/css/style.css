@@ -3,38 +3,57 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* Easier sizing and layout */
 }
 
 :root {
-    --font-body: "Roboto Mono", monospace;
-    --font-header: "Playfair Display", serif;
-    --color-primary: #ff79c6;
-    /* Pink */
-    --color-secondary: #50fa7b;
-    /* Green */
-    --color-glitch-1: #d0ff4f;
-    /* Lime */
-    --color-glitch-shadow-1: red;
-    --color-glitch-shadow-2: blue;
-    --color-text: #000;
+    /* -- Color Palette -- */
+    /* Base HSL values */
+    --color-primary-hsl: 322, 100%, 73%; /* Pink - Base for accents */
+    --color-secondary-hsl: 145, 97%, 67%; /* Green - Accent */
+    --color-glitch-1-hsl: 74, 100%, 66%;  /* Lime - Base for glitch text */
+
+    /* Derived Colors */
+    --color-primary: hsl(var(--color-primary-hsl));
+    --color-secondary: hsl(var(--color-secondary-hsl));
+    --color-glitch-1: hsl(var(--color-glitch-1-hsl));
+
+    /* Colors with sufficient contrast for text (WCAG AA) */
+    --color-header-text: hsl(322, 60%, 50%); /* Darker Pink for Headers (Contrast ~5.2:1) */
+    --color-glitch-header-text: hsl(74, 90%, 30%); /* Darker Lime for Glitch (Contrast ~5.0:1) */
+    --color-timeline-date-text: hsl(322, 60%, 45%); /* Darker Pink for Timeline Dates */
+
+    /* Static/Functional Colors */
+    --color-glitch-shadow-1: rgba(255, 0, 0, 0.7); /* Slightly transparent classic glitch */
+    --color-glitch-shadow-2: rgba(0, 0, 255, 0.7);
+    --color-text: #1a1a1a; /* Body text */
+    --color-text-muted: #555;
     --color-background: #fff;
     --color-code-bg: #f5f5f5;
-    --color-border: #bdbdbd;
+    --color-border: #dcdcdc;
     --color-blockquote-border: var(--color-primary);
-    --color-blockquote-bg: #f9f9f9;
+    --color-blockquote-bg: hsla(var(--color-primary-hsl), 0.05);
     --color-blockquote-text: #3b3b3b;
     --color-link-hover: var(--color-primary);
-    --header-shadow-color: #444;
-    --wrapper-max-width: 800px;
+    --header-shadow-color: rgba(102, 102, 102, 0.8); /* Slightly adjusted shadow */
+
+    /* -- Typography -- */
+    --font-body: "Roboto Mono", monospace;
+    --font-header: "Playfair Display", serif;
     --base-font-size: 16px;
-    /* Base font size for rem calculations */
-    --line-height-base: 1.6;
+    --line-height-base: 1.65;
+
+    /* -- Layout -- */
+    --wrapper-max-width: 800px;
+
+    /* -- Animation -- */
+    --transition-speed: 0.3s;
 }
 
+/* === HTML & Body Defaults === */
 html {
     font-size: var(--base-font-size);
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling on orientation change */
 }
 
 body {
@@ -42,419 +61,369 @@ body {
     padding: 0;
     font-family: var(--font-body);
     background-color: var(--color-background);
-    color: var(--color-text);
+    color: var(--color-text); /* Uses high-contrast dark color */
     line-height: var(--line-height-base);
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* === Layout === */
+/* === Layout Containers === */
 .wrapper {
     width: 95%;
-    /* Use percentage for better fluidity */
     max-width: var(--wrapper-max-width);
     margin: 0 auto;
-    /* Centers the wrapper */
-    padding: 20px 10px;
-    /* Vertical and horizontal padding */
+    padding: 25px 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* Center direct children like header/main/footer */
 }
 
 main {
     width: 100%;
-    /* Takes full width of wrapper */
     padding: 0;
     text-align: left;
-    /* Default text alignment */
 }
 
 header,
-footer {
+footer.main-footer { /* Target specific footers for layout */
     width: 100%;
-    /* Takes full width of wrapper */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 0 10px;
 }
 
 /* === Typography === */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
+    margin: 1.2em 0 0.6em 0;
     font-family: var(--font-header);
+    color: var(--color-header-text); /* Use contrast-safe color */
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-primary);
+    letter-spacing: 0.06em;
     text-shadow: 1px 1px 0px var(--header-shadow-color);
-    /* Slightly reduced shadow */
-    margin: 1em 0 0.5em 0;
-    /* Adjusted margins */
     word-break: break-word;
     line-height: 1.3;
 }
 
-h1 {
-    font-size: 2.2rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 1.2rem;
-}
+h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.0rem); }
+h3 { font-size: clamp(1.3rem, 3.5vw, 1.7rem); }
+h4 { font-size: clamp(1.1rem, 3vw, 1.4rem); }
 
 p {
+    margin: 0 0 1.2em 0;
     text-align: left;
-    /* Changed from justify to left for better readability with mono font */
     word-break: break-word;
-    margin: 0 0 1em 0;
-    /* Only bottom margin */
+    overflow-wrap: break-word;
 }
 
 /* === Links === */
 a {
     color: var(--color-text);
-    /* Start with default text color */
     text-decoration: none;
     border-bottom: 1px dashed var(--color-primary);
-    /* Subtle underline */
     transition:
-        color 0.3s ease,
-        border-bottom-color 0.3s ease,
-        text-shadow 0.3s ease;
+        color var(--transition-speed) ease,
+        border-bottom-color var(--transition-speed) ease,
+        border-bottom-style var(--transition-speed) ease,
+        text-shadow var(--transition-speed) ease;
 }
 
 a:hover,
 a:focus {
     color: var(--color-link-hover);
     border-bottom-color: var(--color-link-hover);
-    /* Underline becomes solid */
     border-bottom-style: solid;
-    text-shadow: 1px 1px 3px rgba(255, 121, 198, 0.4);
-    /* Subtle glow on hover */
+    text-shadow: 0 0 8px hsla(var(--color-primary-hsl), 0.5);
     outline: none;
-    /* Remove default focus outline if custom style is sufficient */
+}
+
+/* Keyboard focus indication */
+a:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 2px;
+    border-bottom-style: solid;
 }
 
 /* === Horizontal Rule === */
 hr {
     border: none;
-    height: 2px;
-    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-    margin: 30px 0;
-    /* Increased margin */
+    height: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        hsla(var(--color-primary-hsl), 0.6), /* Slightly transparent */
+        hsla(var(--color-primary-hsl), 0.6) 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    animation: hr-pulse 5s ease-in-out infinite alternate; /* Slower pulse */
+    margin: 40px 0;
+}
+
+@keyframes hr-pulse {
+    from { opacity: 0.5; }
+    to { opacity: 0.9; }
 }
 
 /* === Images & Figures === */
-img,
-svg {
+img, svg {
+    display: block;
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 1em auto;
-    /* Center images */
+    margin: 1.5em auto;
+    border-radius: 3px;
 }
 
 figure {
-    margin: 1.5em 0;
+    margin: 2em 0;
     padding: 0;
 }
 
 figcaption {
-    text-align: center;
+    margin-top: 0.6em;
     font-size: 0.9em;
-    color: var(--color-blockquote-text);
-    margin-top: 0.5em;
+    color: var(--color-text-muted);
+    text-align: center;
+    font-style: italic;
 }
 
-/* === Footer Menu === */
+/* === Footer Navigation Menu === */
 .main-footer {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .footer-menu {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px 20px;
-    /* Row and column gap */
+    gap: 15px 25px;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-menu li {
-    margin: 0;
-}
+.footer-menu li { margin: 0; }
 
 .footer-menu a {
-    font-size: 0.9em;
+    padding: 6px 8px;
+    font-size: 0.95em;
     border-bottom: none;
-    /* Remove underline from footer nav items */
-    padding: 5px;
-    /* Add some padding for easier clicking */
+    border-radius: 3px;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .footer-menu a:hover,
 .footer-menu a:focus {
-    color: var(--color-link-hover);
-    text-shadow: 1px 1px 5px rgba(255, 121, 198, 0.5);
+    color: var(--color-primary);
+    background-color: hsla(var(--color-primary-hsl), 0.1);
+    text-shadow: none;
     border-bottom: none;
-    /* Ensure no underline on hover */
+}
+.footer-menu a:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 2px;
+    background-color: hsla(var(--color-primary-hsl), 0.1);
 }
 
 /* === Blockquotes === */
 blockquote {
+    position: relative;
     margin: 1.5em 0 1.5em 1em;
-    /* Adjusted margins */
-    color: var(--color-blockquote-text);
+    padding: 12px 20px;
     font-size: 0.95em;
-    border-left: 4px solid var(--color-blockquote-border);
-    padding: 10px 15px;
-    /* Adjusted padding */
+    color: var(--color-blockquote-text);
     background-color: var(--color-blockquote-bg);
-    border-radius: 3px;
+    border-left: 5px solid var(--color-blockquote-border);
+    border-radius: 0 5px 5px 0;
 }
 
-blockquote p {
-    margin-bottom: 0;
-    /* Remove bottom margin for last p inside quote */
-}
-
-blockquote p:last-child {
-    margin-bottom: 0;
-}
+blockquote p { margin-bottom: 0.5em; }
+blockquote p:last-child { margin-bottom: 0; }
 
 /* === Code and Preformatted Text === */
-pre,
-code {
+pre, code {
     font-family: var(--font-body);
-    /* Ensure monospace font */
     font-size: 0.9em;
-    /* Slightly smaller */
     background-color: var(--color-code-bg);
+    border: 1px solid var(--color-border);
     border-radius: 4px;
-    color: #333;
-    /* Darker text for contrast */
+    color: #2c3e50;
 }
 
 pre {
     display: block;
-    overflow-x: auto;
-    padding: 15px;
-    margin: 1.5em 0;
+    margin: 1.8em 0;
+    padding: 18px;
     white-space: pre;
-    /* Preserve whitespace and line breaks */
+    overflow-x: auto;
+    border-left: 4px solid var(--color-secondary);
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
 }
 
 code {
     padding: 0.2em 0.4em;
-    /* Inline code padding */
+    white-space: normal; /* Allow inline code to wrap */
     word-break: break-word;
 }
 
 pre code {
     padding: 0;
-    /* Remove padding for code inside pre */
     background-color: transparent;
-    /* Inherit pre background */
+    border: none;
     border-radius: 0;
-    word-break: normal;
-    /* Let pre handle wrapping/scrolling */
+    white-space: pre;
+    color: inherit;
+}
+
+/* MathJax override fix */
+.has-jax {
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    color: inherit !important;
+    font-size: inherit !important;
 }
 
 /* === Tables === */
 table {
+    display: block; /* For overflow */
     width: 100%;
+    margin: 2em 0;
+    font-size: 0.9em;
     border-collapse: collapse;
     border: 1px solid var(--color-border);
-    margin: 1.5em 0;
+    border-radius: 4px;
+    border-spacing: 0;
     overflow-x: auto;
-    /* Enable horizontal scroll on small screens */
-    display: block;
-    /* Needed for overflow-x */
-    font-size: 0.9em;
+    -webkit-overflow-scrolling: touch;
 }
 
-th,
-td {
-    padding: 10px 14px;
-    /* Increased padding */
+th, td {
+    padding: 12px 15px;
     border: 1px solid var(--color-border);
     text-align: left;
-    white-space: nowrap;
-    /* Keep content on one line */
+    vertical-align: top;
 }
 
 th {
-    background: #eaeaea;
+    background: hsla(0, 0%, 0%, 0.05);
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid var(--color-border);
 }
 
-/* === Glitch Animation Styles === */
+tbody tr:nth-child(odd) { background-color: hsla(0, 0%, 0%, 0.02); }
+tbody tr:hover { background-color: hsla(var(--color-secondary-hsl), 0.1); }
+
+/* === Header ASCII Art & Glitch Effect === */
 .header-link {
     display: block;
-    text-align: center;
     margin: 20px 0;
-    text-decoration: none;
-    border-bottom: none;
+    text-align: center;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    line-height: normal;
 }
-
-.header-link:hover {
+.header-link:hover,
+.header-link:focus {
     text-shadow: none;
-    border-bottom: none;
+    border-bottom: none !important;
+    background: none;
+}
+.header-link:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 4px;
 }
 
+/* Styles for the PRE tag containing the ASCII art */
 .glitch-text {
     position: relative;
-    color: var(--color-glitch-1);
-    font-family: var(--font-body);
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    /* Adjusted size */
-    animation: glitch 2s infinite steps(2, end);
-    /* Slower, step-based glitch */
-    display: inline-block;
-    /* Keep inline-block for centering */
+    display: block;
+    margin: 20px auto;
+    padding: 0;
     max-width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem; /* Base size for ASCII */
     line-height: 1.1;
-    /* Adjust line height for large text */
+    color: var(--color-glitch-header-text); /* Use contrast-safe color */
+    text-align: center;
+    white-space: pre;
+    overflow-x: auto;
+    background: none;
+    border: none;
+    border-bottom: none; /* Explicitly remove underline */
+    animation: glitch-subtle 3s infinite linear alternate;
+    will-change: transform, text-shadow; /* Performance hint */
 }
 
-/* Optional: Add back pseudo-elements for more complex glitch if desired */
-/* .glitch-text::before,
-.glitch-text::after {
-    content: attr(data-text); // Requires data-text attribute on the element
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+/* Glitch animation for the ASCII art */
+@keyframes glitch-subtle {
+  0%, 100% {
+    text-shadow: 0.5px 0 var(--color-glitch-shadow-1), -0.5px 0 var(--color-glitch-shadow-2);
+    transform: skew(-0.1deg);
+  }
+  50% {
+    text-shadow: -0.5px 0 var(--color-glitch-shadow-1), 0.5px 0 var(--color-glitch-shadow-2);
+    transform: skew(0.1deg) translate(1px, -0.5px);
+  }
 }
 
-.glitch-text::before {
-    left: 2px;
-    text-shadow: -1px 0 var(--color-glitch-shadow-1);
-    animation: glitch-skew 3s infinite linear alternate-reverse;
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-}
-
-.glitch-text::after {
-    left: -2px;
-    text-shadow: -1px 0 var(--color-glitch-shadow-2);
-    animation: glitch-skew 2s infinite linear alternate-reverse;
-    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-} */
-
-@keyframes glitch {
-
-    0%,
-    100% {
-        text-shadow: 1px 0 var(--color-glitch-shadow-1), -1px 0 var(--color-glitch-shadow-2);
-        transform: translate(0, 0);
-    }
-
-    25% {
-        text-shadow: -1px 0 var(--color-glitch-shadow-1), 1px 0 var(--color-glitch-shadow-2);
-        transform: translate(-1px, 1px);
-    }
-
-    50% {
-        text-shadow: 1px 0 var(--color-glitch-shadow-1), -1px 0 var(--color-glitch-shadow-2);
-        transform: translate(1px, -1px);
-    }
-
-    75% {
-        text-shadow: -1px 0 var(--color-glitch-shadow-1), 1px 0 var(--color-glitch-shadow-2);
-        transform: translate(-1px, 0);
-    }
-}
-
-/* Simpler skew animation if using pseudo-elements */
-/* @keyframes glitch-skew {
-    0% { transform: skew(0deg); }
-    100% { transform: skew(0.8deg); }
-} */
-
+/* Subtle glitch for decorative images (if any) */
 .glitch-img {
-    filter: contrast(1.1) brightness(1.05);
-    /* Slightly toned down filter */
-    animation: glitch-img 5s infinite linear;
-    /* Smoother linear animation */
+    filter: contrast(1.05) brightness(1.02);
+    animation: glitch-img-subtle 8s infinite linear alternate;
+    will-change: transform, filter; /* Performance hint */
 }
 
-@keyframes glitch-img {
-    0% { transform: translate(0, 0); }
-    20% { transform: translate(-3px, 3px); } /* Reduced offset */
-    40% { transform: translate(3px, -3px); }
-    60% { transform: translate(-2px, -2px); }
-    80% { transform: translate(2px, 2px); }
-    100% { transform: translate(0, 0); }
+@keyframes glitch-img-subtle {
+  0%, 100% { transform: translate(0, 0) skew(0); filter: hue-rotate(0deg) contrast(1.05) brightness(1.02); }
+  25%  { transform: translate(-1px, 1px) skew(-0.1deg); filter: hue-rotate(-2deg) contrast(1.05) brightness(1.02); }
+  50%  { transform: translate(0.5px, -0.5px) skew(0.05deg); filter: hue-rotate(1deg) contrast(1.05) brightness(1.02); }
+  75%  { transform: translate(1px, 0.5px) skew(0.1deg); filter: hue-rotate(3deg) contrast(1.05) brightness(1.02); }
 }
 
 /* === Scrolling Footer === */
-.scrolling-footer {
+footer.scrolling-footer {
+    position: relative; /* Context for mask if needed */
     width: 100%;
-    overflow: hidden;
-    /* Hide overflowing text */
-    white-space: nowrap;
-    margin-top: 30px;
-    /* Space above footer text */
+    margin-top: 40px;
     font-size: 0.8em;
-    color: #555;
-    /* Grey color for less emphasis */
+    color: var(--color-text-muted);
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Keep text on one line */
+    /* Fade out effect at the edges */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .scrolling-footer p {
     display: inline-block;
-    /* Allow transform */
     padding-left: 100%;
-    /* Start off-screen right */
-    animation: scroll-left 25s linear infinite;
-    /* Slower, continuous scroll */
     margin: 0;
+    font-size: 1em; /* Inherit size from parent footer */
     text-align: left;
+    white-space: nowrap !important; /* Ensure nowrap */
+    word-wrap: normal !important; /* Override potential conflicts */
+    vertical-align: middle;
+    animation: scroll-left 40s linear infinite; /* Slightly slower scroll */
+    will-change: transform; /* Performance hint */
 }
 
 .scrolling-footer p:hover {
     animation-play-state: paused;
-    /* Pause scroll on hover */
     text-shadow: none;
-    /* Remove hover effect if not desired */
 }
 
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-200%);
-        /* Adjust based on text length if needed, ensures it scrolls fully off-screen left */
-    }
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-200%); } /* Adjust if text length changes drastically */
 }
 
-.scrolling-footer small {
-    display: inline-block;
-    /* Needed for animation */
-}
+.scrolling-footer small { display: inline-block; } /* Keep inside P */
 
 .scrolling-footer a {
-    color: #333;
-    border-bottom-color: #777;
+    color: var(--color-text-muted);
+    border-bottom-color: var(--color-text-muted);
 }
 
 .scrolling-footer a:hover,
@@ -463,45 +432,57 @@ th {
     border-bottom-color: var(--color-link-hover);
 }
 
-
 /* === Timeline Styles === */
 .timeline-entries {
-    margin: 1.5rem 0;
-    padding-left: 0;
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 0; /* Reset padding */
     list-style: none;
+    /* Optional line decoration */
+    /* border-left: 2px dashed var(--color-border);
+    padding-left: 15px; */
 }
 
-.timeline-entries span { /* Target all spans within */
-    display: block; /* Stack date and text vertically */
-    margin-bottom: 0.8rem; /* Space between entries */
+.timeline-entries span { /* Base style for timeline entry text */
+    display: block;
+    margin-bottom: 1rem;
+    padding: 2px 5px;
     line-height: var(--line-height-base);
+    border-radius: 3px;
+    transition: background-color var(--transition-speed) ease;
+}
+.timeline-entries span:hover {
+    background-color: hsla(var(--color-secondary-hsl), 0.1);
 }
 
 .timeline-entries span.timeline-date {
-    display: inline-block; /* Keep date inline-block but style separately */
-    font-family: var(--font-body); /* Ensure mono font */
-    background: rgba(255, 121, 198, 0.15); /* Slightly stronger background */
-    padding: 0.2rem 0.5rem;
-    margin-right: 0.6rem; /* Space between date and text */
-    border-radius: 3px;
+    display: inline-block; /* Keep date inline-block */
+    margin-right: 0.7rem;
+    margin-bottom: 0.4rem; /* Space below date if it wraps */
+    padding: 0.25rem 0.6rem;
+    font-family: var(--font-body);
     font-weight: bold;
-    color: var(--color-primary);
-    margin-bottom: 0.3rem; /* Smaller bottom margin for date */
+    color: var(--color-timeline-date-text); /* Use contrast-safe color */
+    background-color: hsla(var(--color-primary-hsl), 0.18); /* Slightly darker bg for contrast */
+    border-radius: 3px;
     white-space: nowrap;
+    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+/* Hover effect applied to the whole span affects the date */
+.timeline-entries span:hover span.timeline-date {
+     transform: scale(1.03); /* Slightly subtler scale */
+     background-color: hsla(var(--color-primary-hsl), 0.25);
 }
 
 /* === Responsive Styles === */
 @media (max-width: 699px) {
     html {
         font-size: 15px;
-        /* Slightly smaller base font on mobile */
     }
 
     .wrapper {
         width: 100%;
-        /* Full width on mobile */
-        padding: 15px 5px;
-        /* Reduced padding */
+        padding: 20px 10px;
     }
 
     h1 { font-size: 1.8rem; }
@@ -509,119 +490,102 @@ th {
     h3 { font-size: 1.3rem; }
     h4 { font-size: 1.1rem; }
 
-    p,
-    li,
-    td,
-    th {
-        font-size: 1rem;
-        /* Ensure base size consistency */
-    }
+    p, li, td, th { font-size: 1rem; }
 
     a {
         word-break: break-word;
-        /* Prevent long links from breaking layout */
+        overflow-wrap: break-word;
     }
 
-    /* Footer menu stacking */
+    /* Stack footer menu on mobile */
     .footer-menu {
         flex-direction: column;
         align-items: center;
-        gap: 8px;
-        /* Reduced gap */
+        gap: 10px;
     }
 
-    /* Glitch effect adjustments */
+    /* Adjust glitch on mobile if needed */
     .glitch-text {
-        font-size: 1.8rem;
-        /* Smaller glitch text */
+        font-size: 0.9rem; /* Adjust ASCII size if needed */
+        line-height: 1.0; /* Tighten line height for ASCII */
+        animation-duration: 4s;
     }
 
-    @keyframes glitch-img { /* Further reduced image glitch translation */
-        0% { transform: translate(0, 0); }
-        20% { transform: translate(-2px, 2px); }
-        40% { transform: translate(2px, -2px); }
-        60% { transform: translate(-1px, -1px); }
-        80% { transform: translate(1px, 1px); }
-        100% { transform: translate(0, 0); }
-    }
-
-    .scrolling-footer {
-        font-size: 0.75em;
-    }
+    /* Adjust scrolling footer */
+    .scrolling-footer { font-size: 0.75em; }
+    .scrolling-footer p { animation-duration: 30s; } /* Faster scroll on mobile */
 
     /* Timeline adjustments */
-    .timeline-entries span {
-        margin-bottom: 0.6rem; /* Slightly less space */
-    }
+    .timeline-entries span { margin-bottom: 0.8rem; }
+    .timeline-entries span.timeline-date { margin-right: 0.5rem; padding: 0.2rem 0.5rem;}
+
+    /* Allow table cell content to wrap naturally */
+    table th, table td { white-space: normal; padding: 8px 10px; }
 }
 
 /* === Print Styles === */
 @media print {
+    :root {
+        /* Reset colors for print */
+        --color-primary: #000;
+        --color-secondary: #000;
+        --color-glitch-1: #000;
+        --color-header-text: #000;
+        --color-glitch-header-text: #000;
+        --color-timeline-date-text: #000;
+        --color-text: #000;
+        --color-background: #fff;
+        --color-border: #ccc;
+        --color-blockquote-border: #999;
+        --color-blockquote-bg: #f8f8f8;
+        --color-code-bg: #f8f8f8;
+    }
 
     body {
         font-family: serif;
-        /* Use serif for better print readability */
+        font-size: 11pt;
         color: #000;
         background: #fff;
+        line-height: 1.4;
     }
 
-    .wrapper {
-        width: 100%;
-        max-width: none;
-        padding: 0;
-        margin: 0;
-        box-shadow: none;
+    .wrapper { width: 100%; max-width: none; padding: 0; margin: 0; box-shadow: none; }
+
+    /* Hide non-essential elements */
+    header, footer.main-footer, footer.scrolling-footer, nav, hr,
+    .glitch-text, .glitch-img, /* Hide animated elements */
+    .timeline-entries span:hover, tbody tr:hover /* Remove hover styles */
+    {
+        display: none !important;
+        visibility: hidden !important;
     }
 
-    header,
-    footer,
-    nav,
-    .glitch-text,
-    .glitch-img,
-    .scrolling-footer,
-    hr {
-        display: none;
-        /* Hide non-essential elements */
-    }
+    main { padding: 1cm; } /* Print margins */
 
-    a {
-        color: #000;
-        text-decoration: underline;
-        border-bottom: none;
-    }
+    a { color: #000; text-decoration: underline; border-bottom: none; }
 
-    a[href^="http"]::after {
-        content: " (" attr(href) ")";
-        /* Show URLs */
+    /* Show full URLs */
+    a[href^="http"]::after, a[href^="mailto"]::after {
+        content: " [" attr(href) "]";
         font-size: 0.8em;
+        font-weight: normal;
+        word-break: break-all;
     }
+    /* Don't show URLs for internal/fragment links */
+    a[href^="/"]::after, a[href^="#"]::after { content: ""; }
 
-    pre,
-    blockquote {
-        border: 1px solid #ccc;
-        background: #f8f8f8;
-        page-break-inside: avoid;
-    }
+    pre, blockquote { border: 1px solid var(--color-border); background: var(--color-code-bg); page-break-inside: avoid; font-size: 0.9em; }
+    code { font-size: inherit; }
 
-    table,
-    th,
-    td {
-        border: 1px solid #ccc;
-        white-space: normal;
-        /* Allow text wrap in tables */
-    }
+    table, th, td { border: 1px solid var(--color-border) !important; white-space: normal; }
+    th { background: #eee !important; }
+    tbody tr:nth-child(odd) { background-color: #f8f8f8 !important; }
 
-    img,
-    svg {
-        max-width: 100% !important;
-        page-break-inside: avoid;
-    }
+    img, svg, figure { max-width: 100% !important; page-break-inside: avoid; margin: 1em 0; }
 
-    h1, h2, h3, h4, h5, h6 {
-        color: #000;
-        text-shadow: none;
-        page-break-after: avoid;
-        page-break-inside: avoid;
-        font-family: sans-serif; /* Sans-serif headers for print */
-    }
+    h1, h2, h3, h4 { color: #000 !important; text-shadow: none !important; page-break-after: avoid; page-break-inside: avoid; font-family: sans-serif; }
+    h1 { font-size: 18pt; } h2 { font-size: 16pt; } h3 { font-size: 14pt; } h4 { font-size: 12pt; }
+
+    /* Ensure timeline dates are styled simply */
+    .timeline-entries span.timeline-date { background: #eee !important; color: #000 !important; border: 1px solid #ccc; font-weight: normal; padding: 0.1rem 0.4rem;}
 }
