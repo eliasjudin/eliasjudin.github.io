@@ -6,6 +6,11 @@
 }
 
 /* 2. Reset default margins and paddings */
+:root {
+    --font-mono: "Roboto Mono", monospace;
+    --color-primary: #ff79c6; /* Existing pink color */
+}
+
 html,
 body {
     margin: 0;
@@ -403,9 +408,19 @@ a:hover {
         /* Reduced from 10px to 5px */
     }
 
+    /* Adjust glitch-img animation translation */
+    @keyframes glitch-img {
+        0% { transform: translate(0, 0); }
+        20% { transform: translate(-2px, 2px); } /* Reduced translation */
+        40% { transform: translate(2px, -2px); } /* Reduced translation */
+        60% { transform: translate(-2px, -2px); } /* Reduced translation */
+        80% { transform: translate(2px, 2px); } /* Reduced translation */
+        100% { transform: translate(0, 0); }
+    }
+
     /* Adjust scrolling footer font size and ensure visibility */
     .scrolling-footer {
-        font-size: 0.7em;
+        font-size: 0.8em; /* Slightly increased font size */
         white-space: nowrap;
         padding: 0 0;
     }
@@ -450,21 +465,22 @@ a:hover {
         margin: 1rem 0;
     }
 
-    .timeline-entries p {
-        display: flex;
-        margin: 0.5rem 0;
-        line-height: 1.5;
-    }
-
-    .timeline-date {
-        display: inline-block;
+    /* Corrected selector to target spans directly, adjusted styles */
+    .timeline-entries span.timeline-date {
+        display: inline-block; /* Keep display inline-block */
         font-family: var(--font-mono);
         background: rgba(255, 121, 198, 0.1);
         padding: 0.1rem 0.4rem;
         margin-right: 0.5rem;
         border-radius: 3px;
         font-weight: bold;
-        color: var(--color-primary, #ff79c6);
-        min-width: 110px;
+        color: var(--color-primary);
+        /* min-width: 110px; Removed min-width for better flexibility */
+        margin-bottom: 0.5rem; /* Add some bottom margin for spacing between lines */
+    }
+
+    /* Style for the text following the date span if needed */
+    .timeline-entries span + span { /* Example: If text follows the date */
+         line-height: 1.5;
     }
 }
