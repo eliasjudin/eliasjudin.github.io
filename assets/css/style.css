@@ -432,6 +432,88 @@ footer.scrolling-footer {
     border-bottom-color: var(--color-link-hover);
 }
 
+/* === Pagination Styles === */
+.pagination {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 2.5rem 0 1rem 0; /* Adjust margin */
+    gap: 5px 10px; /* Add gap between items */
+}
+
+.page-item {
+    margin: 0; /* Remove default margin, use gap */
+}
+
+.page-link {
+    display: block;
+    padding: 0.4em 0.8em;
+    font-family: var(--font-body);
+    font-size: 0.9em;
+    color: var(--color-text);
+    text-decoration: none;
+    border: 1px dashed transparent; /* Transparent border to maintain size */
+    border-bottom: 1px dashed var(--color-primary); /* Match link style */
+    background-color: transparent;
+    border-radius: 3px;
+    transition:
+        color var(--transition-speed) ease,
+        border-color var(--transition-speed) ease,
+        border-style var(--transition-speed) ease,
+        background-color var(--transition-speed) ease,
+        text-shadow var(--transition-speed) ease;
+}
+
+.page-link:hover,
+.page-link:focus {
+    color: var(--color-link-hover);
+    border-color: var(--color-link-hover);
+    border-style: solid;
+    background-color: hsla(var(--color-primary-hsl), 0.05);
+    text-shadow: 0 0 8px hsla(var(--color-primary-hsl), 0.5);
+    outline: none;
+}
+.page-link:focus-visible {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 2px;
+    border-style: solid;
+}
+
+.page-item.active .page-link {
+    font-weight: bold;
+    color: var(--color-background); /* White text */
+    background-color: var(--color-primary); /* Pink background */
+    border-color: var(--color-primary);
+    border-style: solid;
+    text-shadow: none;
+    cursor: default;
+}
+.page-item.active .page-link:hover,
+.page-item.active .page-link:focus {
+    background-color: var(--color-primary); /* Keep background on hover/focus */
+    color: var(--color-background);
+    text-shadow: none;
+}
+
+
+.page-item.disabled .page-link {
+    color: var(--color-text-muted);
+    border-bottom-color: transparent; /* No border for disabled */
+    pointer-events: none;
+    background-color: transparent;
+    text-shadow: none;
+}
+.page-item.disabled .page-link:hover,
+.page-item.disabled .page-link:focus {
+    border-color: transparent;
+    border-bottom-color: transparent;
+    background-color: transparent;
+    text-shadow: none;
+}
+
+
 /* === Timeline Styles === */
 .timeline-entries {
     position: relative;
