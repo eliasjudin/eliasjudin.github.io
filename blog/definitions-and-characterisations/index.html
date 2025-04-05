@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>
+        Definitions vs Characterisations | Elias Judin - Category Theory &amp; Monadic Algebra Research
+    </title>
+    <meta name="description" content="Distinguishing between axioms (definitions) and derived properties (characterisations)">
+    <meta name="keywords" content="Category Theory, Categorical Algebra, Universal Algebra, Mathematics Research, logic, general">
+    <meta name="author" content="Elias Judin">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1743871093" type="text/css" />
+    <link
+        rel="stylesheet"
+        href="/assets/css/pdf-container.css?v=1743871093"
+        type="text/css"
+    />
+    <meta name="google-site-verification" content="woicpQb3QYBpCMz2BHOxKJ5K0KwbH2FN-PYSu8jYaaI">
+
+    
+    
+    
+
+    
+    <script>
+        
+        (function() {
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+            script.async = false;
+            script.onload = function() {
+                console.log('PDF.js loaded successfully');
+                
+                if (window.pdfjsLib) {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+                    console.log('PDF.js worker path set');
+                } else {
+                    console.error('PDF.js loaded but pdfjsLib is not defined');
+                }
+            };
+            script.onerror = function() {
+                console.error('Failed to load PDF.js');
+            };
+            
+            document.head.appendChild(script);
+            
+            
+            window.pdfjsWorkerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+        })();
+    </script>
+
+    
+    <meta property="og:title" content="Definitions vs Characterisations">
+    <meta property="og:description" content="Distinguishing between axioms (definitions) and derived properties (characterisations)">
+    <meta property="og:image" content="/assets/images/banner.svg">
+    <meta property="og:url" content="/blog/definitions-and-characterisations/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Definitions vs Characterisations">
+    <meta name="twitter:description" content="Distinguishing between axioms (definitions) and derived properties (characterisations)">
+    <meta name="twitter:image" content="/assets/images/banner.svg">
+    
+    
+    <link rel="canonical" href="/blog/definitions-and-characterisations/">
+    
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+    <body>
+        
+        <a href="#content" class="skip-to-content">Skip to content</a>
+        <div class="wrapper">
+            <a href="/" class="header-link">
+<pre class="glitch-text">
+  ███████╗ ██╗     ██╗ █████╗ ███████╗       ██╗██╗   ██╗██████╗ ██╗███╗   ██╗
+  ██╔════╝ ██║     ██║██╔══██╗██╔════╝       ██║██║   ██║██╔══██╗██║████╗  ██║
+  █████╗   ██║     ██║███████║███████╗       ██║██║   ██║██║  ██║██║██╔██╗ ██║
+  ██╔══╝   ██║     ██║██╔══██║╚════██║  ██   ██║██║   ██║██║  ██║██║██║╚██╗██║
+  ███████╗ ███████╗██║██║  ██║███████║  ╚█████╔╝╚██████╔╝██████╔╝██║██║ ╚████║
+  ╚══════╝ ╚══════╝╚═╝╚═╝  ╚═╝╚══════╝   ╚════╝  ╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝
+</pre>
+</a>
+<hr/>
+
+<footer class="main-footer">
+    <ul class="footer-menu">
+        
+        <li>
+            <a href="/" class="footer-link">home</a>
+        </li>
+        
+        <li>
+            <a href="/log" class="footer-link">log</a>
+        </li>
+        
+        <li>
+            <a href="/blog" class="footer-link">blog</a>
+        </li>
+        
+        <li>
+            <a href="/cv" class="footer-link">cv</a>
+        </li>
+        
+        <li>
+            <a href="mailto:ejudin@gmail.com" class="footer-link">contact</a>
+        </li>
+        
+    </ul>
+</footer>
+            <main id="content">
+
+
+
+
+
+
+<h1>Definitions vs Characterisations</h1>
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">{ home }</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/blog/" itemprop="item"><span itemprop="name">{ Blog }</span></a>
+      <meta itemprop="position" content="2" />
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="current-page">{ Definitions vs Characterisations }</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+
+<em>September 26, 2024</em>
+
+
+
+
+<div class="article-meta">
+  <span class="article-date">September 26, 2024</span>
+  
+    (Updated: April 2, 2025)
+  
+  
+  
+  <div class="article-tags">
+    
+      <a href="/tags/logic" class="article-tag">#logic</a>
+    
+      <a href="/tags/general" class="article-tag">#general</a>
+    
+  </div>
+  
+</div>
+
+
+<h3 id="definitions-axioms">Definitions. <em>axioms</em></h3>
+<p>Serve as the foundational building blocks of a mathematical structure.</p>
+<p>Prescriptive and minimal; they specify the essential properties that define the object without redundancy.</p>
+<p>Establish the scope and boundaries of the structure, allowing for the derivation of further properties and theorems.</p>
+<hr>
+<h3 id="characterizations-derived-properties">Characterizations. <em>derived properties</em></h3>
+<p>Provide additional properties or conditions that uniquely identify or describe specific instances within the broader class defined by the axioms.</p>
+<p>Descriptive and often contingent upon the axioms; they help in classifying and distinguishing structures.</p>
+<p>Used to understandthe diversity and uniqueness of models that satisfy the axioms.</p>
+<hr>
+<h3 id="distinguishing-axioms-from-characterizations">Distinguishing axioms from characterizations</h3>
+<h4 id="foundational-necessity">Foundational necessity</h4>
+<p><strong>axioms.</strong> Must capture the minimal and essential features required to define the mathematical structure.</p>
+<p><strong>characterizations.</strong> Typically involve additional properties that are not necessary for the basic definition but are important for distinguishing particular instances of a definition.</p>
+<p><strong>e.g.</strong>
+In group theory, the basic <em>group</em> axioms (closure, associativity, identity element, and inverses) are foundational. The property of being <em>abelian</em> (commutativity) is not necessary to define a group but is a characterization of a specific subclass of groups.</p>
+<hr>
+<h4 id="independence-and-minimality">Independence and minimality</h4>
+<p><strong>axioms.</strong> Should be independent, meaning that no axiom can be derived from the others. They should also be minimal, avoiding unnecessary redundancy.</p>
+<p><strong>characterizations.</strong> May involve properties that can be derived from the axioms and other theorems. They are not required to be independent or minimal.</p>
+<p><strong>e.g.</strong>
+In the definition of a <em>vector space</em>, axioms include associativity and distributivity of vector addition and scalar multiplication, among others. The existence of a zero vector is an independent and minimal requirement. However, the uniqueness of solutions to linear equations in the space can be seen as a characterization arising from these axioms.</p>
+<hr>
+<h4 id="universality-or-specificity">Universality or specificity</h4>
+<p><strong>axioms</strong> Generally applicable to all instances within the defined structure.</p>
+<p><strong>characterizations</strong> Apply to specific instances or subclasses within the broader structure, often adding constraints or specifying particular behaviors.</p>
+<p><strong>e.g.</strong> <em>ordered fields</em>
+<strong>axioms.</strong> Include the field axioms combined with order compatibility conditions.
+<strong>characterization.</strong> The real numbers can be characterized as the <em>complete</em> ordered field, distinguishing them from other ordered fields like the rationals, which lack completeness.</p>
+<hr>
+<h4 id="utility-and-convenience">Utility and convenience</h4>
+<p><strong>axioms</strong> Should be chosen for their ability to facilitate the development of the theory, making it easier to derive necessary theorems and properties.</p>
+<p><strong>characterizations</strong> Enhance the theory by allowing for classification, comparison, and deeper insights into specific structures.</p>
+<p><strong>e.g.</strong> <em>in topology</em>
+<strong>axioms.</strong> Define what constitutes a topological space via open sets, including properties like arbitrary unions and finite intersections being open.
+<strong>characterizations.</strong> Compactness.</p>
+<hr>
+<h3 id="how">How?</h3>
+<h4 id="identify-the-core-structure">Identify the Core Structure</h4>
+<p>Determine the minimal set of properties that are essential to define the mathematical object. These will form your candidate axioms.</p>
+<p><strong>Example:</strong> For a ring, the core axioms include two binary operations (addition and multiplication), associativity of both operations, distributivity of multiplication over addition, existence of an additive identity (zero), and existence of additive inverses.</p>
+<h4 id="assess-necessity-and-sufficiency">Assess Necessity and Sufficiency</h4>
+<p>Ensure that the chosen axioms are both necessary and sufficient to encapsulate the structure. Remove any redundant axioms that can be derived from others.</p>
+<p><strong>Example:</strong> In Euclidean geometry, the parallel postulate was historically debated as possibly redundant, but it was ultimately accepted as a necessary axiom to distinguish Euclidean geometry from non-Euclidean geometries.</p>
+<h4 id="consider-independence">Consider Independence</h4>
+<p>Verify that each axiom is independent of the others. An axiom should not be derivable from the combination of the other axioms.</p>
+<p><strong>Example:</strong> In Boolean algebra, the complement laws (e.g., ( a \vee \neg a = 1 )) are independent from other axioms like associativity and distributivity.</p>
+<h4 id="determine-additional-properties-as-characterizations">Determine Additional Properties as Characterizations</h4>
+<p>Properties that are not essential for the basic definition but provide meaningful distinctions or classifications should be treated as characterizations.</p>
+<p><strong>Example:</strong> In the category of groups:</p>
+<ul>
+<li><strong>Axiom:</strong> The group must satisfy closure, associativity, identity, and inverses.</li>
+<li><strong>Characterization:</strong> A group is <em>simple</em> if it has no nontrivial normal subgroups.</li>
+</ul>
+<h4 id="evaluate-for-uniqueness-and-classification">Evaluate for Uniqueness and Classification</h4>
+<p>Use characterizations to identify unique or special cases within the defined structure. This helps in classifying and understanding the variety within the theory.</p>
+<p><strong>Example:</strong> In the theory of fields:</p>
+<ul>
+<li><strong>Axiom:</strong> Fields must satisfy field axioms.</li>
+<li><strong>Characterization:</strong> Finite fields are characterized by having a finite number of elements, and for each prime power ( p^n ), there exists a unique (up to isomorphism) finite field.</li>
+</ul>
+<hr>
+<h3 id="examples">Examples</h3>
+<h4 id="topological-spaces">Topological Spaces</h4>
+<ul>
+<li>
+<p><strong>Axioms (Definitions):</strong></p>
+<ol>
+<li>The empty set and the entire space are open.</li>
+<li>Arbitrary unions of open sets are open.</li>
+<li>Finite intersections of open sets are open.</li>
+</ol>
+</li>
+<li>
+<p><strong>Characterizations:</strong></p>
+<ul>
+<li>A topological space is <strong>Hausdorff</strong> if any two distinct points have disjoint neighborhoods.</li>
+<li>A space is <strong>compact</strong> if every open cover has a finite subcover.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Explanation:</strong> The axioms define what a topological space is, while properties like being Hausdorff or compact are additional characterizations that provide further classification within the category of topological spaces.</p>
+<h4 id="vector-spaces">Vector Spaces</h4>
+<ul>
+<li>
+<p><strong>Axioms (Definitions):</strong></p>
+<ol>
+<li>Vector addition is commutative and associative.</li>
+<li>There exists an additive identity (zero vector).</li>
+<li>Every vector has an additive inverse.</li>
+<li>Scalar multiplication is compatible with field multiplication.</li>
+<li>Distributivity of scalar multiplication with respect to vector addition and field addition.</li>
+</ol>
+</li>
+<li>
+<p><strong>Characterizations:</strong></p>
+<ul>
+<li>A vector space is <strong>finite-dimensional</strong> if it has a finite basis.</li>
+<li>Any finite-dimensional vector space over a field ( F ) is isomorphic to ( F^n ) for some ( n ).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Explanation:</strong> The axioms establish the general concept of a vector space, while properties like finite-dimensionality serve as characterizations that allow for specific classifications and theorems, such as isomorphism to ( F^n ).</p>
+<h4 id="groups">Groups</h4>
+<ul>
+<li>
+<p><strong>Axioms (Definitions):</strong></p>
+<ol>
+<li>Closure under the group operation.</li>
+<li>Associativity of the group operation.</li>
+<li>Existence of an identity element.</li>
+<li>Existence of inverse elements for each group element.</li>
+</ol>
+</li>
+<li>
+<p><strong>Characterizations:</strong></p>
+<ul>
+<li>A group is <strong>abelian</strong> if its operation is commutative.</li>
+<li>A group is <strong>simple</strong> if it has no nontrivial normal subgroups.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Explanation:</strong> The group axioms define the general concept of a group. Additional properties like being abelian or simple provide further classification within the broader category.</p>
+<h4 id="fields">Fields</h4>
+<ul>
+<li>
+<p><strong>Axioms (Definitions):</strong></p>
+<ol>
+<li>Commutative addition with an additive identity and inverses.</li>
+<li>Commutative multiplication with a multiplicative identity and inverses (excluding zero).</li>
+<li>Distributivity of multiplication over addition.</li>
+</ol>
+</li>
+<li>
+<p><strong>Characterizations:</strong></p>
+<ul>
+<li>A field is <strong>algebraically closed</strong> if every non-constant polynomial has a root in the field.</li>
+<li>A field is <strong>finite</strong> if it contains a finite number of elements.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Explanation:</strong> The field axioms set up the basic structure, while properties like algebraic closure or finiteness are characterizations that specify particular types of fields with additional significant properties.</p>
+<hr>
+<h3 id="common-pitfalls-and-considerations">Common Pitfalls and Considerations</h3>
+<ul>
+<li>
+<p><strong>Overcomplicating Definitions:</strong> Including too many properties in the axioms can make the structure rigid and limit its applicability. Strive for minimal and essential axioms.</p>
+</li>
+<li>
+<p><strong>Redundancy:</strong> Ensure that axioms are not overlapping or derivable from each other, maintaining independence.</p>
+</li>
+<li>
+<p><strong>Flexibility for Extensions:</strong> Designing axioms that allow for meaningful extensions and the derivation of significant characterizations enhances the richness of the theory.</p>
+</li>
+<li>
+<p><strong>Historical and Conventional Factors:</strong> Sometimes, the choice of axioms versus characterizations is influenced by historical development and established conventions within the mathematical community.</p>
+</li>
+</ul>
+<p><strong>Example:</strong> In Euclidean geometry, the parallel postulate is treated as an axiom, but alternative approaches (like using it as a characterization) have led to the development of non-Euclidean geometries.</p>
+<hr>
+<h1 id="claude">Claude</h1>
+<p>Definitions, often presented as axioms in formal logic, serve as the foundational building blocks of mathematical theories. They specify the basic objects of study and the fundamental relations or operations that these objects satisfy.</p>
+<ol>
+<li>Foundational and prescriptive</li>
+<li>Minimal and essential</li>
+<li>Independent of each other (no axiom can be derived from the other)</li>
+<li>Universally applicable within the defined structure</li>
+</ol>
+<p>Characterizations are properties or conditions that uniquely describe or distinguish a particular mathematical structure within a broader class. They are typically derived from the axioms and other theorems.</p>
+<ol>
+<li>Descriptive and analytical</li>
+<li>Often specific to subclasses or particular instances</li>
+<li>May be derived from axioms and other theorems</li>
+<li>Useful for classification and deeper understanding</li>
+</ol>
+<h2 id="criteria-for-distinguishing-axioms-from-characterizations">Criteria for Distinguishing Axioms from Characterizations</h2>
+<ol>
+<li>
+<p><strong>Foundational Necessity</strong>: Axioms capture minimal, essential features; characterizations involve additional properties.</p>
+</li>
+<li>
+<p><strong>Independence and Minimality</strong>: Axioms should be independent and minimal; characterizations may be derived.</p>
+</li>
+<li>
+<p><strong>Universality vs. Specificity</strong>: Axioms apply generally; characterizations often apply to specific subclasses.</p>
+</li>
+<li>
+<p><strong>Utility and Convenience</strong>: Axioms facilitate theory development; characterizations enhance classification and insight.</p>
+</li>
+</ol>
+<h2 id="practical-steps-for-distinction">Practical Steps for Distinction</h2>
+<ol>
+<li>Identify the core structure</li>
+<li>Assess necessity and sufficiency</li>
+<li>Consider independence</li>
+<li>Determine additional properties as characterizations</li>
+<li>Evaluate for uniqueness and classification</li>
+</ol>
+<h2 id="illustrative-example-topological-spaces">Illustrative Example: Topological Spaces</h2>
+<h3 id="axioms-definition">Axioms (Definition):</h3>
+<p>Let $X$ be a set and $\tau$ be a collection of subsets of $X$. $(X, \tau)$ is a topological space if and only if:</p>
+<ol>
+<li>$\emptyset \in \tau$ and $X \in \tau$</li>
+<li>$\forall {U_\alpha}<em>{\alpha \in I} \subseteq \tau: \bigcup</em>{\alpha \in I} U_\alpha \in \tau$</li>
+<li>$\forall U_1, U_2 \in \tau: U_1 \cap U_2 \in \tau$</li>
+</ol>
+<h3 id="characterizations">Characterizations:</h3>
+<ol>
+<li>
+<p><strong>Hausdorff Space</strong>: A topological space $(X, \tau)$ is Hausdorff if and only if:
+$\forall x, y \in X, x \neq y, \exists U, V \in \tau: x \in U, y \in V, U \cap V = \emptyset$</p>
+</li>
+<li>
+<p><strong>Compact Space</strong>: A topological space $(X, \tau)$ is compact if and only if:
+Every open cover of $X$ has a finite subcover.</p>
+</li>
+</ol>
+<p>The axioms define what a topological space is, while properties like being Hausdorff or compact provide further classification within the category of topological spaces.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Understanding the distinction between definitions (axioms) and characterizations (derived properties) is crucial for the rigorous development of mathematical theories. Axioms provide the foundational structure, while characterizations offer deeper insights and classifications within that structure. This distinction facilitates clear communication, theoretical development, and the exploration of mathematical structures.</p>
+
+
+<p>
+
+</p>
+
+<p>
+
+
+
+
+
+
+
+
+
+    Tags:
+    <a href="/tags/logic">logic</a>
+    , <a href="/tags/general">general</a>
+    
+
+
+
+</p>
+
+
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Definitions vs Characterisations",
+    "description": "Distinguishing between axioms (definitions) and derived properties (characterisations)",
+    "author": {
+      "@type": "Person",
+      
+      "name": "Elias Judin",
+      "url": "\/",
+      
+      "jobTitle": "Masters Student Pure Mathematics",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "Department of Mathematics and Applied Mathematics, University of Cape Town",
+        "department": "Department of Mathematics and Applied Mathematics" 
+      }
+    },
+    "datePublished": "2024-09-26",
+    "dateModified": "2025-04-02",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "\/blog\/definitions-and-characterisations\/"
+    },
+    "keywords": [
+          "logic",
+          "general"
+    ],
+    "image": "\/assets\/images\/banner.svg",
+    "publisher": {
+      "@type": "Organization",
+      
+      "name": "Elias Judin",
+      "logo": {
+        "@type": "ImageObject",
+         
+        "url": "\/\/assets\/images\/banner.svg"
+      }
+    },
+    "about": {
+      "@type": "Thing",
+      
+      "name": "Category Theory"
+    },
+    "isAccessibleForFree": "True",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Elias Judin - Category Theory \u0026 Monadic Algebra Research",
+      "url": "\/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "educationalUse": "Research",
+    "genre": "Academic",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Mathematicians and Category Theorists"
+    },
+    "inLanguage": "en",
+    
+    "citation": {
+      "@type": "CreativeWork",
+      "name": "Definitions vs Characterisations",
+      "author": "Elias Judin",
+      "datePublished": "2024-09-26"
+    }
+    
+  }
+</script>
+
+
+</main>
+                <hr />
+    
+    <div class="scrolling-footer">
+        <p> 
+            <small>
+                <span class="updated">
+                    
+                        Updated: April 2, 2025
+                    
+                </span>
+                © 2025 Elias Judin. Content licensed under
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC-BY-4.0</a>. Website code licensed under
+                <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener noreferrer">MIT License</a>.
+            </small>
+        </p>
+    </div>
+</footer>
+
+<script
+    type="text/javascript"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+
+    MathJax.Hub.Config({
+    
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+</script>
+        </div>
+        <script>
+    function loadTwitterScript() {
+        var script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        document.body.appendChild(script);
+    }
+    if (window.addEventListener) {
+        window.addEventListener("load", loadTwitterScript, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", loadTwitterScript);
+    }
+</script>
+    </body>
+</html>

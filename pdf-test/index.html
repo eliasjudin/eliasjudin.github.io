@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>
+        PDF Viewer Test | Elias Judin - Category Theory &amp; Monadic Algebra Research
+    </title>
+    <meta name="description" content="Testing page for the PDF viewer component">
+    <meta name="keywords" content="Category Theory, Categorical Algebra, Universal Algebra, Mathematics Research">
+    <meta name="author" content="Elias Judin">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1743872072" type="text/css" />
+    <link
+        rel="stylesheet"
+        href="/assets/css/pdf-container.css?v=1743872072"
+        type="text/css"
+    />
+    <meta name="google-site-verification" content="woicpQb3QYBpCMz2BHOxKJ5K0KwbH2FN-PYSu8jYaaI">
+
+    
+    
+    
+
+    
+    <script>
+        
+        (function() {
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+            script.async = false;
+            script.onload = function() {
+                console.log('PDF.js loaded successfully');
+                
+                if (window.pdfjsLib) {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+                    console.log('PDF.js worker path set');
+                } else {
+                    console.error('PDF.js loaded but pdfjsLib is not defined');
+                }
+            };
+            script.onerror = function() {
+                console.error('Failed to load PDF.js');
+            };
+            
+            document.head.appendChild(script);
+            
+            
+            window.pdfjsWorkerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+        })();
+    </script>
+
+    
+    <meta property="og:title" content="PDF Viewer Test">
+    <meta property="og:description" content="Testing page for the PDF viewer component">
+    <meta property="og:image" content="https://eliasjudin.github.io/assets/images/banner.svg">
+    <meta property="og:url" content="https://eliasjudin.github.io/pdf-test/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF Viewer Test">
+    <meta name="twitter:description" content="Testing page for the PDF viewer component">
+    <meta name="twitter:image" content="https://eliasjudin.github.io/assets/images/banner.svg">
+    
+    
+    <link rel="canonical" href="https://eliasjudin.github.io/pdf-test/">
+    
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+    <body>
+        
+        <a href="#content" class="skip-to-content">Skip to content</a>
+        <div class="wrapper">
+            <a href="/" class="header-link">
+<pre class="glitch-text">
+  ███████╗ ██╗     ██╗ █████╗ ███████╗       ██╗██╗   ██╗██████╗ ██╗███╗   ██╗
+  ██╔════╝ ██║     ██║██╔══██╗██╔════╝       ██║██║   ██║██╔══██╗██║████╗  ██║
+  █████╗   ██║     ██║███████║███████╗       ██║██║   ██║██║  ██║██║██╔██╗ ██║
+  ██╔══╝   ██║     ██║██╔══██║╚════██║  ██   ██║██║   ██║██║  ██║██║██║╚██╗██║
+  ███████╗ ███████╗██║██║  ██║███████║  ╚█████╔╝╚██████╔╝██████╔╝██║██║ ╚████║
+  ╚══════╝ ╚══════╝╚═╝╚═╝  ╚═╝╚══════╝   ╚════╝  ╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝
+</pre>
+</a>
+<hr/>
+
+<footer class="main-footer">
+    <ul class="footer-menu">
+        
+        <li>
+            <a href="/" class="footer-link">home</a>
+        </li>
+        
+        <li>
+            <a href="/log" class="footer-link">log</a>
+        </li>
+        
+        <li>
+            <a href="/blog" class="footer-link">blog</a>
+        </li>
+        
+        <li>
+            <a href="/cv" class="footer-link">cv</a>
+        </li>
+        
+        <li>
+            <a href="mailto:ejudin@gmail.com" class="footer-link">contact</a>
+        </li>
+        
+    </ul>
+</footer>
+            <main id="content">
+
+
+
+
+
+
+<h1>PDF Viewer Test</h1>
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="https://eliasjudin.github.io/" itemprop="item"><span itemprop="name">{ home }</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="current-page">{ PDF Viewer Test }</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+
+
+
+
+
+<h2 id="pdf-viewer-component-testing">PDF Viewer Component Testing</h2>
+<p>This page is used for testing the PDF viewer component functionality.</p>
+<h3 id="pdf-example-1-free-semimodules-and-their-examples">PDF Example 1: Free Semimodules and their Examples</h3>
+
+
+
+
+
+<div id="pdf_2454ad8f68c4b864e46609864d34da92" class="pdf-container">
+    <div class="pdf-header">
+        <div class="pdf-title">{ Free Semimodules and their Examples }</div>
+        <div class="pdf-controls">
+            <button id="pdf_2454ad8f68c4b864e46609864d34da92_prev" class="pdf-button" disabled>« prev</button>
+            <span class="page-counter">Page <span id="pdf_2454ad8f68c4b864e46609864d34da92_current">0</span> of <span id="pdf_2454ad8f68c4b864e46609864d34da92_total">0</span></span>
+            <button id="pdf_2454ad8f68c4b864e46609864d34da92_next" class="pdf-button" disabled>next »</button>
+        </div>
+    </div>
+    
+    <div id="pdf_2454ad8f68c4b864e46609864d34da92_loading" class="pdf-loading">
+        <div class="pdf-loading-text">loading document...</div>
+        <div class="pdf-progress-bar"><div id="pdf_2454ad8f68c4b864e46609864d34da92_progress" class="pdf-progress"></div></div>
+    </div>
+    
+    <div id="pdf_2454ad8f68c4b864e46609864d34da92_viewer" class="pdf-viewer"></div>
+    
+    <div class="pdf-footer">
+        <a href="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-their-examples/free_semimodules_and_their_examples.pdf" class="pdf-download-link" download>
+            { download original document }
+        </a>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    setTimeout(function() {
+        initPDFViewer("pdf_2454ad8f68c4b864e46609864d34da92", "https:\/\/cdn.jsdelivr.net\/gh\/eliasjudin\/free-semimodules-and-their-examples\/free_semimodules_and_their_examples.pdf");
+    }, 1000);
+
+    
+    function initPDFViewer(containerId, url) {
+        console.log('Initializing PDF viewer for', containerId);
+        
+        
+        if (typeof pdfjsLib === 'undefined') {
+            console.error('PDF.js not loaded');
+            var loading = document.getElementById(containerId + '_loading');
+            if (loading) {
+                loading.innerHTML = '<div class="pdf-error">PDF.js library not found. Please refresh the page.</div>';
+            }
+            
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+            script.onload = function() {
+                console.log('PDF.js loaded as fallback');
+                if (window.pdfjsLib) {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+                    
+                    setTimeout(function() {
+                        initPDFViewer(containerId, url);
+                    }, 500);
+                }
+            };
+            document.head.appendChild(script);
+            return;
+        }
+        
+        
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+        
+        var container = document.getElementById(containerId);
+        if (!container) {
+            console.error('PDF container not found:', containerId);
+            return;
+        }
+        
+        var viewer = document.getElementById(containerId + '_viewer');
+        var loading = document.getElementById(containerId + '_loading');
+        var currentPageEl = document.getElementById(containerId + '_current');
+        var totalPagesEl = document.getElementById(containerId + '_total');
+        var prevButton = document.getElementById(containerId + '_prev');
+        var nextButton = document.getElementById(containerId + '_next');
+        var progressBar = document.getElementById(containerId + '_progress');
+        
+        
+        var pdfDoc = null;
+        var currentPage = 1;
+        var totalPages = 0;
+        var rendering = false;
+        
+        
+        var loadingTask = pdfjsLib.getDocument(url);
+        
+        
+        loadingTask.onProgress = function(data) {
+            if (data.total && progressBar) {
+                var percent = (data.loaded / data.total) * 100;
+                progressBar.style.width = percent + '%';
+            }
+        };
+        
+        
+        loadingTask.promise.then(function(pdf) {
+            console.log('PDF loaded successfully with', pdf.numPages, 'pages');
+            pdfDoc = pdf;
+            totalPages = pdf.numPages;
+            
+            if (totalPagesEl) {
+                totalPagesEl.textContent = totalPages;
+            }
+            
+            
+            updateButtons();
+            
+            
+            if (loading) {
+                loading.style.display = 'none';
+            }
+            
+            
+            renderPage(currentPage);
+        }).catch(function(error) {
+            console.error('Error loading PDF:', error);
+            if (loading) {
+                loading.innerHTML = '<div class="pdf-error">Failed to load the PDF. Please try again later. Error: ' + error.message + '</div>';
+            }
+        });
+        
+        
+        function renderPage(pageNum) {
+            if (rendering || !viewer) return;
+            rendering = true;
+            
+            
+            currentPage = pageNum;
+            if (currentPageEl) {
+                currentPageEl.textContent = currentPage;
+            }
+            updateButtons();
+            
+            
+            pdfDoc.getPage(pageNum).then(function(page) {
+                
+                viewer.innerHTML = '';
+                
+                
+                var canvas = document.createElement('canvas');
+                canvas.className = 'pdf-page-canvas';
+                var context = canvas.getContext('2d');
+                
+                
+                var viewport = page.getViewport({ scale: 1.0 });
+                var containerWidth = viewer.clientWidth || 800; 
+                var scale = containerWidth / viewport.width;
+                var scaledViewport = page.getViewport({ scale: scale });
+                
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+                
+                
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: scaledViewport
+                };
+                
+                var renderTask = page.render(renderContext);
+                
+                renderTask.promise.then(function() {
+                    viewer.appendChild(canvas);
+                    rendering = false;
+                }).catch(function(error) {
+                    console.error('Error rendering page:', error);
+                    rendering = false;
+                    viewer.innerHTML = '<div class="pdf-error">Error rendering page: ' + error.message + '</div>';
+                });
+            });
+        }
+        
+        
+        function updateButtons() {
+            if (prevButton) {
+                prevButton.disabled = currentPage <= 1;
+            }
+            if (nextButton) {
+                nextButton.disabled = currentPage >= totalPages;
+            }
+        }
+        
+        
+        if (prevButton) {
+            prevButton.addEventListener('click', function() {
+                if (currentPage > 1) {
+                    renderPage(currentPage - 1);
+                }
+            });
+        }
+        
+        if (nextButton) {
+            nextButton.addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    renderPage(currentPage + 1);
+                }
+            });
+        }
+    }
+});
+</script>
+<h3 id="pdf-example-2-another-pdf">PDF Example 2: Another PDF</h3>
+
+
+
+
+
+<div id="pdf_902d69d0b5ba125174d72e60af633cfd" class="pdf-container">
+    <div class="pdf-header">
+        <div class="pdf-title">{ Sample PDF Document }</div>
+        <div class="pdf-controls">
+            <button id="pdf_902d69d0b5ba125174d72e60af633cfd_prev" class="pdf-button" disabled>« prev</button>
+            <span class="page-counter">Page <span id="pdf_902d69d0b5ba125174d72e60af633cfd_current">0</span> of <span id="pdf_902d69d0b5ba125174d72e60af633cfd_total">0</span></span>
+            <button id="pdf_902d69d0b5ba125174d72e60af633cfd_next" class="pdf-button" disabled>next »</button>
+        </div>
+    </div>
+    
+    <div id="pdf_902d69d0b5ba125174d72e60af633cfd_loading" class="pdf-loading">
+        <div class="pdf-loading-text">loading document...</div>
+        <div class="pdf-progress-bar"><div id="pdf_902d69d0b5ba125174d72e60af633cfd_progress" class="pdf-progress"></div></div>
+    </div>
+    
+    <div id="pdf_902d69d0b5ba125174d72e60af633cfd_viewer" class="pdf-viewer"></div>
+    
+    <div class="pdf-footer">
+        <a href="https://www.africau.edu/images/default/sample.pdf" class="pdf-download-link" download>
+            { download original document }
+        </a>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    setTimeout(function() {
+        initPDFViewer("pdf_902d69d0b5ba125174d72e60af633cfd", "https:\/\/www.africau.edu\/images\/default\/sample.pdf");
+    }, 1000);
+
+    
+    function initPDFViewer(containerId, url) {
+        console.log('Initializing PDF viewer for', containerId);
+        
+        
+        if (typeof pdfjsLib === 'undefined') {
+            console.error('PDF.js not loaded');
+            var loading = document.getElementById(containerId + '_loading');
+            if (loading) {
+                loading.innerHTML = '<div class="pdf-error">PDF.js library not found. Please refresh the page.</div>';
+            }
+            
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+            script.onload = function() {
+                console.log('PDF.js loaded as fallback');
+                if (window.pdfjsLib) {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+                    
+                    setTimeout(function() {
+                        initPDFViewer(containerId, url);
+                    }, 500);
+                }
+            };
+            document.head.appendChild(script);
+            return;
+        }
+        
+        
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+        
+        var container = document.getElementById(containerId);
+        if (!container) {
+            console.error('PDF container not found:', containerId);
+            return;
+        }
+        
+        var viewer = document.getElementById(containerId + '_viewer');
+        var loading = document.getElementById(containerId + '_loading');
+        var currentPageEl = document.getElementById(containerId + '_current');
+        var totalPagesEl = document.getElementById(containerId + '_total');
+        var prevButton = document.getElementById(containerId + '_prev');
+        var nextButton = document.getElementById(containerId + '_next');
+        var progressBar = document.getElementById(containerId + '_progress');
+        
+        
+        var pdfDoc = null;
+        var currentPage = 1;
+        var totalPages = 0;
+        var rendering = false;
+        
+        
+        var loadingTask = pdfjsLib.getDocument(url);
+        
+        
+        loadingTask.onProgress = function(data) {
+            if (data.total && progressBar) {
+                var percent = (data.loaded / data.total) * 100;
+                progressBar.style.width = percent + '%';
+            }
+        };
+        
+        
+        loadingTask.promise.then(function(pdf) {
+            console.log('PDF loaded successfully with', pdf.numPages, 'pages');
+            pdfDoc = pdf;
+            totalPages = pdf.numPages;
+            
+            if (totalPagesEl) {
+                totalPagesEl.textContent = totalPages;
+            }
+            
+            
+            updateButtons();
+            
+            
+            if (loading) {
+                loading.style.display = 'none';
+            }
+            
+            
+            renderPage(currentPage);
+        }).catch(function(error) {
+            console.error('Error loading PDF:', error);
+            if (loading) {
+                loading.innerHTML = '<div class="pdf-error">Failed to load the PDF. Please try again later. Error: ' + error.message + '</div>';
+            }
+        });
+        
+        
+        function renderPage(pageNum) {
+            if (rendering || !viewer) return;
+            rendering = true;
+            
+            
+            currentPage = pageNum;
+            if (currentPageEl) {
+                currentPageEl.textContent = currentPage;
+            }
+            updateButtons();
+            
+            
+            pdfDoc.getPage(pageNum).then(function(page) {
+                
+                viewer.innerHTML = '';
+                
+                
+                var canvas = document.createElement('canvas');
+                canvas.className = 'pdf-page-canvas';
+                var context = canvas.getContext('2d');
+                
+                
+                var viewport = page.getViewport({ scale: 1.0 });
+                var containerWidth = viewer.clientWidth || 800; 
+                var scale = containerWidth / viewport.width;
+                var scaledViewport = page.getViewport({ scale: scale });
+                
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+                
+                
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: scaledViewport
+                };
+                
+                var renderTask = page.render(renderContext);
+                
+                renderTask.promise.then(function() {
+                    viewer.appendChild(canvas);
+                    rendering = false;
+                }).catch(function(error) {
+                    console.error('Error rendering page:', error);
+                    rendering = false;
+                    viewer.innerHTML = '<div class="pdf-error">Error rendering page: ' + error.message + '</div>';
+                });
+            });
+        }
+        
+        
+        function updateButtons() {
+            if (prevButton) {
+                prevButton.disabled = currentPage <= 1;
+            }
+            if (nextButton) {
+                nextButton.disabled = currentPage >= totalPages;
+            }
+        }
+        
+        
+        if (prevButton) {
+            prevButton.addEventListener('click', function() {
+                if (currentPage > 1) {
+                    renderPage(currentPage - 1);
+                }
+            });
+        }
+        
+        if (nextButton) {
+            nextButton.addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    renderPage(currentPage + 1);
+                }
+            });
+        }
+    }
+});
+</script>
+<h2 id="testing-scenarios">Testing Scenarios</h2>
+<ol>
+<li><strong>Multiple PDFs on one page</strong>: Each PDF viewer should function independently</li>
+<li><strong>Navigation</strong>: Page navigation should work with buttons and keyboard arrows</li>
+<li><strong>Responsive display</strong>: PDF viewers should display properly on all screen sizes</li>
+<li><strong>Loading indicators</strong>: Progress bars should work as expected</li>
+<li><strong>Error handling</strong>: Error messages should be displayed for invalid PDFs</li>
+</ol>
+<h2 id="debugging-information">Debugging Information</h2>
+<p>If the PDF viewer isn&rsquo;t working, please check the browser console for errors using the browser developer tools (F12 or Ctrl+Shift+I).</p>
+
+
+<p>
+
+</p>
+
+<p>
+
+</p>
+
+
+
+
+</main>
+                <hr />
+    
+    <div class="scrolling-footer">
+        <p> 
+            <small>
+                <span class="updated">
+                    
+                        Updated: April 5, 2025
+                    
+                </span>
+                © 2025 Elias Judin. Content licensed under
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC-BY-4.0</a>. Website code licensed under
+                <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener noreferrer">MIT License</a>.
+            </small>
+        </p>
+    </div>
+</footer>
+
+<script
+    type="text/javascript"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+
+    MathJax.Hub.Config({
+    
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+</script>
+        </div>
+        <script>
+    function loadTwitterScript() {
+        var script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        document.body.appendChild(script);
+    }
+    if (window.addEventListener) {
+        window.addEventListener("load", loadTwitterScript, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", loadTwitterScript);
+    }
+</script>
+    </body>
+</html>

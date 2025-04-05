@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algebraic-Geometry on Elias Judin - Category Theory &amp; Monadic Algebra Research</title>
+    <link>https://eliasjudin.github.io/tags/algebraic-geometry/</link>
+    <description>Recent content in Algebraic-Geometry on Elias Judin - Category Theory &amp; Monadic Algebra Research</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© 2024 by Elias Judin</copyright>
+    <lastBuildDate>Sat, 05 Apr 2025 18:42:31 +0200</lastBuildDate>
+    <atom:link href="https://eliasjudin.github.io/tags/algebraic-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sheaves as Presheaves with an Equalizer Diagram</title>
+      <link>https://eliasjudin.github.io/blog/sheaves-and-presheaves/</link>
+      <pubDate>Sat, 26 Oct 2024 17:45:50 +0200</pubDate>
+      <guid>https://eliasjudin.github.io/blog/sheaves-and-presheaves/</guid>
+      <description>&lt;p&gt;A sheaf on a topological space $ X $ can be defined as a presheaf $ F: \text{Open}(X)^{\text{op}} \to \mathbf{Set} $ such that for any open covering $ { U_i } $ $ (i \in I) $ of an open set $ U $, the following diagram is an equalizer:&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;https://cdn.jsdelivr.net/gh/eliasjudin/website-assets@main/images/sheaf-equalizer.svg&#34;&#xA;         alt=&#34;Equalizer diagram for sheaves.&#34;&#xA;         width=&#34;600&#34;&#xA;         &gt;&#xA;    &#xA;&lt;/figure&gt;&#xA;&lt;h4 id=&#34;presheaves-and-sheaves&#34;&gt;Presheaves and sheaves&lt;/h4&gt;&#xA;&lt;p&gt;A &lt;strong&gt;presheaf&lt;/strong&gt; $ F $ on $ X $ is a contravariant functor from the collection of open sets of $ X $ ordered by inclusion, $ \text{Open}(X) $, to the category of sets, $ \mathbf{Set} $:&#xA;$$&#xA;F: \text{Open}(X)^{\text{op}} \to \mathbf{Set}&#xA;$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>General on Elias Judin - Category Theory &amp; Monadic Algebra Research</title>
+    <link>/tags/general/</link>
+    <description>Recent content in General on Elias Judin - Category Theory &amp; Monadic Algebra Research</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© 2024 by Elias Judin</copyright>
+    <lastBuildDate>Wed, 02 Apr 2025 12:32:18 +0200</lastBuildDate>
+    <atom:link href="/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Definitions vs Characterisations</title>
+      <link>/blog/definitions-and-characterisations/</link>
+      <pubDate>Thu, 26 Sep 2024 16:15:40 +0200</pubDate>
+      <guid>/blog/definitions-and-characterisations/</guid>
+      <description>&lt;h3 id=&#34;definitions-axioms&#34;&gt;Definitions. &lt;em&gt;axioms&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Serve as the foundational building blocks of a mathematical structure.&lt;/p&gt;&#xA;&lt;p&gt;Prescriptive and minimal; they specify the essential properties that define the object without redundancy.&lt;/p&gt;&#xA;&lt;p&gt;Establish the scope and boundaries of the structure, allowing for the derivation of further properties and theorems.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;characterizations-derived-properties&#34;&gt;Characterizations. &lt;em&gt;derived properties&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Provide additional properties or conditions that uniquely identify or describe specific instances within the broader class defined by the axioms.&lt;/p&gt;&#xA;&lt;p&gt;Descriptive and often contingent upon the axioms; they help in classifying and distinguishing structures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

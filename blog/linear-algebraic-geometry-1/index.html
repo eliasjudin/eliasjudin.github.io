@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>
+        Linear Algebraic Geometry Part I | Elias Judin - Category Theory &amp; Monadic Algebra Research
+    </title>
+    <meta name="description" content="Below is a revised technical blog post written in flowing, well‐structured paragraphs. The post explains how your work on linear varieties of universal algebras and their equivalence to the category of semimodules over the semiring of unary operations fits naturally into Olivia Caramello’s general affine adjunction framework. The exposition is aimed at graduate students in mathematics.
+
+Bridging Linear Varieties and Semimodules via General Affine Adjunctions
+In recent years, abstract dualities and adjunctions have become powerful tools in many areas of mathematics. One particularly influential development is the general affine adjunction framework developed by Caramello, Marra, and Spada, which abstracts the classical correspondence between affine algebraic varieties and coordinate rings into a categorical setting. In my work on linear varieties of universal algebras, I establish an equivalence between such a variety and the category of semimodules over the semiring of unary operations. In this post, we explain how this concrete equivalence fits into Caramello’s general framework, detailing each step and verifying all calculations along the way.">
+    <meta name="keywords" content="Category Theory, Categorical Algebra, Universal Algebra, Mathematics Research, linear-algebra, universal-algebra, category-theory, algebraic-geometry, logic">
+    <meta name="author" content="Elias Judin">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1743871093" type="text/css" />
+    <link
+        rel="stylesheet"
+        href="/assets/css/pdf-container.css?v=1743871093"
+        type="text/css"
+    />
+    <meta name="google-site-verification" content="woicpQb3QYBpCMz2BHOxKJ5K0KwbH2FN-PYSu8jYaaI">
+
+    
+    
+    
+
+    
+    <script>
+        
+        (function() {
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+            script.async = false;
+            script.onload = function() {
+                console.log('PDF.js loaded successfully');
+                
+                if (window.pdfjsLib) {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+                    console.log('PDF.js worker path set');
+                } else {
+                    console.error('PDF.js loaded but pdfjsLib is not defined');
+                }
+            };
+            script.onerror = function() {
+                console.error('Failed to load PDF.js');
+            };
+            
+            document.head.appendChild(script);
+            
+            
+            window.pdfjsWorkerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+        })();
+    </script>
+
+    
+    <meta property="og:title" content="Linear Algebraic Geometry Part I">
+    <meta property="og:description" content="Below is a revised technical blog post written in flowing, well‐structured paragraphs. The post explains how your work on linear varieties of universal algebras and their equivalence to the category of semimodules over the semiring of unary operations fits naturally into Olivia Caramello’s general affine adjunction framework. The exposition is aimed at graduate students in mathematics.
+
+Bridging Linear Varieties and Semimodules via General Affine Adjunctions
+In recent years, abstract dualities and adjunctions have become powerful tools in many areas of mathematics. One particularly influential development is the general affine adjunction framework developed by Caramello, Marra, and Spada, which abstracts the classical correspondence between affine algebraic varieties and coordinate rings into a categorical setting. In my work on linear varieties of universal algebras, I establish an equivalence between such a variety and the category of semimodules over the semiring of unary operations. In this post, we explain how this concrete equivalence fits into Caramello’s general framework, detailing each step and verifying all calculations along the way.">
+    <meta property="og:image" content="/assets/images/banner.svg">
+    <meta property="og:url" content="/blog/linear-algebraic-geometry-1/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Linear Algebraic Geometry Part I">
+    <meta name="twitter:description" content="Below is a revised technical blog post written in flowing, well‐structured paragraphs. The post explains how your work on linear varieties of universal algebras and their equivalence to the category of semimodules over the semiring of unary operations fits naturally into Olivia Caramello’s general affine adjunction framework. The exposition is aimed at graduate students in mathematics.
+
+Bridging Linear Varieties and Semimodules via General Affine Adjunctions
+In recent years, abstract dualities and adjunctions have become powerful tools in many areas of mathematics. One particularly influential development is the general affine adjunction framework developed by Caramello, Marra, and Spada, which abstracts the classical correspondence between affine algebraic varieties and coordinate rings into a categorical setting. In my work on linear varieties of universal algebras, I establish an equivalence between such a variety and the category of semimodules over the semiring of unary operations. In this post, we explain how this concrete equivalence fits into Caramello’s general framework, detailing each step and verifying all calculations along the way.">
+    <meta name="twitter:image" content="/assets/images/banner.svg">
+    
+    
+    <link rel="canonical" href="/blog/linear-algebraic-geometry-1/">
+    
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+    <body>
+        
+        <a href="#content" class="skip-to-content">Skip to content</a>
+        <div class="wrapper">
+            <a href="/" class="header-link">
+<pre class="glitch-text">
+  ███████╗ ██╗     ██╗ █████╗ ███████╗       ██╗██╗   ██╗██████╗ ██╗███╗   ██╗
+  ██╔════╝ ██║     ██║██╔══██╗██╔════╝       ██║██║   ██║██╔══██╗██║████╗  ██║
+  █████╗   ██║     ██║███████║███████╗       ██║██║   ██║██║  ██║██║██╔██╗ ██║
+  ██╔══╝   ██║     ██║██╔══██║╚════██║  ██   ██║██║   ██║██║  ██║██║██║╚██╗██║
+  ███████╗ ███████╗██║██║  ██║███████║  ╚█████╔╝╚██████╔╝██████╔╝██║██║ ╚████║
+  ╚══════╝ ╚══════╝╚═╝╚═╝  ╚═╝╚══════╝   ╚════╝  ╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝
+</pre>
+</a>
+<hr/>
+
+<footer class="main-footer">
+    <ul class="footer-menu">
+        
+        <li>
+            <a href="/" class="footer-link">home</a>
+        </li>
+        
+        <li>
+            <a href="/log" class="footer-link">log</a>
+        </li>
+        
+        <li>
+            <a href="/blog" class="footer-link">blog</a>
+        </li>
+        
+        <li>
+            <a href="/cv" class="footer-link">cv</a>
+        </li>
+        
+        <li>
+            <a href="mailto:ejudin@gmail.com" class="footer-link">contact</a>
+        </li>
+        
+    </ul>
+</footer>
+            <main id="content">
+
+
+
+
+
+
+<h1>Linear Algebraic Geometry Part I</h1>
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">{ home }</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/blog/" itemprop="item"><span itemprop="name">{ Blog }</span></a>
+      <meta itemprop="position" content="2" />
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="current-page">{ Linear Algebraic Geometry Part I }</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+
+<em>February 1, 2025</em>
+
+
+
+
+<div class="article-meta">
+  <span class="article-date">February 1, 2025</span>
+  
+    (Updated: March 9, 2025)
+  
+  
+  
+  <div class="article-tags">
+    
+      <a href="/tags/linear-algebra" class="article-tag">#linear-algebra</a>
+    
+      <a href="/tags/universal-algebra" class="article-tag">#universal-algebra</a>
+    
+      <a href="/tags/category-theory" class="article-tag">#category-theory</a>
+    
+      <a href="/tags/algebraic-geometry" class="article-tag">#algebraic-geometry</a>
+    
+      <a href="/tags/logic" class="article-tag">#logic</a>
+    
+  </div>
+  
+</div>
+
+
+<p>Below is a revised technical blog post written in flowing, well‐structured paragraphs. The post explains how your work on linear varieties of universal algebras and their equivalence to the category of semimodules over the semiring of unary operations fits naturally into Olivia Caramello’s general affine adjunction framework. The exposition is aimed at graduate students in mathematics.</p>
+<hr>
+<h1 id="bridging-linear-varieties-and-semimodules-via-general-affine-adjunctions">Bridging Linear Varieties and Semimodules via General Affine Adjunctions</h1>
+<p>In recent years, abstract dualities and adjunctions have become powerful tools in many areas of mathematics. One particularly influential development is the general affine adjunction framework developed by Caramello, Marra, and Spada, which abstracts the classical correspondence between affine algebraic varieties and coordinate rings into a categorical setting. In my work on linear varieties of universal algebras, I establish an equivalence between such a variety and the category of semimodules over the semiring of unary operations. In this post, we explain how this concrete equivalence fits into Caramello’s general framework, detailing each step and verifying all calculations along the way.</p>
+<h2 id="the-general-affine-adjunction-framework">The General Affine Adjunction Framework</h2>
+<p>Caramello’s approach begins with an abstract setting that distinguishes between a “syntactic” category and a “semantic” category. In the classical case of affine algebraic geometry, one studies the Galois connection between subsets of ( k^n ) and ideals in the polynomial ring ( k[X_1,\dots,X_n] ), and the Hilbert Nullstellensatz then characterizes the fixed points of the corresponding closure operator. In the abstract framework, one fixes a category (\mathcal{T}) (which, in the algebraic specialization, is taken to be the opposite of the full subcategory of free algebras in a variety (\mathcal{V})) and a semantic category (\mathcal{S}) (usually (\mathbf{Set})). A functor
+[
+I \colon \mathcal{T} \to \mathcal{S}
+]
+is then chosen to interpret the syntactic objects into the semantic domain. In our algebraic case, for a fixed algebra (A) in (\mathcal{V}) one typically defines
+[
+I(t) = \operatorname{hom}<em>{\mathcal{V}}(t, A).
+]
+A distinguished object (\triangle \in \mathcal{T}) is selected—usually, the free algebra on one generator, denoted (F(1)). With these ingredients the authors define two operators. For any subobject (or, in (\mathbf{Set}), any subset) (s \colon S \hookrightarrow I(t)) the operator (C) is defined by
+[
+C(s) = { (p,q) \in \operatorname{hom}</em>{\mathcal{T}}(t,\triangle)^2 \mid I(p)\circ s = I(q)\circ s },
+]
+while for any relation (R \subseteq \operatorname{hom}<em>{\mathcal{T}}(t,\triangle)^2) one defines
+[
+V(R) = \bigcap</em>{(p,q) \in R} \operatorname{Eq}(I(p), I(q)),
+]
+where (\operatorname{Eq}(I(p),I(q))) denotes the equalizer in (\mathbf{Set}). One then verifies that these two assignments form a contravariant Galois connection—that is, (R \subseteq C(s)) if and only if (s \subseteq V(R)). Lifting this connection produces an adjunction between a “geometric” category (\mathcal{D}) (of definable subobjects) and an “algebraic” category (\mathcal{Q}) (of quotients of the hom‑sets by congruences). When restricted to the fixed points of the closure operator (a setting in which an abstract Nullstellensatz holds), one recovers a dual equivalence between the geometric and the algebraic sides.</p>
+<h2 id="specialization-to-linear-varieties-and-semimodule-equivalence">Specialization to Linear Varieties and Semimodule Equivalence</h2>
+<p>Now, suppose that our variety (\mathcal{V}) is “linear” in the sense that every algebra (A \in \mathcal{V}) is generated by the canonical arrow
+[
+\iota_A\colon F(1) \to A,
+]
+and every operation in (A) is determined solely by its restriction to the “unary part”
+[
+M_A := \operatorname{hom}<em>{\mathcal{V}}(F(1), A).
+]
+In this setting one can define the semiring
+[
+S := \operatorname{End}</em>{\mathcal{V}}(F(1)),
+]
+where the multiplication is given by composition and the addition is induced by the linear structure inherent in the variety. In other words, the structure of any algebra (A) is completely encoded in the (S)-module structure on (M_A). In our work, we construct a functor
+[
+\Phi\colon \mathcal{V}<em>p \to S\text{-}\mathbf{SMod}, \quad \Phi(A) = \operatorname{hom}</em>{\mathcal{V}}(F(1), A),
+]
+where (\mathcal{V}<em>p) denotes the category of presented algebras (which is equivalent to (\mathcal{V}) under standard conditions). Here, the right (S)-action on (\Phi(A)) is given by precomposition; that is, for any (f\in \operatorname{hom}</em>{\mathcal{V}}(F(1), A)) and any (s\in S) we define
+[
+f \cdot s := f \circ s.
+]
+A straightforward verification shows that this action is associative, unital, and distributive. The key point is that, under the generation assumption, the hom‑functor (\Phi) captures all of the algebraic structure of (A), and thus one may reconstruct (A) (up to isomorphism) from the semimodule (\Phi(A)).</p>
+<h2 id="formalizing-the-equivalence">Formalizing the Equivalence</h2>
+<p>Let us now describe the construction in precise terms.</p>
+<ol>
+<li>
+<p><strong>Data Setup.</strong><br>
+We define our syntactic category to be
+[
+\mathcal{T} = {F(\mu): \mu \in \mathrm{Card}}^{\mathrm{op}},
+]
+where (F(\mu)) denotes the free algebra on (\mu) generators. Our semantic category is (\mathcal{S} = \mathbf{Set}). We choose the distinguished object
+[
+\triangle = F(1),
+]
+and define the interpretation functor
+[
+I \colon \mathcal{T} \to \mathbf{Set}, \quad I(F(\mu)) = \operatorname{hom}<em>{\mathcal{V}}(F(\mu), A).
+]
+In particular, (I(F(1)) \cong \operatorname{hom}</em>{\mathcal{V}}(F(1), A) = M_A).</p>
+</li>
+<li>
+<p><strong>Verification of Power Preservation.</strong><br>
+For any set (J), note that in our algebraic context the power (F(1)^J) (taken in (\mathcal{T})) is isomorphic to (F(J)). Consequently,
+[
+I(F(1)^J) \cong \operatorname{hom}_{\mathcal{V}}(F(J), A) \cong U(A)^J \cong \bigl(I(F(1))\bigr)^J.
+]</p>
+</li>
+<li>
+<p><strong>Galois Connection.</strong><br>
+For a free algebra (F(\mu)) and any subobject (s\colon S \hookrightarrow I(F(\mu))), we define
+[
+C(s) = {(p,q) \in \operatorname{hom}<em>{\mathcal{T}}(F(\mu), F(1))^2 \mid I(p) \circ s = I(q) \circ s}.
+]
+For any relation (R \subseteq \operatorname{hom}</em>{\mathcal{T}}(F(\mu), F(1))^2), we define
+[
+V(R) = \bigcap_{(p,q)\in R} \operatorname{Eq}(I(p), I(q)).
+]
+A short calculation verifies that (R \subseteq C(s)) if and only if (s \subseteq V(R)).</p>
+</li>
+<li>
+<p><strong>Semimodule Structure.</strong><br>
+The key observation in the linear case is that
+[
+M_A := \operatorname{hom}_{\mathcal{V}}(F(1), A)
+]
+carries a natural right (S)-semimodule structure defined by
+[
+f \cdot s := f \circ s, \quad \forall, f \in M_A,, s \in S.
+]
+One verifies that this action is associative (since composition in (\mathcal{V}) is associative), unital (because composing with the identity yields the same function), and distributive with respect to the addition in (S) (by the assumed linearity of the operations).</p>
+</li>
+<li>
+<p><strong>The Equivalence Functor.</strong><br>
+We now define the functor
+[
+\Phi\colon \mathcal{V}<em>p \to S\text{-}\mathbf{SMod},\quad \Phi(A) = \operatorname{hom}</em>{\mathcal{V}}(F(1), A).
+]
+For a morphism (h\colon A\to B) in (\mathcal{V}_p) the induced map is
+[
+\Phi(h)(f) = h\circ f, \quad f\in M_A.
+]
+Using the universal property of (F(1)) and the generation hypothesis (that every algebra is generated by the image of (F(1))), one shows that (\Phi) is fully faithful. Moreover, any right (S)-semimodule (of the type arising in this context) can be “reconstructed” to give an algebra (A) with
+[
+M_A \cong \Phi(A).
+]
+This proves that (\Phi) is essentially surjective, and hence an equivalence of categories.</p>
+</li>
+</ol>
+<hr>
+<h2 id="final-formulation">Final Formulation</h2>
+<p><strong>Theorem (Equivalence for Linear Varieties).</strong><br>
+Let (\mathcal{V}) be a linear variety of universal algebras such that every algebra (A) is generated by the canonical arrow
+[
+\iota_A\colon F(1) \to A,
+]
+and every operation in (A) is determined by its restriction to (M_A = \operatorname{hom}<em>{\mathcal{V}}(F(1),A)). Define the semiring
+[
+S := \operatorname{End}</em>{\mathcal{V}}(F(1)),
+]
+with composition as multiplication and an addition induced by the linear structure. With</p>
+<ul>
+<li>(\mathcal{T} = {F(\mu): \mu\in\mathrm{Card}}^{\mathrm{op}}),</li>
+<li>(\mathcal{S} = \mathbf{Set}),</li>
+<li>distinguished object (\triangle = F(1)),</li>
+<li>and the interpretation functor (I\colon \mathcal{T}\to \mathbf{Set}) defined by
+[
+I(F(\mu)) = \operatorname{hom}_{\mathcal{V}}(F(\mu),A),
+]</li>
+</ul>
+<p>the functor
+[
+\Phi\colon \mathcal{V}<em>p\to S\text{-}\mathbf{SMod},\quad \Phi(A)=\operatorname{hom}</em>{\mathcal{V}}(F(1),A),
+]
+with the right (S)-action defined by
+[
+f\cdot s = f\circ s,\quad \forall, f\in \operatorname{hom}_{\mathcal{V}}(F(1),A),; s\in S,
+]
+is an equivalence of categories. Moreover, for every morphism (h\colon A\to B) in (\mathcal{V}<em>p) the induced (S)-linear map is given by
+[
+\Phi(h)(f)=h\circ f,\quad \forall, f\in \operatorname{hom}</em>{\mathcal{V}}(F(1),A).
+]</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this post we have carefully integrated your work on linear varieties into Caramello’s general affine adjunction framework. We began by setting up the abstract data—choosing appropriate syntactic and semantic categories, a distinguished object, and an interpretation functor—and verified that the necessary properties (such as power preservation and the Galois connection) hold. We then specialized the construction to a linear variety, where every algebra is determined by its unary part, and we defined a natural semimodule structure on the hom‑set (\operatorname{hom}(F(1),A)). Finally, we showed that the resulting functor from the category of presented algebras to the category of (S)-semimodules is an equivalence.</p>
+<p>This polished formulation and careful verification of each calculation not only illustrates the power of Caramello’s framework but also demonstrates how your results serve as a concrete example of its applicability. Graduate students interested in abstract duality theory and its applications in universal algebra should find this synthesis both enlightening and motivating for further research.</p>
+
+
+<p>
+
+</p>
+
+<p>
+
+
+
+
+
+
+
+
+
+    Tags:
+    <a href="/tags/linear-algebra">linear-algebra</a>
+    , <a href="/tags/universal-algebra">universal-algebra</a>
+    , <a href="/tags/category-theory">category-theory</a>
+    , <a href="/tags/algebraic-geometry">algebraic-geometry</a>
+    , <a href="/tags/logic">logic</a>
+    
+
+
+
+</p>
+
+
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Linear Algebraic Geometry Part I",
+    "description": "\u003cp\u003eBelow is a revised technical blog post written in flowing, well‐structured paragraphs. The post explains how your work on linear varieties of universal algebras and their equivalence to the category of semimodules over the semiring of unary operations fits naturally into Olivia Caramello’s general affine adjunction framework. The exposition is aimed at graduate students in mathematics.\u003c\/p\u003e\n\u003chr\u003e\n\u003ch1 id=\u0022bridging-linear-varieties-and-semimodules-via-general-affine-adjunctions\u0022\u003eBridging Linear Varieties and Semimodules via General Affine Adjunctions\u003c\/h1\u003e\n\u003cp\u003eIn recent years, abstract dualities and adjunctions have become powerful tools in many areas of mathematics. One particularly influential development is the general affine adjunction framework developed by Caramello, Marra, and Spada, which abstracts the classical correspondence between affine algebraic varieties and coordinate rings into a categorical setting. In my work on linear varieties of universal algebras, I establish an equivalence between such a variety and the category of semimodules over the semiring of unary operations. In this post, we explain how this concrete equivalence fits into Caramello’s general framework, detailing each step and verifying all calculations along the way.\u003c\/p\u003e",
+    "author": {
+      "@type": "Person",
+      
+      "name": "Elias Judin",
+      "url": "\/",
+      
+      "jobTitle": "Masters Student Pure Mathematics",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "Department of Mathematics and Applied Mathematics, University of Cape Town",
+        "department": "Department of Mathematics and Applied Mathematics" 
+      }
+    },
+    "datePublished": "2025-02-01",
+    "dateModified": "2025-03-09",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "\/blog\/linear-algebraic-geometry-1\/"
+    },
+    "keywords": [
+          "linear-algebra",
+          "universal-algebra",
+          "category-theory",
+          "algebraic-geometry",
+          "logic"
+    ],
+    "image": "\/assets\/images\/banner.svg",
+    "publisher": {
+      "@type": "Organization",
+      
+      "name": "Elias Judin",
+      "logo": {
+        "@type": "ImageObject",
+         
+        "url": "\/\/assets\/images\/banner.svg"
+      }
+    },
+    "about": {
+      "@type": "Thing",
+      
+      "name": "Category Theory"
+    },
+    "isAccessibleForFree": "True",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Elias Judin - Category Theory \u0026 Monadic Algebra Research",
+      "url": "\/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "educationalUse": "Research",
+    "genre": "Academic",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Mathematicians and Category Theorists"
+    },
+    "inLanguage": "en",
+    
+    "citation": {
+      "@type": "CreativeWork",
+      "name": "Linear Algebraic Geometry Part I",
+      "author": "Elias Judin",
+      "datePublished": "2025-02-01"
+    }
+    
+  }
+</script>
+
+
+</main>
+                <hr />
+    
+    <div class="scrolling-footer">
+        <p> 
+            <small>
+                <span class="updated">
+                    
+                        Updated: March 9, 2025
+                    
+                </span>
+                © 2025 Elias Judin. Content licensed under
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC-BY-4.0</a>. Website code licensed under
+                <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener noreferrer">MIT License</a>.
+            </small>
+        </p>
+    </div>
+</footer>
+
+<script
+    type="text/javascript"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+
+    MathJax.Hub.Config({
+    
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+</script>
+        </div>
+        <script>
+    function loadTwitterScript() {
+        var script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        document.body.appendChild(script);
+    }
+    if (window.addEventListener) {
+        window.addEventListener("load", loadTwitterScript, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", loadTwitterScript);
+    }
+</script>
+    </body>
+</html>

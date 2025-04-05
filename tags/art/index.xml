@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Art on Elias Judin - Category Theory &amp; Monadic Algebra Research</title>
+    <link>https://eliasjudin.github.io/tags/art/</link>
+    <description>Recent content in Art on Elias Judin - Category Theory &amp; Monadic Algebra Research</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© 2024 by Elias Judin</copyright>
+    <lastBuildDate>Sat, 05 Apr 2025 18:42:31 +0200</lastBuildDate>
+    <atom:link href="https://eliasjudin.github.io/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Describing difficult spaces</title>
+      <link>https://eliasjudin.github.io/blog/describing-difficult-spaces/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://eliasjudin.github.io/blog/describing-difficult-spaces/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://eliasjudin.github.io/assets/images/blog/difficult-spaces/3D-Torus-Rotated.png&#34; alt=&#34;torus 3d&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The idea behind this curatorial project is to give artists a prompt describing a space that is difficult to visualise, and ask them to come up with a way of describing that space whether that be a visual, auditory, or literary description.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;What would it be like to be inside a 3-torus? A space where everything in front of you is behind you, everything to the left of you is to the right and everything above you is below.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
