@@ -1,0 +1,11 @@
+\documentclass[
+    tikz,
+    convert={outext=.svg, command=\unexpanded{pdf2svg \infile\space\outfile}},
+    multi=false
+]{standalone}
+\usepackage{tikz-cd, amsmath}
+\begin{document}
+\begin{tikzcd}
+	F(U) \arrow[r, "\delta"] & \displaystyle\prod_{i\in I} F(U_i) \arrow[r, shift left, "\alpha"] \arrow[r, shift right, "\beta"'] & \displaystyle\prod_{(i, j) \in I \times I} F(U_i \cap U_j)
+\end{tikzcd}
+\end{document}

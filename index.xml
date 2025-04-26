@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Elias Judin - Category Theory &amp; Monadic Algebra Research</title><link>https://eliasjudin.github.io/</link><description>Recent content on Elias Judin - Category Theory &amp; Monadic Algebra Research</description><generator>Hugo</generator><language>en</language><copyright>© 2024 by Elias Judin</copyright><atom:link href="https://eliasjudin.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Reflections on the Right Use of Artificial Intelligence With a View to the Love of Mathematics</title><link>https://eliasjudin.github.io/blog/reflections-on-the-right-use-of-ai-for-math/</link><pubDate>Tue, 01 Apr 2025 17:06:31 +0200</pubDate><guid>https://eliasjudin.github.io/blog/reflections-on-the-right-use-of-ai-for-math/</guid><description>&lt;p>Quentin Meillassoux’s speculative realism, launched with the provocative force of &lt;em>After Finitude&lt;/em>, throws down a gauntlet to the pervasive philosophical climate he terms &amp;ldquo;correlationism.&amp;rdquo; Correlationism, in its various guises, insists that we only ever access the correlation between thinking and being, never either term in isolation. Thought cannot grasp an object independent of its being-given-to-thought, nor conceive of a subject detached from its relation to an object. Meillassoux’s primary weapon against this enclosure is the &lt;em>arche-fossil&lt;/em>: scientific statements, like those dating the accretion of the Earth or the formation of stars, which refer to a reality chronologically &lt;em>anterior&lt;/em> to the emergence of life and, consequently, anterior to any thought or consciousness. The &lt;em>arche-fossil&lt;/em> presents a profound challenge: how can science meaningfully speak of a time when the correlation itself did not exist? How can a discourse meaningful &lt;em>for us&lt;/em>, now, denote a reality radically independent of any &lt;em>us&lt;/em>? This is the crux – the &lt;em>arche-fossil&lt;/em> signifies a reality definitively &lt;em>not for us&lt;/em> in its origin, yet seemingly accessed &lt;em>by us&lt;/em> through mathematized science.&lt;/p></description></item><item><title>Tarski's automorphsisms</title><link>https://eliasjudin.github.io/blog/tarskis-automorphsisms/</link><pubDate>Thu, 14 Nov 2024 09:34:48 +0200</pubDate><guid>https://eliasjudin.github.io/blog/tarskis-automorphsisms/</guid><description>&lt;p>I first came across &lt;a href="https://ncatlab.org/nlab/show/Albert+Lautman">Albert Lautman (nLab)&lt;/a> after reading &lt;a href="https://ncatlab.org/nlab/show/Fernando+Zalamea">Fernando Zalamea&amp;rsquo;s&lt;/a> remarks on his importance to structural mathematics in &lt;a href="https://mitpress.mit.edu/9780956775016/synthetic-philosophy-of-contemporary-mathematics/">&lt;em>Synthetic philosophy of contemporary mathematics&lt;/em>&lt;/a>.&lt;/p>
+&lt;p>While reading the &lt;a href="https://golem.ph.utexas.edu/category/">n-category cafe&lt;/a> article on &lt;a href="https://golem.ph.utexas.edu/category/2008/02/albert_lautman.html">Albert Lautman&lt;/a>, I encountered some ideas which have been coming up in my work on my masters thesis and seem to originate with &lt;a href="https://en.wikipedia.org/wiki/Alfred_Tarski">Alfred Tarski&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>From Tarski&amp;rsquo;s 1966 lecture &lt;a href="https://philarchive.org/rec/TARWAL">&lt;em>&amp;ldquo;What are logical notions?&amp;rdquo;&lt;/em>&lt;/a> (published posthumously in 1986).&lt;/p>
+&lt;p>What would an answer to the question of the title look like?&lt;/p></description></item><item><title>Sheaves as Presheaves with an Equalizer Diagram</title><link>https://eliasjudin.github.io/blog/sheaves-and-presheaves/</link><pubDate>Sat, 26 Oct 2024 17:45:50 +0200</pubDate><guid>https://eliasjudin.github.io/blog/sheaves-and-presheaves/</guid><description>&lt;p>A sheaf on a topological space $ X $ can be defined as a presheaf $ F: \text{Open}(X)^{\text{op}} \to \mathbf{Set} $ such that for any open covering $ { U_i } $ $ (i \in I) $ of an open set $ U $, the following diagram is an equalizer:&lt;/p>
+
+
+
+
+
+
+
+
+
+&lt;figure>
+ &lt;img src="https://cdn.jsdelivr.net/gh/eliasjudin/website-assets@main/images/sheaf-equalizer.svg"
+ alt="Equalizer diagram for sheaves."
+ width="600"
+ >
+ 
+&lt;/figure>
+&lt;h4 id="presheaves-and-sheaves">Presheaves and sheaves&lt;/h4>
+&lt;p>A &lt;strong>presheaf&lt;/strong> $ F $ on $ X $ is a contravariant functor from the collection of open sets of $ X $ ordered by inclusion, $ \text{Open}(X) $, to the category of sets, $ \mathbf{Set} $:
+$$
+F: \text{Open}(X)^{\text{op}} \to \mathbf{Set}
+$$&lt;/p></description></item><item><title>Monomorphisms and epimorphisms</title><link>https://eliasjudin.github.io/blog/monos-and-epis/</link><pubDate>Sat, 17 Dec 2022 12:45:05 +0200</pubDate><guid>https://eliasjudin.github.io/blog/monos-and-epis/</guid><description>&lt;p>The classes of monomorphisms, epimorphisms, bimorphisms, split monomorphisms, and split epimorphisms are closed under composition and contain all isomorsphisms.
+To show these classes are closed under composition, consider two morphisms $f:A\to B$ and $g:B\to C$. If $f$ and $g$ are monomorphisms then for $a,a&amp;rsquo;\in\operatorname{hom}(X,A)$, $$(gf)a=(gf)a&amp;rsquo;\implies fa=fa&amp;rsquo;\implies a = a&amp;rsquo;$$ and so $gf$ is a monomorphism. If $f$ and $g$ are epimorphisms then for $c,c&amp;rsquo;\in\operatorname{hom}(C,X)$, $$c(gf)=c&amp;rsquo;(gf)\implies cg=cg&amp;rsquo;\implies c=c&amp;rsquo;$$ and so $gf$ is an epimorphism. If $f$ and $g$ are split monomorphisms then there exists $F:B\to A$ and $G:C\to B$ such that $Ff=1_A$ and $Gg=1_B$. So $gf$ is a split monomorphism since $(FG)(gf)=1_A$. Similarily, if $g$ and $f$ are split epimorphisms then $(gf)(FG)=1_C$ and so $gf$ is a split epimorphism.&lt;/p></description></item><item><title>hom-Sets</title><link>https://eliasjudin.github.io/blog/hom-sets/</link><pubDate>Thu, 15 Dec 2022 10:00:00 +0200</pubDate><guid>https://eliasjudin.github.io/blog/hom-sets/</guid><description>&lt;p>Let $\mathbb{C}$ be a fixed category.&lt;/p>
+&lt;p>Consider a morphism $f:A\to B$ in $\mathbb{C}$ then, for any object $X$ in $\mathbb{C}$, $\operatorname{hom}(X,1_A):\operatorname{hom}(X,A)\to\operatorname{hom}(X,A)$ is the identity map of $\operatorname{hom}(X,A)$ since for any $a\in A$, $$\operatorname{hom}(X,1_A)(a)=1_Aa=a.$$&lt;/p>
+&lt;hr>
+&lt;p>Given $g:B\to C$ a morphism in $\mathbb{C}$, we have that $$\operatorname{hom}(X,g)\operatorname{hom}(X,f)(a) = \operatorname{hom}(X,g)(fa) = gfa = \operatorname{hom}(X,gf)(a)$$ and so $\operatorname{hom}(X,g)\operatorname{hom}(X,f) = \operatorname{hom}(X,gf)$. Similarily, for a morphism $c\in\operatorname{hom}(C,X)$ we have that, $$\operatorname{hom}(f,X)\operatorname{hom}(g,X)(c) = \operatorname{hom}(f,X)(cg) = cgf = \operatorname{hom}(gf,X)(c)$$ and so $\operatorname{hom}(f,X)\operatorname{hom}(g,X) = \operatorname{hom}(gf,X)$.&lt;/p></description></item><item><title>Describing difficult spaces</title><link>https://eliasjudin.github.io/blog/describing-difficult-spaces/</link><pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/blog/describing-difficult-spaces/</guid><description>&lt;p>&lt;img src="https://eliasjudin.github.io/assets/images/blog/difficult-spaces/3D-Torus-Rotated.png" alt="torus 3d">&lt;/p>
+&lt;p>The idea behind this curatorial project is to give artists a prompt describing a space that is difficult to visualise, and ask them to come up with a way of describing that space whether that be a visual, auditory, or literary description.&lt;/p>
+&lt;hr>
+&lt;blockquote>
+&lt;p>What would it be like to be inside a 3-torus? A space where everything in front of you is behind you, everything to the left of you is to the right and everything above you is below.&lt;/p></description></item><item><title>Free semimodules and their examples</title><link>https://eliasjudin.github.io/blog/free-semimodules-and-their-examples/</link><pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/blog/free-semimodules-and-their-examples/</guid><description>&lt;p>&lt;strong>abstract.&lt;/strong> This project covers &lt;em>free semimodules&lt;/em> and their examples. We define various algebraic structures via $\Omega$-algebras (from universal algebra) with an emphasis on semimodules. We continue to define, categorically, the property of an algebraic structure being &lt;em>free&lt;/em>, and show that this is a &lt;em>universal property&lt;/em>. We construct the free semimodule on a set and explore various examples of them appearing in mathematics. We observe that the free semimodule on a set is a universal arrow from that set to the forgetful functor and that there is a functor called the &lt;em>free functor&lt;/em> that is the left adjoint to the forgetful functor and which provides an equivalent characterisation of the property of being free. That is, when the object is in the image of the free functor.&lt;/p></description></item><item><title>M-sets and Yoneda for monoids</title><link>https://eliasjudin.github.io/blog/yoneda/</link><pubDate>Fri, 15 Jul 2022 10:51:26 +0400</pubDate><guid>https://eliasjudin.github.io/blog/yoneda/</guid><description>&lt;p>The Yoneda lemma says that for a category $\mathbb{C}$, an object $C$ in $\mathbb{C}$, and a functor $S:\mathbb{C}\to\textbf{Sets}$, $\operatorname{Nat}(\operatorname{hom}(C,-),S)$ is in bijection with $S(C)$. These bijections are given by $\alpha: \operatorname{Nat}(\operatorname{hom}(C,-),S)\to S(C)$ and $\beta: S(C) \to \operatorname{Nat}(\operatorname{hom}(C,-),S)$ defined as $\alpha(\sigma)=\sigma_ {C}(1_ {C})$ and $\beta(c)_ {A}(f)=S(f)(c)$&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. This is the covariant form of the Yoneda lemma. There is also a contravariant form that specifies the bijective correspondence $\operatorname{Nat}(\operatorname{hom}(-,C),S)\approx S(C)$. Setting $S=\operatorname{hom}(-,C&amp;rsquo;)$, the Yoneda lemma tells us that natural transformations between the functors $\operatorname{hom}(-,C)$ and $\operatorname{hom}(-,C&amp;rsquo;)$ are in bijection with elements of the set $\operatorname{hom}(C,C&amp;rsquo;)$.&lt;/p></description></item><item><title>Free algebras by means of a universal property</title><link>https://eliasjudin.github.io/blog/free_algebras_by_means_of_a_universal_property/</link><pubDate>Mon, 27 Jun 2022 12:22:12 +0200</pubDate><guid>https://eliasjudin.github.io/blog/free_algebras_by_means_of_a_universal_property/</guid><description>&lt;p>Consider a vector space $V$, when $X$ is a basis of $V$, we say that $V$ is a &lt;em>free vector space on&lt;/em> $X$ &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. For any vector space $V$ and $W$ and a basis $X$ of $V$, if there is a map $f:X\to W$ then there exists a unique linear map from $V$ to $W$ that extends $f$. That is, there is a unique linear map making the following diagram commute,&lt;/p></description></item><item><title>Modules and Vector Spaces as Algebraic Categories</title><link>https://eliasjudin.github.io/blog/category_of_modules_and_vector_spaces_as_algebraic_categories/</link><pubDate>Sun, 26 Jun 2022 18:56:48 +0200</pubDate><guid>https://eliasjudin.github.io/blog/category_of_modules_and_vector_spaces_as_algebraic_categories/</guid><description>&lt;p>An algebraic category is defined to be any full subcategory of $\textbf{Alg}(\Omega)$, the catgeory of all $\Omega$-algebras. We can define various algebraic structures as algebraic categories. For example, in order to define $\textbf{Groups}$, the category of Groups, we can specify $\Omega = \{e,m,i\}$ as the set consisting of three operators: one nullary, one unary, and one binary, such that, $(G,e,m)$ is a monoid and $$m(i(x),x)=x=m(x,(i(x))$$ $\forall x \in G$, making $\textbf{Alg}(\Omega) = \textbf{Groups}$ for $\Omega$ as specified&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. However, an issue arises when considering vector spaces over a field and modules over a ring as the operators in $\Omega$ are defined to act on the elements of the underlying set, and not on elements outside of that set, say in a field or a ring. This issue arises when trying to define scalar multiplication for these structures. Consider a vector space $V$ over a field $K$. We define a binary operator $m$ on $V$ called multiplication, then $v(m):V^2\to V$, where $$v: \Omega \to \bigcup_{n \in \mathbf{N}} V^{V^{n}}$$ for $\mathbf{N}$ the natural numbers&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Now there is an issue since $m$ is not defined to operate on the elements of $K$. What follows is an explanation as to how we can get around this issue and define vector spaces over a field $K$ and modules over a ring $R$ as algebraic catgeories.&lt;/p></description></item><item><title>Groupoids and skeletons of monoids and preorders</title><link>https://eliasjudin.github.io/blog/groupoids_and_skeletons_of_monoids_and_preorders/</link><pubDate>Tue, 14 Jun 2022 19:18:00 +0200</pubDate><guid>https://eliasjudin.github.io/blog/groupoids_and_skeletons_of_monoids_and_preorders/</guid><description>&lt;p>A &lt;em>monoid&lt;/em> $(M,e,m)$, where $M$ is a set, $e$ an element of $M$, and $m$ an associative binary operation on $M$, can be viewed as a single object category. Take $M_0 = \{M\}$ or $M_0 = \emptyset$ and $M_1$ to be the elements of $M$, that is, morphisms in this category are elements of the monoid (where $M_0$ is the class of objects of the category and $M_1$ is the class of morphisms).&lt;/p></description></item><item><title>Exercises in category theory</title><link>https://eliasjudin.github.io/blog/exercises_in_category_theory/</link><pubDate>Tue, 14 Jun 2022 19:08:52 +0200</pubDate><guid>https://eliasjudin.github.io/blog/exercises_in_category_theory/</guid><description>&lt;p>&lt;em>(Last updated: December 2022)&lt;/em>&lt;/p>
+&lt;p>I will be making a series of posts that contains edited versions of some of the short answers I submitted for my category theory course at the University of Cape Town. These were answers to a number of exercises in Prof. George Janelidze&amp;rsquo;s category theory notes&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Every week we had to submit a short essay of sorts, which made up our continuos assessment mark, as well as a final essay which functioned as our exam.&lt;/p></description></item><item><title>Is the Double Twisted Möbius Strip Isotopic to the Strip?</title><link>https://eliasjudin.github.io/blog/is-double-mobius-strip-isotopic-to-strip/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/blog/is-double-mobius-strip-isotopic-to-strip/</guid><description>&lt;p>&lt;img src="https://eliasjudin.github.io/assets/images/blog/is-mobius-isotopic-strip/is-mobius-isotopy-strip.png" alt="Is the double twisted Möbius strip isotopic to the ordinary strip?">&lt;/p>
+&lt;p>Over the past couple days I have been watching &lt;a href="https://youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ">Tadashi Tokieda&amp;rsquo;s &lt;em>Topology and Geometry&lt;/em>&lt;/a> lectures, given at &lt;a href="https://aims.ac.za/">AIMS&lt;/a>.&lt;/p>
+&lt;p>I thought they would help me prepare for my first point-set topology course. The material is very different, but I think the lectures will help my intuition. Regardless, they have been a lot of fun.&lt;/p>
+&lt;p>In one of the lectures Tokieda gives a project: &lt;em>is the double twisted Möbius strip isotopic to the ordinary strip in $\mathbb{R}^3$?&lt;/em>&lt;/p></description></item><item><title>Curriculum Vitae</title><link>https://eliasjudin.github.io/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/cv/</guid><description>&lt;p>&lt;em>Last updated: Aug 2024&lt;/em>&lt;/p>
+&lt;h2 id="academic-history">Academic History&lt;/h2>
+&lt;p>February 2023 - present: M.Sc Mathematics, University of Cape Town. Supervisors: Prof. George Janelidze and Dr. Juana Sanchez-Ortega.&lt;/p>
+&lt;p>February 2022 - November 2022: B.Sc. Mathematics in the first class (cum laude), University of Cape Town.
+Project: &lt;a href="https://eliasjudin.github.io/blog/free-semimodules-and-their-examples/">&lt;em>Free semimodules and their examples&lt;/em>&lt;/a>. Supervisor: Prof. George Janelidze.&lt;/p>
+&lt;p>January 2019 - December 2021: B.Sc. Mathematics &amp;amp; Computer Science w/ Distinction (cum laude), University of the Witwatersrand.&lt;/p>
+&lt;p>January 2014 - November 2018: IEB National Senior Certificate, King David Victory Park High School.&lt;/p></description></item><item><title>Log</title><link>https://eliasjudin.github.io/log/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/log/</guid><description>&lt;h3 id="march-2025">March 2025&lt;/h3>
+&lt;p>I&amp;rsquo;ve been formalizing AIME and AMC problems and solutions in &lt;a href="https://leanprover-community.github.io">Lean4&lt;/a> for &lt;a href="https://www.projectnumina.ai">Project Numina&lt;/a> through &lt;a href="https://kili-technology.com">Kili-technology&lt;/a> (opensource). Project Numina is a non-profit organization whose mission is to &amp;ldquo;foster the development of human and artificial intelligence in the field of mathematics&amp;rdquo;. Their &lt;a href="https://huggingface.co/AI-MO/NuminaMath-7B-TIR">Numina Math 7B&lt;/a> model won the 1st progress prize of the &lt;a href="https://aimoprize.com">AI Math Olympiad&lt;/a>.&lt;/p>
+&lt;h3 id="december-2024">December 2024&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://science.uct.ac.za/department-mathematics/prof-guillaume-brummer">Guillaume C. L. Brümmer&lt;/a> 90th Conference&lt;/strong>&lt;/p>
+&lt;p>&lt;em>Organisers:&lt;/em> &lt;strong>Prof. G. Janelidze&lt;/strong> with assistance from &lt;strong>Jacob Lund&lt;/strong>.
+&lt;em>Location:&lt;/em> University of Cape Town
+&lt;em>Date:&lt;/em> December 12-13, 2024&lt;/p></description></item><item><title>PDF Viewer Test</title><link>https://eliasjudin.github.io/pdf-test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/pdf-test/</guid><description>&lt;h2 id="pdf-viewer-component-testing">PDF Viewer Component Testing&lt;/h2>
+&lt;p>This page is used for testing the PDF viewer component functionality.&lt;/p>
+&lt;h3 id="pdf-example-1-free-semimodules-and-their-examples">PDF Example 1: Free Semimodules and their Examples&lt;/h3>
+
+
+
+
+
+&lt;div id="pdf_2454ad8f68c4b864e46609864d34da92" class="pdf-container">
+ &lt;div class="pdf-header">
+ &lt;div class="pdf-title">{ Free Semimodules and their Examples }&lt;/div>
+ &lt;div class="pdf-controls">
+ &lt;button id="pdf_2454ad8f68c4b864e46609864d34da92_prev" class="pdf-button" disabled>« prev&lt;/button>
+ &lt;span class="page-counter">Page &lt;span id="pdf_2454ad8f68c4b864e46609864d34da92_current">0&lt;/span> of &lt;span id="pdf_2454ad8f68c4b864e46609864d34da92_total">0&lt;/span>&lt;/span>
+ &lt;button id="pdf_2454ad8f68c4b864e46609864d34da92_next" class="pdf-button" disabled>next »&lt;/button>
+ &lt;/div>
+ &lt;/div>
+ 
+ &lt;div id="pdf_2454ad8f68c4b864e46609864d34da92_loading" class="pdf-loading">
+ &lt;div class="pdf-loading-text">loading document...&lt;/div>
+ &lt;div class="pdf-progress-bar">&lt;div id="pdf_2454ad8f68c4b864e46609864d34da92_progress" class="pdf-progress">&lt;/div>&lt;/div>
+ &lt;/div>
+ 
+ &lt;div id="pdf_2454ad8f68c4b864e46609864d34da92_viewer" class="pdf-viewer">&lt;/div>
+ 
+ &lt;div class="pdf-footer">
+ &lt;a href="https://cdn.jsdelivr.net/gh/eliasjudin/free-semimodules-and-their-examples/free_semimodules_and_their_examples.pdf" class="pdf-download-link" download>
+ { download original document }
+ &lt;/a>
+ &lt;/div>
+&lt;/div>
+
+&lt;script>
+document.addEventListener('DOMContentLoaded', function() {
+ 
+ setTimeout(function() {
+ initPDFViewer("pdf_2454ad8f68c4b864e46609864d34da92", "https:\/\/cdn.jsdelivr.net\/gh\/eliasjudin\/free-semimodules-and-their-examples\/free_semimodules_and_their_examples.pdf");
+ }, 1000);
+
+ 
+ function initPDFViewer(containerId, url) {
+ console.log('Initializing PDF viewer for', containerId);
+ 
+ 
+ if (typeof pdfjsLib === 'undefined') {
+ console.error('PDF.js not loaded');
+ var loading = document.getElementById(containerId + '_loading');
+ if (loading) {
+ loading.innerHTML = '&lt;div class="pdf-error">PDF.js library not found. Please refresh the page.&lt;/div>';
+ }
+ 
+ 
+ var script = document.createElement('script');
+ script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+ script.onload = function() {
+ console.log('PDF.js loaded as fallback');
+ if (window.pdfjsLib) {
+ window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+ 
+ setTimeout(function() {
+ initPDFViewer(containerId, url);
+ }, 500);
+ }
+ };
+ document.head.appendChild(script);
+ return;
+ }
+ 
+ 
+ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+ 
+ var container = document.getElementById(containerId);
+ if (!container) {
+ console.error('PDF container not found:', containerId);
+ return;
+ }
+ 
+ var viewer = document.getElementById(containerId + '_viewer');
+ var loading = document.getElementById(containerId + '_loading');
+ var currentPageEl = document.getElementById(containerId + '_current');
+ var totalPagesEl = document.getElementById(containerId + '_total');
+ var prevButton = document.getElementById(containerId + '_prev');
+ var nextButton = document.getElementById(containerId + '_next');
+ var progressBar = document.getElementById(containerId + '_progress');
+ 
+ 
+ var pdfDoc = null;
+ var currentPage = 1;
+ var totalPages = 0;
+ var rendering = false;
+ 
+ 
+ var loadingTask = pdfjsLib.getDocument(url);
+ 
+ 
+ loadingTask.onProgress = function(data) {
+ if (data.total &amp;&amp; progressBar) {
+ var percent = (data.loaded / data.total) * 100;
+ progressBar.style.width = percent + '%';
+ }
+ };
+ 
+ 
+ loadingTask.promise.then(function(pdf) {
+ console.log('PDF loaded successfully with', pdf.numPages, 'pages');
+ pdfDoc = pdf;
+ totalPages = pdf.numPages;
+ 
+ if (totalPagesEl) {
+ totalPagesEl.textContent = totalPages;
+ }
+ 
+ 
+ updateButtons();
+ 
+ 
+ if (loading) {
+ loading.style.display = 'none';
+ }
+ 
+ 
+ renderPage(currentPage);
+ }).catch(function(error) {
+ console.error('Error loading PDF:', error);
+ if (loading) {
+ loading.innerHTML = '&lt;div class="pdf-error">Failed to load the PDF. Please try again later. Error: ' + error.message + '&lt;/div>';
+ }
+ });
+ 
+ 
+ function renderPage(pageNum) {
+ if (rendering || !viewer) return;
+ rendering = true;
+ 
+ 
+ currentPage = pageNum;
+ if (currentPageEl) {
+ currentPageEl.textContent = currentPage;
+ }
+ updateButtons();
+ 
+ 
+ pdfDoc.getPage(pageNum).then(function(page) {
+ 
+ viewer.innerHTML = '';
+ 
+ 
+ var canvas = document.createElement('canvas');
+ canvas.className = 'pdf-page-canvas';
+ var context = canvas.getContext('2d');
+ 
+ 
+ var viewport = page.getViewport({ scale: 1.0 });
+ var containerWidth = viewer.clientWidth || 800; 
+ var scale = containerWidth / viewport.width;
+ var scaledViewport = page.getViewport({ scale: scale });
+ 
+ canvas.width = scaledViewport.width;
+ canvas.height = scaledViewport.height;
+ 
+ 
+ var renderContext = {
+ canvasContext: context,
+ viewport: scaledViewport
+ };
+ 
+ var renderTask = page.render(renderContext);
+ 
+ renderTask.promise.then(function() {
+ viewer.appendChild(canvas);
+ rendering = false;
+ }).catch(function(error) {
+ console.error('Error rendering page:', error);
+ rendering = false;
+ viewer.innerHTML = '&lt;div class="pdf-error">Error rendering page: ' + error.message + '&lt;/div>';
+ });
+ });
+ }
+ 
+ 
+ function updateButtons() {
+ if (prevButton) {
+ prevButton.disabled = currentPage &lt;= 1;
+ }
+ if (nextButton) {
+ nextButton.disabled = currentPage >= totalPages;
+ }
+ }
+ 
+ 
+ if (prevButton) {
+ prevButton.addEventListener('click', function() {
+ if (currentPage > 1) {
+ renderPage(currentPage - 1);
+ }
+ });
+ }
+ 
+ if (nextButton) {
+ nextButton.addEventListener('click', function() {
+ if (currentPage &lt; totalPages) {
+ renderPage(currentPage + 1);
+ }
+ });
+ }
+ }
+});
+&lt;/script>
+&lt;h3 id="pdf-example-2-another-pdf">PDF Example 2: Another PDF&lt;/h3>
+
+
+
+
+
+&lt;div id="pdf_902d69d0b5ba125174d72e60af633cfd" class="pdf-container">
+ &lt;div class="pdf-header">
+ &lt;div class="pdf-title">{ Sample PDF Document }&lt;/div>
+ &lt;div class="pdf-controls">
+ &lt;button id="pdf_902d69d0b5ba125174d72e60af633cfd_prev" class="pdf-button" disabled>« prev&lt;/button>
+ &lt;span class="page-counter">Page &lt;span id="pdf_902d69d0b5ba125174d72e60af633cfd_current">0&lt;/span> of &lt;span id="pdf_902d69d0b5ba125174d72e60af633cfd_total">0&lt;/span>&lt;/span>
+ &lt;button id="pdf_902d69d0b5ba125174d72e60af633cfd_next" class="pdf-button" disabled>next »&lt;/button>
+ &lt;/div>
+ &lt;/div>
+ 
+ &lt;div id="pdf_902d69d0b5ba125174d72e60af633cfd_loading" class="pdf-loading">
+ &lt;div class="pdf-loading-text">loading document...&lt;/div>
+ &lt;div class="pdf-progress-bar">&lt;div id="pdf_902d69d0b5ba125174d72e60af633cfd_progress" class="pdf-progress">&lt;/div>&lt;/div>
+ &lt;/div>
+ 
+ &lt;div id="pdf_902d69d0b5ba125174d72e60af633cfd_viewer" class="pdf-viewer">&lt;/div>
+ 
+ &lt;div class="pdf-footer">
+ &lt;a href="https://www.africau.edu/images/default/sample.pdf" class="pdf-download-link" download>
+ { download original document }
+ &lt;/a>
+ &lt;/div>
+&lt;/div>
+
+&lt;script>
+document.addEventListener('DOMContentLoaded', function() {
+ 
+ setTimeout(function() {
+ initPDFViewer("pdf_902d69d0b5ba125174d72e60af633cfd", "https:\/\/www.africau.edu\/images\/default\/sample.pdf");
+ }, 1000);
+
+ 
+ function initPDFViewer(containerId, url) {
+ console.log('Initializing PDF viewer for', containerId);
+ 
+ 
+ if (typeof pdfjsLib === 'undefined') {
+ console.error('PDF.js not loaded');
+ var loading = document.getElementById(containerId + '_loading');
+ if (loading) {
+ loading.innerHTML = '&lt;div class="pdf-error">PDF.js library not found. Please refresh the page.&lt;/div>';
+ }
+ 
+ 
+ var script = document.createElement('script');
+ script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js';
+ script.onload = function() {
+ console.log('PDF.js loaded as fallback');
+ if (window.pdfjsLib) {
+ window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+ 
+ setTimeout(function() {
+ initPDFViewer(containerId, url);
+ }, 500);
+ }
+ };
+ document.head.appendChild(script);
+ return;
+ }
+ 
+ 
+ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+ 
+ var container = document.getElementById(containerId);
+ if (!container) {
+ console.error('PDF container not found:', containerId);
+ return;
+ }
+ 
+ var viewer = document.getElementById(containerId + '_viewer');
+ var loading = document.getElementById(containerId + '_loading');
+ var currentPageEl = document.getElementById(containerId + '_current');
+ var totalPagesEl = document.getElementById(containerId + '_total');
+ var prevButton = document.getElementById(containerId + '_prev');
+ var nextButton = document.getElementById(containerId + '_next');
+ var progressBar = document.getElementById(containerId + '_progress');
+ 
+ 
+ var pdfDoc = null;
+ var currentPage = 1;
+ var totalPages = 0;
+ var rendering = false;
+ 
+ 
+ var loadingTask = pdfjsLib.getDocument(url);
+ 
+ 
+ loadingTask.onProgress = function(data) {
+ if (data.total &amp;&amp; progressBar) {
+ var percent = (data.loaded / data.total) * 100;
+ progressBar.style.width = percent + '%';
+ }
+ };
+ 
+ 
+ loadingTask.promise.then(function(pdf) {
+ console.log('PDF loaded successfully with', pdf.numPages, 'pages');
+ pdfDoc = pdf;
+ totalPages = pdf.numPages;
+ 
+ if (totalPagesEl) {
+ totalPagesEl.textContent = totalPages;
+ }
+ 
+ 
+ updateButtons();
+ 
+ 
+ if (loading) {
+ loading.style.display = 'none';
+ }
+ 
+ 
+ renderPage(currentPage);
+ }).catch(function(error) {
+ console.error('Error loading PDF:', error);
+ if (loading) {
+ loading.innerHTML = '&lt;div class="pdf-error">Failed to load the PDF. Please try again later. Error: ' + error.message + '&lt;/div>';
+ }
+ });
+ 
+ 
+ function renderPage(pageNum) {
+ if (rendering || !viewer) return;
+ rendering = true;
+ 
+ 
+ currentPage = pageNum;
+ if (currentPageEl) {
+ currentPageEl.textContent = currentPage;
+ }
+ updateButtons();
+ 
+ 
+ pdfDoc.getPage(pageNum).then(function(page) {
+ 
+ viewer.innerHTML = '';
+ 
+ 
+ var canvas = document.createElement('canvas');
+ canvas.className = 'pdf-page-canvas';
+ var context = canvas.getContext('2d');
+ 
+ 
+ var viewport = page.getViewport({ scale: 1.0 });
+ var containerWidth = viewer.clientWidth || 800; 
+ var scale = containerWidth / viewport.width;
+ var scaledViewport = page.getViewport({ scale: scale });
+ 
+ canvas.width = scaledViewport.width;
+ canvas.height = scaledViewport.height;
+ 
+ 
+ var renderContext = {
+ canvasContext: context,
+ viewport: scaledViewport
+ };
+ 
+ var renderTask = page.render(renderContext);
+ 
+ renderTask.promise.then(function() {
+ viewer.appendChild(canvas);
+ rendering = false;
+ }).catch(function(error) {
+ console.error('Error rendering page:', error);
+ rendering = false;
+ viewer.innerHTML = '&lt;div class="pdf-error">Error rendering page: ' + error.message + '&lt;/div>';
+ });
+ });
+ }
+ 
+ 
+ function updateButtons() {
+ if (prevButton) {
+ prevButton.disabled = currentPage &lt;= 1;
+ }
+ if (nextButton) {
+ nextButton.disabled = currentPage >= totalPages;
+ }
+ }
+ 
+ 
+ if (prevButton) {
+ prevButton.addEventListener('click', function() {
+ if (currentPage > 1) {
+ renderPage(currentPage - 1);
+ }
+ });
+ }
+ 
+ if (nextButton) {
+ nextButton.addEventListener('click', function() {
+ if (currentPage &lt; totalPages) {
+ renderPage(currentPage + 1);
+ }
+ });
+ }
+ }
+});
+&lt;/script>
+&lt;h2 id="testing-scenarios">Testing Scenarios&lt;/h2>
+&lt;ol>
+&lt;li>&lt;strong>Multiple PDFs on one page&lt;/strong>: Each PDF viewer should function independently&lt;/li>
+&lt;li>&lt;strong>Navigation&lt;/strong>: Page navigation should work with buttons and keyboard arrows&lt;/li>
+&lt;li>&lt;strong>Responsive display&lt;/strong>: PDF viewers should display properly on all screen sizes&lt;/li>
+&lt;li>&lt;strong>Loading indicators&lt;/strong>: Progress bars should work as expected&lt;/li>
+&lt;li>&lt;strong>Error handling&lt;/strong>: Error messages should be displayed for invalid PDFs&lt;/li>
+&lt;/ol>
+&lt;h2 id="debugging-information">Debugging Information&lt;/h2>
+&lt;p>If the PDF viewer isn&amp;rsquo;t working, please check the browser console for errors using the browser developer tools (F12 or Ctrl+Shift+I).&lt;/p></description></item></channel></rss>
