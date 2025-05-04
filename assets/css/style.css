@@ -816,9 +816,8 @@ footer.scrolling-footer {
     position: relative;
     border: 1px solid var(--color-border);
     border-radius: 5px;
-    padding: 1.2rem;
+    padding: 1.5rem;
     transition: all 0.3s ease;
-    height: 100%;
     background: rgba(255,255,255,0.5);
 }
 
@@ -868,6 +867,45 @@ footer.scrolling-footer {
     line-height: 1.5;
     margin: 0;
     opacity: 0.85;
+}
+
+/* Applying refined CSS resets for links within work excerpts */
+
+/* Neutralize link styling within work excerpts to prevent layout issues */
+.work-excerpt a {
+    display: inline; /* Ensure inline display */
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    text-shadow: none;
+    font-weight: inherit; /* Inherit weight from paragraph */
+    color: inherit; /* Inherit color from paragraph */
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none; /* Remove underline */
+    vertical-align: baseline; /* Prevent alignment shifts */
+    box-shadow: none; /* Remove any box shadows */
+}
+
+/* Remove hover/focus effects specifically for links in excerpts */
+.work-excerpt a:hover,
+.work-excerpt a:focus {
+    color: inherit;
+    border: none;
+    text-shadow: none;
+    background: none;
+    text-decoration: none; /* Ensure no underline on hover */
+    outline: none; /* Remove focus outline */
+}
+
+/* Remove pseudo-elements */
+.work-excerpt a::before,
+.work-excerpt a::after,
+.work-excerpt a:hover::before,
+.work-excerpt a:hover::after {
+    display: none;
+    content: none;
 }
 
 .view-more {
@@ -984,7 +1022,6 @@ footer.scrolling-footer {
     text-shadow: none;
 }
 
-
 .page-item.disabled .page-link {
     color: var(--color-text-muted);
     border-bottom-color: transparent; /* No border for disabled */
@@ -999,7 +1036,6 @@ footer.scrolling-footer {
     background-color: transparent;
     text-shadow: none;
 }
-
 
 /* === Timeline Styles === */
 .timeline-entries {
