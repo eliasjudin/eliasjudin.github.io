@@ -82,9 +82,26 @@ Project: &lt;a href="https://eliasjudin.github.io/blog/free-semimodules-and-thei
 &lt;script>
 document.addEventListener('DOMContentLoaded', function() {
  
- setTimeout(function() {
+ waitForPDFJS(function() {
  initPDFViewer("pdf_2454ad8f68c4b864e46609864d34da92", "https:\/\/cdn.jsdelivr.net\/gh\/eliasjudin\/free-semimodules-and-their-examples\/free_semimodules_and_their_examples.pdf");
- }, 1000);
+ });
+
+ 
+ function waitForPDFJS(callback) {
+ var attempts = 0;
+ if (window.pdfjsLib) {
+ return callback();
+ }
+ var interval = setInterval(function() {
+ if (window.pdfjsLib) {
+ clearInterval(interval);
+ callback();
+ } else if (attempts++ > 20) {
+ clearInterval(interval);
+ console.error('PDF.js failed to load');
+ }
+ }, 200);
+ }
 
  
  function initPDFViewer(containerId, url) {
@@ -191,6 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
  
  pdfDoc.getPage(pageNum).then(function(page) {
  
+ var prevHeight = viewer.offsetHeight;
+ viewer.style.minHeight = prevHeight + 'px';
  viewer.innerHTML = '';
  
  
@@ -217,11 +236,13 @@ document.addEventListener('DOMContentLoaded', function() {
  
  renderTask.promise.then(function() {
  viewer.appendChild(canvas);
+ viewer.style.minHeight = '';
  rendering = false;
  }).catch(function(error) {
  console.error('Error rendering page:', error);
  rendering = false;
  viewer.innerHTML = '&lt;div class="pdf-error">Error rendering page: ' + error.message + '&lt;/div>';
+ viewer.style.minHeight = '';
  });
  });
  }
@@ -288,9 +309,26 @@ document.addEventListener('DOMContentLoaded', function() {
 &lt;script>
 document.addEventListener('DOMContentLoaded', function() {
  
- setTimeout(function() {
+ waitForPDFJS(function() {
  initPDFViewer("pdf_902d69d0b5ba125174d72e60af633cfd", "https:\/\/www.africau.edu\/images\/default\/sample.pdf");
- }, 1000);
+ });
+
+ 
+ function waitForPDFJS(callback) {
+ var attempts = 0;
+ if (window.pdfjsLib) {
+ return callback();
+ }
+ var interval = setInterval(function() {
+ if (window.pdfjsLib) {
+ clearInterval(interval);
+ callback();
+ } else if (attempts++ > 20) {
+ clearInterval(interval);
+ console.error('PDF.js failed to load');
+ }
+ }, 200);
+ }
 
  
  function initPDFViewer(containerId, url) {
@@ -397,6 +435,8 @@ document.addEventListener('DOMContentLoaded', function() {
  
  pdfDoc.getPage(pageNum).then(function(page) {
  
+ var prevHeight = viewer.offsetHeight;
+ viewer.style.minHeight = prevHeight + 'px';
  viewer.innerHTML = '';
  
  
@@ -423,11 +463,13 @@ document.addEventListener('DOMContentLoaded', function() {
  
  renderTask.promise.then(function() {
  viewer.appendChild(canvas);
+ viewer.style.minHeight = '';
  rendering = false;
  }).catch(function(error) {
  console.error('Error rendering page:', error);
  rendering = false;
  viewer.innerHTML = '&lt;div class="pdf-error">Error rendering page: ' + error.message + '&lt;/div>';
+ viewer.style.minHeight = '';
  });
  });
  }
