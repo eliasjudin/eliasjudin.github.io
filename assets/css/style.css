@@ -1375,6 +1375,11 @@ footer.scrolling-footer {
         --color-blockquote-bg: hsla(var(--color-primary-hsl), 0.15);
         --header-shadow-color: rgba(0,0,0,0.8);
     }
+    /* Ensure hero text is readable on dark backgrounds */
+    .hero-section .section-title,
+    .hero-section .intro-header {
+        color: var(--color-text);
+    }
 }
 /* === Print Styles === */
 @media print {
