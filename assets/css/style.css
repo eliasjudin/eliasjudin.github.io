@@ -1303,7 +1303,8 @@ footer.scrolling-footer {
     
     /* Adjust glitch header for mobile */
     .glitch-text {
-        font-size: 0.7rem; /* Reduce ASCII size for mobile */
+        /* Scale font with viewport to prevent overflow */
+        font-size: clamp(0.25rem, 1.25vw, 0.9rem);
         line-height: 1.0; /* Keep tight line height */
         font-weight: bold; /* Ensure bold text is maintained */
         margin: 15px auto; /* Reduce vertical margin */
