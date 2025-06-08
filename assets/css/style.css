@@ -329,8 +329,7 @@ a::before {
 a:hover,
 a:focus {
     color: var(--color-link-hover);
-    border-bottom-color: var(--color-link-hover);
-    border-bottom-style: solid;
+    border-bottom: var(--border-thin) solid var(--color-link-hover);
     text-shadow: 0 0 8px hsla(var(--color-primary-hsl), 0.5);
     outline: none;
     background-color: transparent;
@@ -687,13 +686,13 @@ footer.scrolling-footer {
 
 .scrolling-footer a {
     color: var(--color-text-muted);
-    border-bottom-color: var(--color-text-muted);
+    border-bottom: var(--border-thin) dashed var(--color-text-muted);
 }
 
 .scrolling-footer a:hover,
 .scrolling-footer a:focus {
     color: var(--color-link-hover);
-    border-bottom-color: var(--color-link-hover);
+    border-bottom: var(--border-thin) dashed var(--color-link-hover);
 }
 
 /* === Homepage Styles === */

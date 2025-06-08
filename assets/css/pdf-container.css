@@ -76,7 +76,7 @@
 .pdf-action-button:hover,
 .pdf-action-button:focus {
     color: var(--color-primary, hsl(322, 100%, 73%));
-    border-style: solid;
+    border: 1px solid hsla(var(--color-primary-hsl, 322, 100%, 73%), 0.4);
     outline: none;
 }
 
@@ -212,8 +212,7 @@
 .pdf-nav-button:hover:not(:disabled),
 .pdf-nav-button:focus:not(:disabled) {
     color: var(--color-primary, hsl(322, 100%, 73%));
-    border-style: solid;
-    border-color: var(--color-primary, hsl(322, 100%, 73%));
+    border: 1px solid var(--color-primary, hsl(322, 100%, 73%));
     outline: none;
 }
 
@@ -462,7 +461,7 @@
 .pdf-download-link:hover,
 .pdf-download-link:focus {
     color: var(--color-primary, hsl(322, 100%, 73%));
-    border-bottom-style: solid;
+    border-bottom: 1px solid var(--color-primary, hsl(322, 100%, 73%));
     text-decoration: none;
 }
 
@@ -502,7 +501,7 @@
 .pdf-tool-button:hover,
 .pdf-tool-button:focus {
     color: var(--color-primary, hsl(322, 100%, 73%));
-    border-bottom-color: var(--color-primary, hsl(322, 100%, 73%));
+    border-bottom: 1px dashed var(--color-primary, hsl(322, 100%, 73%));
     outline: none;
 }
 
