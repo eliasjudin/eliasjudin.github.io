@@ -710,7 +710,24 @@ footer.scrolling-footer {
 .hero-section {
     margin: 2rem 0 3rem;
     text-align: center;
-    padding: 0 1rem; /* Prevent edge overflow on narrow screens */
+    padding: 1.5rem 1rem;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        hsla(var(--color-primary-hsl), 0.4),
+        hsla(var(--color-primary-hsl), 0.4) 5px,
+        transparent 5px,
+        transparent 10px
+    );
 }
 
 .intro-card {
