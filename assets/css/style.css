@@ -24,7 +24,7 @@
     /* Colors with sufficient contrast for text (WCAG AA) */
     --color-header-text: hsl(322, 60%, 50%); /* Darker Pink for Headers (Contrast ~5.2:1) */
     --color-glitch-header-text: hsl(74, 90%, 30%); /* Darker Lime for Glitch (Contrast ~5.0:1) */
-    --color-timeline-date-text: hsl(322, 60%, 45%); /* Darker Pink for Timeline Dates */
+    --color-timeline-date-text: #555; /* Muted tone for Timeline Dates */
     --color-tech-text: hsl(210, 90%, 40%); /* Darker Blue for tech-related text (Contrast ~5.5:1) */
     --color-syntax-text: hsl(280, 70%, 45%); /* Darker Purple for syntax (Contrast ~5.3:1) */
 
@@ -1093,22 +1093,19 @@ footer.scrolling-footer {
 }
 
 .timeline-entries span.timeline-date {
-    display: inline-block; /* Keep date inline-block */
-    margin-right: 0.7rem;
-    margin-bottom: 0.4rem; /* Space below date if it wraps */
-    padding: 0.25rem 0.6rem;
+    display: inline-block;
+    margin-right: 0.6rem;
+    margin-bottom: 0.2rem;
     font-family: var(--font-body);
-    font-weight: bold;
-    color: var(--color-timeline-date-text); /* Use contrast-safe color */
-    background-color: hsla(var(--color-primary-hsl), 0.18); /* Slightly darker bg for contrast */
-    border-radius: 3px;
+    font-weight: normal;
+    color: var(--color-timeline-date-text);
+    background: none;
     white-space: nowrap;
-    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
-/* Hover effect applied to the whole span affects the date */
+/* Hover effect applied to the whole span should not amplify the date */
 .timeline-entries span:hover span.timeline-date {
-     transform: scale(1.03); /* Slightly subtler scale */
-     background-color: hsla(var(--color-primary-hsl), 0.25);
+    transform: none;
+    background: none;
 }
 
 /* === SEO Enhancements === */
@@ -1333,7 +1330,6 @@ footer.scrolling-footer {
     .timeline-entries span { margin-bottom: 0.7rem; } /* Slightly less margin */
     .timeline-entries span.timeline-date {
         margin-right: 0.4rem; /* Slightly less margin */
-        padding: 0.15rem 0.4rem; /* Slightly smaller padding */
         font-size: 0.85em; /* Make date slightly smaller */
     }
 
