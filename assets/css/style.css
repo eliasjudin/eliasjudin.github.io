@@ -583,7 +583,8 @@ tbody tr:hover { background-color: hsla(var(--color-secondary-hsl), 0.1); }
     text-decoration: none;
     /* Disable font smoothing to get pixel-perfect characters */
     -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: none;
+    /* Firefox only supports 'auto' or 'grayscale' */
+    -moz-osx-font-smoothing: grayscale;
     /* Temporarily disable animation to fix the basic display */
     /* animation: glitch-subtle 3s infinite linear alternate; */
     /* will-change: transform, text-shadow; */
