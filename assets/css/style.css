@@ -168,7 +168,7 @@ main::before {
 }
 
 header,
-footer.main-footer { /* Target specific footers for layout */
+.main-footer { /* Target specific footers for layout */
     width: 100%;
     text-align: center;
     margin-bottom: var(--space-xl);
@@ -354,9 +354,15 @@ a.nav-link {
     border-bottom: none;
 }
 
-a.header-link::before, 
+a.header-link::before,
 a.nav-link::before {
     display: none;
+}
+
+a.nav-link:hover,
+a.nav-link:focus,
+a.nav-link:focus-visible {
+    border-bottom: none;
 }
 
 /* === Horizontal Rule === */
