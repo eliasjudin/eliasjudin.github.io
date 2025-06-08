@@ -80,6 +80,11 @@
     outline: none;
 }
 
+.pdf-action-button:focus-visible {
+    outline: var(--border-medium) dashed var(--color-primary, hsl(322, 100%, 73%));
+    outline-offset: 2px;
+}
+
 .pdf-dark-mode .pdf-action-button {
     color: #e4e6eb;
     border-color: hsla(var(--color-primary-hsl, 322, 100%, 73%), 0.6);
@@ -202,14 +207,20 @@
     min-width: 2rem;
 }
 
-.pdf-button:hover:not(:disabled), 
+.pdf-button:hover:not(:disabled),
 .pdf-button:focus:not(:disabled),
-.pdf-nav-button:hover:not(:disabled), 
+.pdf-nav-button:hover:not(:disabled),
 .pdf-nav-button:focus:not(:disabled) {
     color: var(--color-primary, hsl(322, 100%, 73%));
     border-style: solid;
     border-color: var(--color-primary, hsl(322, 100%, 73%));
     outline: none;
+}
+
+.pdf-button:focus-visible:not(:disabled),
+.pdf-nav-button:focus-visible:not(:disabled) {
+    outline: var(--border-medium) dashed var(--color-primary, hsl(322, 100%, 73%));
+    outline-offset: 2px;
 }
 
 .pdf-dark-mode .pdf-button,
@@ -455,6 +466,11 @@
     text-decoration: none;
 }
 
+.pdf-download-link:focus-visible {
+    outline: var(--border-medium) dashed var(--color-primary, hsl(322, 100%, 73%));
+    outline-offset: 2px;
+}
+
 .pdf-dark-mode .pdf-download-link {
     color: #a0a0a0;
 }
@@ -488,6 +504,11 @@
     color: var(--color-primary, hsl(322, 100%, 73%));
     border-bottom-color: var(--color-primary, hsl(322, 100%, 73%));
     outline: none;
+}
+
+.pdf-tool-button:focus-visible {
+    outline: var(--border-medium) dashed var(--color-primary, hsl(322, 100%, 73%));
+    outline-offset: 2px;
 }
 
 .pdf-dark-mode .pdf-tool-button {

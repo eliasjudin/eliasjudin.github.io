@@ -348,6 +348,16 @@ a:focus-visible {
     border-bottom-style: solid;
 }
 
+/* Focus styles for form controls */
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: var(--border-medium) dashed var(--color-primary);
+    outline-offset: 2px;
+}
+
 /* Reset link style for certain elements */
 a.header-link, 
 a.nav-link {
@@ -909,6 +919,11 @@ footer.scrolling-footer {
     outline: none; /* Remove focus outline */
 }
 
+.work-excerpt a:focus-visible {
+    outline: var(--border-medium) dashed var(--color-primary);
+    outline-offset: 2px;
+}
+
 /* Remove pseudo-elements */
 .work-excerpt a::before,
 .work-excerpt a::after,
@@ -1231,6 +1246,11 @@ footer.scrolling-footer {
 
 .skip-to-content:focus {
     top: 0;
+}
+
+.skip-to-content:focus-visible {
+    outline: var(--border-medium) dashed var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* === Responsive Styles === */
