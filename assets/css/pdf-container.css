@@ -621,7 +621,8 @@
 }
 
 /* Fullscreen mode */
-.pdf-container:fullscreen {
+.pdf-container:fullscreen,
+.pdf-container:-webkit-full-screen {
     background-color: #f8f8f8;
     padding: 2rem;
     max-width: none;
@@ -629,7 +630,8 @@
     overflow-y: auto;
 }
 
-.pdf-dark-mode:fullscreen {
+.pdf-dark-mode:fullscreen,
+.pdf-dark-mode:-webkit-full-screen {
     background-color: #1a1a1a;
 }
 
