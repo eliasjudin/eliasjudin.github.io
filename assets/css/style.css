@@ -845,6 +845,7 @@ footer.scrolling-footer {
     padding: 1.5rem;
     transition: all 0.3s ease;
     background: rgba(255,255,255,0.5);
+    overflow: hidden; /* prevent content bleed */
 }
 
 .work-card:hover {
