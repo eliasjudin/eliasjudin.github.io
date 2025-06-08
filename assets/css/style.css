@@ -567,7 +567,7 @@ tbody tr:hover { background-color: hsla(var(--color-secondary-hsl), 0.1); }
     max-width: 100%;
     /* Use a web-safe monospace font for better character rendering */
     font-family: "Courier New", monospace;
-    font-size: 0.9rem;
+    font-size: clamp(0.25rem, 1.25vw, 0.9rem);
     /* Extra bold to ensure solid character display */
     font-weight: 900;
     /* Critical for proper ASCII art display */
