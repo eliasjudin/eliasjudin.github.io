@@ -15,6 +15,7 @@
 &lt;figure>
  &lt;img src="https://cdn.jsdelivr.net/gh/eliasjudin/website-assets@main/images/sheaf-equalizer.svg"
  alt="Equalizer diagram for sheaves."
+ loading="lazy"
  width="600"
  >
  
