@@ -186,7 +186,7 @@ h1, h2, h3, h4 {
     text-shadow: 1px 1px 0px var(--header-shadow-color);
     word-break: break-word;
     line-height: var(--line-height-tight);
-    font-weight: var(--weight-semibold);
+    font-weight: var(--weight-bold); /* Changed to bold */
 }
 
 /* Add a subtle animated indicator before headings */
@@ -230,8 +230,8 @@ h2::after {
     height: 1px;
     background: repeating-linear-gradient(
         90deg,
-        var(--color-primary),
-        var(--color-primary) var(--decoration-dash),
+        var(--color-header-text),
+        var(--color-header-text) var(--decoration-dash),
         transparent var(--decoration-dash),
         transparent calc(var(--decoration-dash) + var(--decoration-gap))
     );
@@ -380,8 +380,8 @@ hr {
     height: 1px;
     background: repeating-linear-gradient(
         90deg,
-        hsla(var(--color-primary-hsl), 0.6), /* Slightly transparent */
-        hsla(var(--color-primary-hsl), 0.6) 5px,
+        hsla(322, 60%, 50%, 0.6), /* Slightly transparent */
+        hsla(322, 60%, 50%, 0.6) 5px,
         transparent 5px,
         transparent 10px
     );
@@ -1396,6 +1396,12 @@ footer.scrolling-footer {
     .hero-section .section-title,
     .hero-section .intro-header {
         color: var(--color-text);
+    }
+
+    .intro-card .position-badge,
+    .intro-card .specialization,
+    .intro-card .university {
+        color: var(--color-text); /* Use the standard dark mode text color for better contrast */
     }
 }
 /* === Print Styles === */
