@@ -24,7 +24,18 @@
 &lt;p>A &lt;strong>presheaf&lt;/strong> $ F $ on $ X $ is a contravariant functor from the collection of open sets of $ X $ ordered by inclusion, $ \text{Open}(X) $, to the category of sets, $ \mathbf{Set} $:
 $$
 F: \text{Open}(X)^{\text{op}} \to \mathbf{Set}
-$$&lt;/p></description></item><item><title>Monomorphisms and epimorphisms</title><link>https://eliasjudin.github.io/blog/monos-and-epis/</link><pubDate>Sat, 17 Dec 2022 12:45:05 +0200</pubDate><guid>https://eliasjudin.github.io/blog/monos-and-epis/</guid><description>&lt;p>The classes of monomorphisms, epimorphisms, bimorphisms, split monomorphisms, and split epimorphisms are closed under composition and contain all isomorsphisms.
+$$&lt;/p></description></item><item><title>Author Logic Test Post</title><link>https://eliasjudin.github.io/blog/author-test-post/</link><pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/blog/author-test-post/</guid><description>&lt;p>This post tests the author display logic.&lt;/p>
+&lt;p>&lt;strong>Scenario 1:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>author&lt;/code>: &amp;ldquo;Primary Author One&amp;rdquo;&lt;/li>
+&lt;li>&lt;code>authors&lt;/code>: [&amp;ldquo;Primary Author One&amp;rdquo;, &amp;ldquo;Additional Author A&amp;rdquo;, &amp;ldquo;Additional Author B&amp;rdquo;]&lt;/li>
+&lt;/ul>
+&lt;p>Expected behavior:&lt;/p>
+&lt;ul>
+&lt;li>Main author displayed: Primary Author One (If the template shows main author explicitly)&lt;/li>
+&lt;li>Additional authors displayed: Additional Author A, Additional Author B&lt;/li>
+&lt;li>Tags should appear once in the article meta.&lt;/li>
+&lt;/ul></description></item><item><title>Monomorphisms and epimorphisms</title><link>https://eliasjudin.github.io/blog/monos-and-epis/</link><pubDate>Sat, 17 Dec 2022 12:45:05 +0200</pubDate><guid>https://eliasjudin.github.io/blog/monos-and-epis/</guid><description>&lt;p>The classes of monomorphisms, epimorphisms, bimorphisms, split monomorphisms, and split epimorphisms are closed under composition and contain all isomorsphisms.
 To show these classes are closed under composition, consider two morphisms $f:A\to B$ and $g:B\to C$. If $f$ and $g$ are monomorphisms then for $a,a&amp;rsquo;\in\operatorname{hom}(X,A)$, $$(gf)a=(gf)a&amp;rsquo;\implies fa=fa&amp;rsquo;\implies a = a&amp;rsquo;$$ and so $gf$ is a monomorphism. If $f$ and $g$ are epimorphisms then for $c,c&amp;rsquo;\in\operatorname{hom}(C,X)$, $$c(gf)=c&amp;rsquo;(gf)\implies cg=cg&amp;rsquo;\implies c=c&amp;rsquo;$$ and so $gf$ is an epimorphism. If $f$ and $g$ are split monomorphisms then there exists $F:B\to A$ and $G:C\to B$ such that $Ff=1_A$ and $Gg=1_B$. So $gf$ is a split monomorphism since $(FG)(gf)=1_A$. Similarily, if $g$ and $f$ are split epimorphisms then $(gf)(FG)=1_C$ and so $gf$ is a split epimorphism.&lt;/p></description></item><item><title>hom-Sets</title><link>https://eliasjudin.github.io/blog/hom-sets/</link><pubDate>Thu, 15 Dec 2022 10:00:00 +0200</pubDate><guid>https://eliasjudin.github.io/blog/hom-sets/</guid><description>&lt;p>Let $\mathbb{C}$ be a fixed category.&lt;/p>
 &lt;p>Consider a morphism $f:A\to B$ in $\mathbb{C}$ then, for any object $X$ in $\mathbb{C}$, $\operatorname{hom}(X,1_A):\operatorname{hom}(X,A)\to\operatorname{hom}(X,A)$ is the identity map of $\operatorname{hom}(X,A)$ since for any $a\in A$, $$\operatorname{hom}(X,1_A)(a)=1_Aa=a.$$&lt;/p>
 &lt;hr>
