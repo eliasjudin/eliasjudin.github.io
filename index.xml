@@ -20,6 +20,7 @@
  >
  
 &lt;/figure>
+
 &lt;h4 id="presheaves-and-sheaves">Presheaves and sheaves&lt;/h4>
 &lt;p>A &lt;strong>presheaf&lt;/strong> $ F $ on $ X $ is a contravariant functor from the collection of open sets of $ X $ ordered by inclusion, $ \text{Open}(X) $, to the category of sets, $ \mathbf{Set} $:
 $$
@@ -290,6 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
  }
 });
 &lt;/script>
+
 &lt;h3 id="pdf-example-2-another-pdf">PDF Example 2: Another PDF&lt;/h3>
 
 
@@ -517,6 +519,7 @@ document.addEventListener('DOMContentLoaded', function() {
  }
 });
 &lt;/script>
+
 &lt;h2 id="testing-scenarios">Testing Scenarios&lt;/h2>
 &lt;ol>
 &lt;li>&lt;strong>Multiple PDFs on one page&lt;/strong>: Each PDF viewer should function independently&lt;/li>

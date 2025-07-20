@@ -20,6 +20,7 @@
  >
  
 &lt;/figure>
+
 &lt;h4 id="presheaves-and-sheaves">Presheaves and sheaves&lt;/h4>
 &lt;p>A &lt;strong>presheaf&lt;/strong> $ F $ on $ X $ is a contravariant functor from the collection of open sets of $ X $ ordered by inclusion, $ \text{Open}(X) $, to the category of sets, $ \mathbf{Set} $:
 $$
