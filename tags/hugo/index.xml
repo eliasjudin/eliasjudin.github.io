@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Elias Judin</title><link>https://eliasjudin.github.io/tags/hugo/</link><description>Recent content in Hugo on Elias Judin</description><generator>Hugo</generator><language>en</language><copyright>© 2024 by Elias Judin</copyright><lastBuildDate>Tue, 22 Jul 2025 12:31:34 +0200</lastBuildDate><atom:link href="https://eliasjudin.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Author Logic Test Post</title><link>https://eliasjudin.github.io/blog/author-test-post/</link><pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/blog/author-test-post/</guid><description>&lt;p>This post tests the author display logic.&lt;/p>
-&lt;p>&lt;strong>Scenario 1:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>author&lt;/code>: &amp;ldquo;Primary Author One&amp;rdquo;&lt;/li>
-&lt;li>&lt;code>authors&lt;/code>: [&amp;ldquo;Primary Author One&amp;rdquo;, &amp;ldquo;Additional Author A&amp;rdquo;, &amp;ldquo;Additional Author B&amp;rdquo;]&lt;/li>
-&lt;/ul>
-&lt;p>Expected behavior:&lt;/p>
-&lt;ul>
-&lt;li>Main author displayed: Primary Author One (If the template shows main author explicitly)&lt;/li>
-&lt;li>Additional authors displayed: Additional Author A, Additional Author B&lt;/li>
-&lt;li>Tags should appear once in the article meta.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Elias Judin</title><link>https://eliasjudin.github.io/tags/hugo/</link><description>Recent content in Hugo on Elias Judin</description><generator>Hugo</generator><language>en</language><copyright>© 2024 by Elias Judin</copyright><lastBuildDate>Mon, 15 Sep 2025 13:05:01 +0200</lastBuildDate><atom:link href="https://eliasjudin.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Author Logic Test Post</title><link>https://eliasjudin.github.io/blog/author-test-post/</link><pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate><guid>https://eliasjudin.github.io/blog/author-test-post/</guid><description>&lt;p&gt;This post tests the author display logic.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scenario 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;author&lt;/code&gt;: &amp;ldquo;Primary Author One&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;authors&lt;/code&gt;: [&amp;ldquo;Primary Author One&amp;rdquo;, &amp;ldquo;Additional Author A&amp;rdquo;, &amp;ldquo;Additional Author B&amp;rdquo;]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Expected behavior:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Main author displayed: Primary Author One (If the template shows main author explicitly)&lt;/li&gt;
+&lt;li&gt;Additional authors displayed: Additional Author A, Additional Author B&lt;/li&gt;
+&lt;li&gt;Tags should appear once in the article meta.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
