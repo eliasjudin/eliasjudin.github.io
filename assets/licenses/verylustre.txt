@@ -1,0 +1,8 @@
+Very Lustre legacy interface assets
+===================================
+
+The GIF sprites, backgrounds, and iconography located under
+`/verylustre/img/` originate from the legacy Very Lustre website by
+UBERMORGEN.COM. They are reproduced here solely to preserve the
+historical visual system while presenting Elias Judin's content. All
+trademarks and copyrights remain with their respective owners.

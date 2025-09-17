@@ -1,4 +1,1 @@
 User-agent: *
-Disallow:
-
-Sitemap: https://eliasjudin.github.io/sitemap.xml
