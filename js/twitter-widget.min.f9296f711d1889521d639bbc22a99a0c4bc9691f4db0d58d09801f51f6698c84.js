@@ -1,0 +1,1 @@
+(()=>{const t=document.getElementById("twitter-wjs");if(t){window.twttr&&window.twttr.widgets&&window.twttr.widgets.load();return}const e=document.createElement("script");e.id="twitter-wjs",e.src="https://platform.twitter.com/widgets.js",e.async=!0,e.charset="utf-8",e.onload=()=>{window.twttr&&window.twttr.widgets&&window.twttr.widgets.load()},document.head.appendChild(e)})()
