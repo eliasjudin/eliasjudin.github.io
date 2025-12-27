@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrow-hollow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="2">
+    <path d="M 40 40 Q 150.0 23.2 260 40" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="150.0" y="49.6" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">y_A</text>
+    <path d="M 260 40 Q 150.0 56.8 40 40" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow-hollow)"/>
+    <text x="150.0" y="34.4" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">colim_A</text>
+    <path d="M 40 190 Q 150.0 173.2 260 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="150.0" y="199.6" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">y_X</text>
+    <path d="M 260 190 Q 150.0 206.8 40 190" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow-hollow)"/>
+    <text x="150.0" y="184.4" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">colim</text>
+    <path d="M 40 40 L 40 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="24.0" y="109.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">P</text>
+    <path d="M 260 40 L 260 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="276.0" y="109.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">Q</text>
+  </g>
+  <g fill="#111" font-family="serif" font-size="20" text-anchor="middle">
+    <text x="40" y="34" style="font-style:italic">ᵎ</text>
+    <text x="260" y="34" style="font-style:italic">Â</text>
+    <text x="40" y="184" style="font-style:italic">ᵌ</text>
+    <text x="260" y="184" style="font-style:italic">X̂</text>
+  </g>
+</svg>

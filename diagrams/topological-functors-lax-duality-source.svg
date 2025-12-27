@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 380" width="740" height="380">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrow-hollow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="2">
+    <path d="M 40 40 L 260 40" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="150.0" y="58.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">v</text>
+    <path d="M 260 40 L 480 40" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="370.0" y="58.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">q</text>
+    <path d="M 40 40 Q 260.0 56.8 480 40" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+    <text x="260.0" y="34.4" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">Ph</text>
+    <path d="M 40 40 Q 261.8069739956136 109.69954294620018 480 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="260.9034869978068" y="130.34977147310008" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">Pgᵢ</text>
+    <path d="M 480 40 L 480 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="496.0" y="109.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">Pfᵢ</text>
+    <path d="M 260 40 Q 376.3093724359849 105.74625376055546 480 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="357.15468621799243" y="104.37312688027774" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">uᵢ</text>
+  </g>
+  <g fill="#111" font-family="serif" font-size="20" text-anchor="middle">
+    <text x="40" y="34" style="font-style:italic">PC</text>
+    <text x="260" y="34" style="font-style:italic">X</text>
+    <text x="480" y="34" style="font-style:italic">PA</text>
+    <text x="480" y="184" style="font-style:italic">PBᵢ</text>
+  </g>
+</svg>

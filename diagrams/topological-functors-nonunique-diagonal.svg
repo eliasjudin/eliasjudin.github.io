@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrow-hollow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="white" stroke="currentColor" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="2">
+    <path d="M 40 40 L 260 40" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 40 40 L 40 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 260 40 L 260 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="276.0" y="109.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">U</text>
+    <path d="M 40 190 L 260 190" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="150.0" y="208.0" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">equals</text>
+    <path d="M 40 190 Q 159.46405865397736 128.88061935916681 260 40" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="170.73202932698868" y="115.94030967958341" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">disc</text>
+    <path d="M 40 190 Q 140.53594134602264 101.1193806408332 260 40" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="129.26797067301132" y="102.05969032041659" fill="#111" font-family="serif" font-style="italic" font-size="18" text-anchor="middle">indisc</text>
+  </g>
+  <g fill="#111" font-family="serif" font-size="20" text-anchor="middle">
+    <text x="40" y="34">∅</text>
+    <text x="260" y="34" style="font-style:italic">ᵍᵇᵒ</text>
+    <text x="40" y="184" style="font-style:italic">ᵍᵉᵗ</text>
+    <text x="260" y="184" style="font-style:italic">ᵍᵉᵗ</text>
+  </g>
+</svg>
