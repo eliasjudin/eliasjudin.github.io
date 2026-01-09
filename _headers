@@ -1,3 +1,9 @@
+# NOTE: GitHub Pages does not support custom headers via _headers file.
+# This file is configured for Netlify-style hosting or CDN configurations.
+# GitHub Pages uses its own caching policy (typically 10 minutes for assets).
+# However, Hugo asset fingerprinting is enabled, which allows safe long-term caching
+# when used with a CDN like Cloudflare that respects custom headers.
+
 /*
   Cache-Control: public, max-age=300
 
