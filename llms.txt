@@ -1,0 +1,36 @@
+# Elias Judin
+
+> Academic website and mathematics research blog for Elias Judin, focused on category theory, universal algebra, topology, sheaf theory, Lean theorem proving, and the role of AI in mathematics.
+
+## Core pages
+
+- [Homepage](https://eliasjudin.github.io/): Academic hub, latest writing, and recent milestones.
+- [Mathematics Research Blog](https://eliasjudin.github.io/blog/): Articles on category theory, universal algebra, topology, sheaf theory, algebraic geometry, logic, and AI in mathematics.
+- [Curriculum Vitae](https://eliasjudin.github.io/cv/): Academic history, research, teaching, awards, and industry work.
+- [Log](https://eliasjudin.github.io/log/): Research, seminar, reading, and project notes.
+- [Contact](https://eliasjudin.github.io/contact/): Email and professional profile links.
+
+## Research topics
+
+- Category theory and categorical topology
+- Universal algebra, semirings, semimodules, and semialgebras
+- Topology, sheaf theory, descent theory, and effective descent
+- Lean4 theorem proving and formalization of mathematics
+- AI and mathematics, including formal verification and mathematical reasoning
+
+## Selected writing
+
+- [Free semimodules and their examples](https://eliasjudin.github.io/blog/free-semimodules-and-their-examples/): Honours project on free semimodules, universal properties, and examples.
+- [Modules and Vector Spaces as Algebraic Categories](https://eliasjudin.github.io/blog/category-of-modules-and-vector-spaces-as-algebraic-categories/): Exercises framing modules and vector spaces as algebraic categories.
+- [Free algebras by means of a universal property](https://eliasjudin.github.io/blog/free-algebras-by-means-of-a-universal-property/): Free algebras as initial objects, with examples from vector spaces, magmas, and groups.
+- [Monomorphisms and epimorphisms](https://eliasjudin.github.io/blog/monos-and-epis/): Lecture-style notes on monos, epis, split morphisms, and closure under composition.
+- [Topological, Lax-Topological (Semi-Topological/Solid), and Topologically Algebraic Functors](https://eliasjudin.github.io/blog/topological-laxtop-topalg/): Notes on structured sources and sinks, classical characterizations, and the enriched "topological = total" theorem.
+- [Sheaves as Presheaves with an Equalizer Diagram](https://eliasjudin.github.io/blog/sheaves-and-presheaves/): Primer on presheaves, sheaves, and the equalizer diagram for the sheaf condition.
+- [M-sets and Yoneda for monoids](https://eliasjudin.github.io/blog/yoneda/): Yoneda lemma for monoids via M-sets.
+- [Reflections on the Right Use of Artificial Intelligence With a View to the Love of Mathematics](https://eliasjudin.github.io/blog/reflections-on-the-right-use-of-ai-for-math/): Essay on AI-generated mathematics, attention, and meaning.
+
+## External profiles
+
+- [GitHub](https://github.com/eliasjudin)
+- [LinkedIn](https://za.linkedin.com/in/elias-judin-a6988325a)
+- [ORCID](https://orcid.org/0009-0009-3267-9204)
