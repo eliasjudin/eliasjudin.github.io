@@ -1,13 +1,13 @@
 # Elias Judin
 
-> Academic website and mathematics research blog for Elias Judin, focused on category theory, universal algebra, topology, sheaf theory, Lean theorem proving, and the role of AI in mathematics.
+> Website of Elias Judin, a research mathematician working in category theory, algebra, and formalized mathematics.
 
 ## Core pages
 
-- [Homepage](https://eliasjudin.github.io/): Academic hub, latest writing, and recent milestones.
-- [Mathematics Research Blog](https://eliasjudin.github.io/blog/): Articles on category theory, universal algebra, topology, sheaf theory, algebraic geometry, logic, and AI in mathematics.
-- [Curriculum Vitae](https://eliasjudin.github.io/cv/): Academic history, research, teaching, awards, and industry work.
-- [Log](https://eliasjudin.github.io/log/): Research, seminar, reading, and project notes.
+- [Homepage](https://eliasjudin.github.io/): Research profile, recent writing, and milestones.
+- [Mathematics Research Blog](https://eliasjudin.github.io/blog/): Research articles and notes in category theory, algebra, topology, and formalized mathematics.
+- [Curriculum Vitae](https://eliasjudin.github.io/cv/): Research, education, teaching, awards, and professional experience.
+- [Log](https://eliasjudin.github.io/log/): Research updates, seminar notes, reading notes, and project records.
 - [Contact](https://eliasjudin.github.io/contact/): Email and professional profile links.
 
 ## Research topics
