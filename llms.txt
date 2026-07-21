@@ -32,5 +32,6 @@
 ## External profiles
 
 - [GitHub](https://github.com/eliasjudin)
-- [LinkedIn](https://za.linkedin.com/in/elias-judin-a6988325a)
-- [ORCID](https://orcid.org/0009-0009-3267-9204)
+- [LinkedIn](https://www.linkedin.com/in/elias-judin-a6988325a/)
+- [ORCID](https://orcid.org/0009-0003-8247-0910)
+- [arXiv author profile](https://arxiv.org/a/judin_e_1)
