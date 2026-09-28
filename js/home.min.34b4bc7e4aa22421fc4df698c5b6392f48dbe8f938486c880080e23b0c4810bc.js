@@ -1,0 +1,1 @@
+(function(){document.querySelectorAll(".vl-home-gif-link").forEach(e=>{const t=e.querySelector("img[data-reveal-src]");if(!t)return;const n=new Image;n.src=t.dataset.revealSrc;function s(){t.src=e.matches(":hover, :focus")?t.dataset.revealSrc:t.dataset.idleSrc}["pointerenter","pointerleave","focus","blur"].forEach(t=>e.addEventListener(t,s))})})()
