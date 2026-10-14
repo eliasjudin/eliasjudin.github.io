@@ -6,6 +6,8 @@
 
 - [Homepage](https://eliasjudin.github.io/): Research profile, recent writing, and milestones.
 - [Mathematics Research Blog](https://eliasjudin.github.io/blog/): Research articles and notes in category theory, algebra, topology, and formalized mathematics.
+- [Kourovka Notebook](https://eliasjudin.github.io/kourovka/): Joint preprint with Wouter van Doorn, Pietro Monticone, and Daniel Morrison, presenting solutions to eight group-theory problems with Lean formalizations.
+- [Formal proof](https://eliasjudin.github.io/formal-proof/): Collaborative Lean research, accepted upstream contributions, tools, and explicitly distinguished submission statuses.
 - [Curriculum Vitae](https://eliasjudin.github.io/cv/): Research, education, teaching, awards, and professional experience.
 - [Log](https://eliasjudin.github.io/log/): Research updates, seminar notes, reading notes, and project records.
 - [Contact](https://eliasjudin.github.io/contact/): Email and professional profile links.

@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-Disallow: /log/archive/
 
 Sitemap: https://eliasjudin.github.io/sitemap.xml
